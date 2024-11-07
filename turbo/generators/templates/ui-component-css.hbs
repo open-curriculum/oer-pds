@@ -1,0 +1,35 @@
+import { StyleRule } from '@vanilla-extract/css';
+import { recipe } from '@vanilla-extract/recipes';
+
+import { theme } from '../../theme';
+import { calc } from '../../helpers/utils';
+
+import { {{pascalCase name}}Colors } from './{{pascalCase name}}';
+
+const colors: { [key in {{pascalCase name}}Colors]: StyleRule } = {
+  accent: {
+    backgroundColor: theme.color.accent.base,
+  },
+  neutral: {
+    backgroundColor: theme.color.neutral.base,
+  },
+};
+
+export const styles = recipe({
+  base: {
+    boxSizing: 'border-box',
+    paddingBlock: calc(calc.x(theme.space[2], 2), '10vh'),
+    color: theme.color.content.regular,
+    fontFamily: theme.fontFamily,
+
+    selectors: {
+      ['&[data-disabled]']: {},
+      ['&[data-selected]']: {},
+      ['&[data-focus-visible]']: {},
+    },
+  },
+
+  variants: {
+    color: colors,
+  },
+});

@@ -1,0 +1,13 @@
+# Printout
+# prints inputs
+
+name: Printout
+runs:
+  using: 'composite'
+  steps:
+    - name: Print Inputs
+      env:
+        EVENT_INPUTS: ${{ toJSON(github.event.inputs) }}
+      shell: bash
+      run: |
+        echo $EVENT_INPUTS

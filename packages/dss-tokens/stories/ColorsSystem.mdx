@@ -1,0 +1,96 @@
+import { Meta, ColorItem } from '@storybook/blocks';
+
+import ColorPalette from './helpers/ColorPalette.tsx';
+import colors from './helpers/colors.ts';
+
+<Meta title="Foundations/Color System" />
+
+# Color System
+
+[https://www.npmjs.com/package/unicornix](https://www.npmjs.com/package/unicornix) | [https://www.design-tokens.dev/](https://www.design-tokens.dev/)
+
+<br />
+
+<ColorPalette>
+  <ColorItem title="Accent" subtitle="color.accent" colors={colors.accent} />
+  <ColorItem
+    title="Accent Gamma"
+    subtitle="color.accent.gamma"
+    colors={colors.accentGamma1}
+  />
+  <ColorItem
+    title="Accent Gamma"
+    subtitle="color.accent.gamma"
+    colors={colors.accentGamma2}
+  />
+  <ColorItem
+    title="Accent Alpha"
+    subtitle="color.accent.alpha"
+    colors={colors.accentAlpha1}
+  />
+  <ColorItem
+    title="Accent Alpha"
+    subtitle="color.accent.alpha"
+    colors={colors.accentAlpha2}
+  />
+
+  <ColorItem title="Neutral" subtitle="color.neutral" colors={colors.neutral} />
+  <ColorItem
+    title="Neutral Gamma"
+    subtitle="color.neutral.gamma"
+    colors={colors.neutralGamma1}
+  />
+  <ColorItem
+    title="Neutral Gamma"
+    subtitle="color.neutral.gamma"
+    colors={colors.neutralGamma2}
+  />
+  <ColorItem
+    title="Neutral Alpha"
+    subtitle="color.neutral.alpha"
+    colors={colors.neutralAlpha1}
+  />
+  <ColorItem
+    title="Neutral Alpha"
+    subtitle="color.neutral.alpha"
+    colors={colors.neutralAlpha2}
+  />
+
+  <ColorItem
+    title="Safe"
+    subtitle="color.safe"
+    colors={colors.safe}
+  />
+
+  <ColorItem
+    title="Alert"
+    subtitle="color.alert"
+    colors={colors.alert}
+  />
+
+  <ColorItem
+    title="Warning"
+    subtitle="color.warning"
+    colors={colors.warning}
+  />
+
+  <ColorItem
+    title="Info"
+    subtitle="color.info"
+    colors={colors.info}
+  />
+ 
+  <ColorItem title="Content" subtitle="color.content" colors={colors.content} />
+  <ColorItem
+    title="Background"
+    subtitle="color.background"
+    colors={colors.background}
+  />
+  
+  <ColorItem
+    title="Focus Ring"
+    subtitle="focus.color"
+    colors={colors.focus}
+  />
+  <ColorItem title="Shadow" subtitle="shadow.color" colors={colors.shadow} />
+</ColorPalette>

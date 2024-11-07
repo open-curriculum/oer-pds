@@ -1,0 +1,50 @@
+import type { Meta, StoryObj } from '@storybook/react';
+
+import { DemoFlow } from '../../helpers/docs';
+
+import {{pascalCase name}} from './{{pascalCase name}}';
+
+export default {
+  title: '{{pascalCase category}}/{{pascalCase name}}',
+  component: {{pascalCase name}},
+  parameters: {
+    layout: 'centered',
+    docs: {
+      description: {
+        component: 'Based on [React Aria {{pascalCase name}}](https://react-spectrum.adobe.com/react-aria/{{pascalCase name}}.html)',
+      },
+    },
+  },
+  tags: ['autodocs'],
+} satisfies Meta<typeof {{pascalCase name}}>;
+
+type Story = StoryObj<typeof {{pascalCase name}}>;
+
+export const Base: Story = {
+  args: {
+    children: 'Awesome'
+  },
+};
+
+export const ColorAccent: Story = {
+  args: {
+    ...Base.args,
+    color: 'accent',
+  },
+};
+
+export const ColorNeutral: Story = {
+  args: {
+    ...Base.args,
+    color: 'neutral',
+  },
+};
+
+export const AllColors: Story = {
+  render: () => (
+    <DemoFlow>
+      <{{pascalCase name}} color="accent">Awesome</{{pascalCase name}}>
+      <{{pascalCase name}} color="neutral">Awesome</{{pascalCase name}}>
+    </DemoFlow>
+  ),
+};

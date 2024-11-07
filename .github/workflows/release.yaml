@@ -1,0 +1,91 @@
+name: Release
+
+on:
+  push:
+    paths:
+      - '.changeset/**'
+    branches: [main]
+
+  # for debug purposes
+  workflow_dispatch:
+
+env:
+  VERCEL_ORG_ID: ${{ secrets.VERCEL_ORG_ID }}
+
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+
+jobs:
+  release_packages:
+    name: Release-Packages
+    timeout-minutes: 30
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup
+        uses: ./.github/actions/setup
+
+      - name: Build Packages
+        run: pnpm build:pck
+
+      - name: Create PR or Publish to npm
+        id: changesets
+        uses: changesets/action@v1
+        with:
+          publish: pnpm release
+          commit: 'chore: release packages'
+          title: 'chore: release packages'
+        env:
+          NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+  deploy_docs_dev:
+    name: Deploy-Docs-Prod
+    timeout-minutes: 30
+    runs-on: ubuntu-latest
+    env:
+      VERCEL_PROJECT_ID: ${{ secrets.VERCEL_PROJECT_DOCS_ID }}
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Printout
+        uses: ./.github/actions/printout
+
+      - name: Setup
+        uses: ./.github/actions/setup
+
+      - name: Deploy
+        uses: ./.github/actions/deploy-docs
+        with:
+          mode: 'prod'
+          vercel_token: ${{ secrets.VERCEL_TOKEN }}
+          app_dir: ./apps/docs
+
+  deploy_storybook_dev:
+    name: Deploy-Storybook-Prod
+    timeout-minutes: 30
+    runs-on: ubuntu-latest
+    env:
+      VERCEL_PROJECT_ID: ${{ secrets.VERCEL_PROJECT_STORYBOOK_ID }}
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Printout
+        uses: ./.github/actions/printout
+
+      - name: Setup
+        uses: ./.github/actions/setup
+
+      - name: Deploy
+        uses: ./.github/actions/deploy-docs
+        with:
+          mode: 'prod'
+          vercel_token: ${{ secrets.VERCEL_TOKEN }}
+          app_dir: ./apps/storybook

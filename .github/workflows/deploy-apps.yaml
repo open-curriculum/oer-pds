@@ -1,0 +1,57 @@
+name: Deploy Apps
+env:
+  VERCEL_ORG_ID: ${{ secrets.VERCEL_ORG_ID }}
+
+on:
+  workflow_dispatch:
+    inputs:
+      deploy_mode:
+        description: 'Mode'
+        type: choice
+        options: ['dev', 'prod']
+        required: false
+        default: 'dev'
+      deploy_example_vite:
+        description: 'Example Vite'
+        type: boolean
+        required: false
+        default: true
+
+  workflow_call:
+    inputs:
+      deploy_mode:
+        description: 'Mode'
+        type: string
+        required: false
+        default: 'dev'
+      deploy_example_vite:
+        description: 'Example Vite'
+        type: boolean
+        required: false
+        default: true
+
+jobs:
+  deploy_example_vite:
+    if: ${{ github.event.inputs.deploy_example_vite == 'true' }}
+    name: Deploy-Example-Vite-Dev
+    timeout-minutes: 30
+    runs-on: ubuntu-latest
+    env:
+      VERCEL_PROJECT_ID: ${{ secrets.VERCEL_PROJECT_EXAMPLE_VITE_ID }}
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Printout
+        uses: ./.github/actions/printout
+
+      - name: Setup
+        uses: ./.github/actions/setup
+
+      - name: Deploy
+        uses: ./.github/actions/deploy-apps
+        with:
+          mode: ${{ github.event.inputs.deploy_mode }}
+          vercel_token: ${{ secrets.VERCEL_TOKEN }}
+          app_dir: ./apps/example-vite
