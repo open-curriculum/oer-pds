@@ -1,0 +1,42 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://open-instructional-systems.org/schemas/ois-theme.schema.json",
+  "title": "OIS Pedagogical Theme",
+  "description": "A named bundle of token defaults representing a complete pedagogical style",
+  "type": "object",
+  "required": ["id", "name", "summary", "tokens"],
+  "additionalProperties": false,
+  "properties": {
+    "id": {
+      "type": "string",
+      "pattern": "^[a-z][a-z0-9-]*$"
+    },
+    "name": { "type": "string" },
+    "summary": { "type": "string" },
+    "description": { "type": "string" },
+    "tokens": {
+      "type": "object",
+      "description": "Default token values for this theme",
+      "additionalProperties": {
+        "oneOf": [
+          { "type": "string" },
+          { "type": "boolean" },
+          { "type": "array", "items": { "type": "string" } }
+        ]
+      }
+    },
+    "preferredPatterns": {
+      "type": "array",
+      "items": { "type": "string" }
+    },
+    "recommendedRendererProfiles": {
+      "type": "array",
+      "items": { "type": "string" }
+    },
+    "bestFor": {
+      "type": "array",
+      "items": { "type": "string" }
+    },
+    "aiGuidance": { "type": "string" }
+  }
+}

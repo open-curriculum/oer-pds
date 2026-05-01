@@ -10,6 +10,11 @@
       "outputs": ["dist/**"],
       "cache": true
     },
+    "generate": {
+      "dependsOn": ["^build"],
+      "outputs": ["dist/**"],
+      "cache": false
+    },
     "lint": {
       "cache": true
     },
@@ -17,10 +22,6 @@
       "cache": true
     },
     "format:fix": {
-      "cache": true
-    },
-    "test": {
-      "dependsOn": ["build"],
       "cache": true
     }
   }

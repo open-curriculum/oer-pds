@@ -1,0 +1,51 @@
+id: observe-analyze-create-critique-revise
+name: Observe, Analyze, Create, Critique, Revise
+summary: A studio-based cycle where learners study exemplars, analyze structure, make original work, receive critique, and revise.
+problem: How do you design a learning experience where making, feedback, and revision are the core of learning — not supplemental?
+context:
+  - Design, media production, writing, arts
+  - Constructivist or studio pedagogy
+  - Creative and technical skill development
+sequence:
+  - phase: 1
+    label: Observe
+    learnerAction: Study 2-3 exemplars of finished work in the target form.
+    instructorAction: Curate exemplars that represent the range of quality and approach. Prompt observation with guiding questions.
+    evidence: Observation notes or annotation
+  - phase: 2
+    label: Analyze
+    learnerAction: Identify patterns, techniques, decisions, and what makes each exemplar effective or not.
+    instructorAction: Facilitate structured analysis using a common vocabulary or rubric.
+    evidence: Written analysis or discussion contribution
+  - phase: 3
+    label: Create
+    learnerAction: Produce original work in response to the brief.
+    instructorAction: Circulate, offer coaching feedback during process.
+    evidence: Draft or work in progress
+  - phase: 4
+    label: Critique
+    learnerAction: Present work to peers; receive structured feedback using established criteria.
+    instructorAction: Facilitate critique. Model feedback language. Keep critique focused on work, not person.
+    evidence: Critique notes; feedback received log
+  - phase: 5
+    label: Revise
+    learnerAction: Revise work based on critique. Document what changed and why.
+    instructorAction: Review revision with attention to responsiveness to feedback.
+    evidence: Revised artifact + revision documentation
+recommendedTokens:
+  scaffolding.level: medium
+  agency.mode: bounded-choice
+  feedback.mode: peer-plus-instructor
+  feedback.timing: before-submission
+  assessment.evidence: artifact-plus-reflection
+  revision.required: true
+  revision.mode: required-once
+assessmentEvidence:
+  - artifact-plus-reflection
+  - critique-notes
+  - process-documentation
+compatibleThemes:
+  - constructivist-studio
+  - project-based-production
+  - critical-media-analysis
+aiGuidance: When generating materials for this pattern, produce both a student-facing brief (phases 1-5 as instructions) and a studio critique guide for the instructor. Ensure the exemplars section specifies what to observe. Do not skip the revision phase.

@@ -1,0 +1,33 @@
+- id: localization.level
+  name: Localization Level
+  category: localization
+  type: enum
+  definition: The depth of localization applied to the learning materials.
+  defaultValue: none
+  values:
+    - value: none
+      definition: No localization. Original language and examples only.
+    - value: language-only
+      definition: Text is translated but examples remain from the original cultural context.
+    - value: examples-localized
+      definition: Both language and examples are adapted to the target cultural context.
+    - value: culturally-adapted
+      definition: Deeper cultural adaptation including values, norms, and local context.
+    - value: community-co-designed
+      definition: Materials were co-designed with members of the target community.
+
+- id: bandwidth.assumption
+  name: Bandwidth Assumption
+  category: localization
+  type: enum
+  definition: The assumed internet connectivity level for learners.
+  defaultValue: medium
+  values:
+    - value: low
+      definition: Assumes limited or intermittent connectivity (< 1 Mbps).
+    - value: medium
+      definition: Assumes moderate broadband connectivity.
+    - value: high
+      definition: Assumes reliable high-speed internet.
+    - value: offline-capable
+      definition: All materials must function without internet access.

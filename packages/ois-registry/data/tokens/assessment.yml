@@ -1,0 +1,45 @@
+- id: assessment.evidence
+  name: Assessment Evidence
+  category: assessment
+  type: enum
+  definition: The primary form of evidence collected to demonstrate learning.
+  defaultValue: artifact
+  values:
+    - value: quiz
+      definition: A knowledge check or test with predetermined correct answers.
+    - value: artifact
+      definition: A tangible product created by the learner.
+    - value: performance
+      definition: A live or recorded demonstration of skill.
+    - value: portfolio
+      definition: A curated collection of work over time.
+    - value: reflection
+      definition: Written or recorded personal reflection on learning.
+    - value: critique-notes
+      definition: Documentation produced during a critique or review session.
+    - value: process-documentation
+      definition: Evidence of the learning process itself (sketches, drafts, logs).
+    - value: presentation
+      definition: A structured presentation to an audience.
+    - value: artifact-plus-reflection
+      definition: A finished product accompanied by a required reflection.
+
+- id: assessment.mode
+  name: Assessment Mode
+  category: assessment
+  type: enum
+  definition: The purpose or function of the assessment in the learning arc.
+  defaultValue: formative
+  values:
+    - value: formative
+      definition: Assessment used to guide ongoing learning; low-stakes.
+    - value: summative
+      definition: Assessment of learning at the end of a unit; higher-stakes.
+    - value: diagnostic
+      definition: Assessment used to identify prior knowledge or gaps before instruction.
+    - value: ipsative
+      definition: Assessment comparing learner to their own prior performance.
+    - value: mastery
+      definition: Assessment that must be passed at a threshold before advancement.
+    - value: critique-based
+      definition: Assessment conducted through structured group critique.

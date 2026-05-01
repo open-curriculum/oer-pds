@@ -1,0 +1,86 @@
+---
+title: Open Instructional Systems
+description: A pedagogical design system for open education — tokens, patterns, themes, renderers, and validation rules for making instructional intent portable, adaptable, automatable, and researchable.
+template: splash
+hero:
+  tagline: OER made educational content shareable. OERSchema made it machine-readable. Open Instructional Systems make it pedagogically reusable.
+  actions:
+    - text: What is OIS?
+      link: /concepts/open-instructional-systems
+      icon: right-arrow
+      variant: primary
+    - text: Browse tokens
+      link: /tokens/
+      icon: open-book
+    - text: For AI agents
+      link: /ai/
+      icon: rocket
+---
+
+import { Card, CardGrid, LinkCard } from '@astrojs/starlight/components';
+
+## What is this?
+
+**Open Instructional Systems (OIS)** is a pedagogical design system for open education. It provides a shared vocabulary for describing, applying, adapting, validating, and automating instructional design decisions in open educational materials.
+
+OIS is not a platform. It is a **reference library and vocabulary** — like a design token system, but for pedagogy instead of visual style.
+
+<CardGrid stagger>
+  <Card title="Pedagogical Tokens" icon="puzzle">
+    Atomic instructional decisions: scaffolding level, feedback mode, assessment evidence, learner agency, AI-use policy.
+
+    [Browse tokens →](/tokens/)
+  </Card>
+  <Card title="Instructional Patterns" icon="list-format">
+    Reusable sequences of learning activity — from studio critique cycles to mastery checkpoints to AI literacy workflows.
+
+    [Browse patterns →](/patterns/)
+  </Card>
+  <Card title="Pedagogical Themes" icon="approve-check-circle">
+    Coherent instructional styles bundled from tokens and patterns. Direct instruction, constructivist studio, AI literacy, and more.
+
+    [Browse themes →](/themes/)
+  </Card>
+  <Card title="For AI Agents" icon="rocket">
+    Machine-readable `llms.txt`, JSON Schemas, and a full OIS index so AI tools can discover and apply the system correctly.
+
+    [AI agent guide →](/ai/)
+  </Card>
+</CardGrid>
+
+## Core Design Principle
+
+> **OIS provides pedagogical "styles" for learning materials — not visual styles, but instructional styles.**
+
+The same lesson content can be structured as direct instruction, a constructivist studio project, a mastery checkpoint pathway, or a critical media analysis exercise — using the **same content object**, different tokens and patterns.
+
+## Relationship to OERSchema and AIUL
+
+| Layer | What it describes |
+|-------|------------------|
+| **OERSchema** | What the learning resource *is* and how its educational parts relate |
+| **AIUL** | Conditions under which AI use is permitted in a learning activity |
+| **OIS** | How the learning experience is pedagogically structured, styled, adapted, and validated |
+
+OIS sits beside OERSchema as a pedagogical design layer, and treats AIUL as one token family (`aiUse.*`) within the broader system.
+
+## Machine-Readable Files
+
+AI agents and automation tools can discover and apply this system through static files:
+
+| File | Purpose |
+|------|---------|
+| [`/llms.txt`](/llms.txt) | LLM discovery and operating rules |
+| [`/llms-full.txt`](/llms-full.txt) | Full specification for AI agents |
+| [`/ois-index.json`](/ois-index.json) | Normalized registry of all tokens, patterns, themes, renderers, and validation rules |
+| [`/ois-context.jsonld`](/ois-context.jsonld) | JSON-LD context for OIS vocabulary |
+
+JSON Schemas for each object type are available at `/schemas/`.
+
+## Version
+
+Current version: **OIS Profile 0.1** (draft)
+
+This is an open specification. Contributions, feedback, and implementations are welcome.
+
+<LinkCard title="Read the specification →" href="/spec/" />

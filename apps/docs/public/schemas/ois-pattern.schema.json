@@ -1,0 +1,55 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://open-instructional-systems.org/schemas/ois-pattern.schema.json",
+  "title": "OIS Instructional Pattern",
+  "description": "A reusable sequence of learner and instructor actions",
+  "type": "object",
+  "required": ["id", "name", "summary", "sequence"],
+  "additionalProperties": false,
+  "properties": {
+    "id": {
+      "type": "string",
+      "pattern": "^[a-z][a-z0-9-]*$"
+    },
+    "name": { "type": "string" },
+    "summary": { "type": "string" },
+    "problem": { "type": "string" },
+    "context": {
+      "type": "array",
+      "items": { "type": "string" }
+    },
+    "sequence": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["phase", "label"],
+        "properties": {
+          "phase": { "type": "number" },
+          "label": { "type": "string" },
+          "learnerAction": { "type": "string" },
+          "instructorAction": { "type": "string" },
+          "evidence": { "type": "string" }
+        }
+      }
+    },
+    "recommendedTokens": {
+      "type": "object",
+      "additionalProperties": {
+        "oneOf": [
+          { "type": "string" },
+          { "type": "boolean" },
+          { "type": "array", "items": { "type": "string" } }
+        ]
+      }
+    },
+    "assessmentEvidence": {
+      "type": "array",
+      "items": { "type": "string" }
+    },
+    "compatibleThemes": {
+      "type": "array",
+      "items": { "type": "string" }
+    },
+    "aiGuidance": { "type": "string" }
+  }
+}

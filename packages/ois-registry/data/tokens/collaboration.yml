@@ -1,0 +1,35 @@
+- id: collaboration.structure
+  name: Collaboration Structure
+  category: collaboration
+  type: enum
+  definition: How learners are organized for collaborative work.
+  defaultValue: individual
+  values:
+    - value: individual
+      definition: Each learner works alone.
+    - value: pair
+      definition: Learners work in pairs.
+    - value: small-group
+      definition: Learners work in groups of 3-6.
+    - value: peer-review
+      definition: Learners review each other's work in a structured exchange.
+    - value: studio-critique
+      definition: Work is shared and critiqued in a group critique format.
+    - value: community-partner
+      definition: Collaboration involves a real external community partner.
+
+- id: collaboration.roleClarity
+  name: Collaboration Role Clarity
+  category: collaboration
+  type: enum
+  definition: How explicitly roles are defined within collaborative work.
+  defaultValue: none
+  values:
+    - value: none
+      definition: No role definitions given.
+    - value: informal
+      definition: Roles emerge organically without formal assignment.
+    - value: assigned-roles
+      definition: Specific roles are assigned by the instructor.
+    - value: rotating-roles
+      definition: Roles rotate across activities or sessions.

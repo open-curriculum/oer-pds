@@ -1,0 +1,69 @@
+- id: objective-requires-evidence
+  name: Learning Objective Requires Assessment Evidence
+  severity: error
+  condition:
+    token: assessment.evidence
+    present: false
+  expected:
+    token: assessment.evidence
+    present: true
+  message: No assessment evidence type is specified. Every learning activity must define how learning will be evidenced.
+  rationale: Without a defined evidence type, there is no basis for evaluating whether learning occurred.
+
+- id: revision-requires-timely-feedback
+  name: Revision Requires Pre-Submission Feedback
+  severity: error
+  condition:
+    token: revision.required
+    values:
+      - "true"
+  expected:
+    token: feedback.timing
+    notValues:
+      - after-submission
+  message: revision.required is true but feedback.timing is after-submission. Revision cannot be meaningfully performed without timely feedback.
+  rationale: If feedback arrives only after submission, learners cannot revise in the same cycle.
+
+- id: ai-use-requires-disclosure
+  name: AI Use Requires Disclosure
+  severity: error
+  condition:
+    token: aiUse.policy
+    notValues:
+      - prohibited
+      - not-specified
+  expected:
+    token: aiUse.disclosureRequired
+    values:
+      - "true"
+  message: aiUse.policy permits AI use but aiUse.disclosureRequired is not set to true.
+  rationale: Any non-prohibited AI use must require disclosure for academic integrity.
+
+- id: ai-collaborative-requires-reflection
+  name: Collaborative AI Use Requires Reflection
+  severity: error
+  condition:
+    token: aiUse.policy
+    values:
+      - collaborative-disclosed
+  expected:
+    token: reflection.required
+    values:
+      - "true"
+  message: aiUse.policy is collaborative-disclosed but reflection.required is not true. Collaborative AI use requires reflection.
+  rationale: Collaborative AI use involves the highest degree of AI integration. Without reflection, learners cannot develop critical AI literacy.
+
+- id: low-bandwidth-needs-alternatives
+  name: Low Bandwidth Requires Downloadable Alternatives
+  severity: warning
+  condition:
+    token: bandwidth.assumption
+    values:
+      - low
+      - offline-capable
+  expected:
+    token: accessibility.mediaAlternatives
+    includes:
+      - downloadable-assets
+  message: bandwidth.assumption is low or offline-capable but no downloadable-assets media alternative is specified.
+  rationale: Low-bandwidth learners need downloadable assets to access content offline.

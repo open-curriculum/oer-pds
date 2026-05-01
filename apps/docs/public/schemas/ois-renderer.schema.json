@@ -1,0 +1,45 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://open-instructional-systems.org/schemas/ois-renderer.schema.json",
+  "title": "OIS Renderer Profile",
+  "description": "Defines the expected output structure for a given instructional document type",
+  "type": "object",
+  "required": ["id", "name", "summary", "outputType", "requiredSections"],
+  "additionalProperties": false,
+  "properties": {
+    "id": {
+      "type": "string",
+      "pattern": "^[a-z][a-z0-9-]*$"
+    },
+    "name": { "type": "string" },
+    "summary": { "type": "string" },
+    "outputType": {
+      "type": "string",
+      "enum": [
+        "student-facing-assignment",
+        "student-facing-content",
+        "facilitation-guide",
+        "student-checklist",
+        "instructor-guide",
+        "assessment-rubric",
+        "ai-disclosure",
+        "course-map",
+        "lms-assignment",
+        "ai-context-package"
+      ]
+    },
+    "requiredSections": {
+      "type": "array",
+      "items": { "type": "string" }
+    },
+    "optionalSections": {
+      "type": "array",
+      "items": { "type": "string" }
+    },
+    "compatiblePatterns": {
+      "type": "array",
+      "items": { "type": "string" }
+    },
+    "aiGuidance": { "type": "string" }
+  }
+}

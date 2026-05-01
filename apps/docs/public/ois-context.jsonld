@@ -1,0 +1,53 @@
+{
+  "@context": {
+    "@vocab": "https://open-instructional-systems.org/vocab/",
+    "ois": "https://open-instructional-systems.org/vocab/",
+    "oer": "https://oerschema.org/",
+    "schema": "https://schema.org/",
+    "id": "@id",
+    "type": "@type",
+
+    "PedagogicalToken": "ois:PedagogicalToken",
+    "InstructionalPattern": "ois:InstructionalPattern",
+    "PedagogicalTheme": "ois:PedagogicalTheme",
+    "RendererProfile": "ois:RendererProfile",
+    "ValidationRule": "ois:ValidationRule",
+
+    "tokenId": "ois:tokenId",
+    "patternId": "ois:patternId",
+    "themeId": "ois:themeId",
+    "rendererId": "ois:rendererId",
+    "ruleId": "ois:ruleId",
+
+    "scaffoldingLevel": "ois:scaffoldingLevel",
+    "scaffoldingType": "ois:scaffoldingType",
+    "agencyMode": "ois:agencyMode",
+    "agencyChoicePoint": "ois:agencyChoicePoint",
+    "feedbackMode": "ois:feedbackMode",
+    "feedbackTiming": "ois:feedbackTiming",
+    "assessmentEvidence": "ois:assessmentEvidence",
+    "assessmentMode": "ois:assessmentMode",
+    "revisionRequired": "ois:revisionRequired",
+    "revisionMode": "ois:revisionMode",
+    "reflectionRequired": "ois:reflectionRequired",
+    "reflectionFocus": "ois:reflectionFocus",
+    "collaborationStructure": "ois:collaborationStructure",
+    "collaborationRoleClarity": "ois:collaborationRoleClarity",
+    "accessibilityMode": "ois:accessibilityMode",
+    "accessibilityMediaAlternatives": "ois:accessibilityMediaAlternatives",
+    "localizationLevel": "ois:localizationLevel",
+    "bandwidthAssumption": "ois:bandwidthAssumption",
+    "aiUsePolicy": "ois:aiUsePolicy",
+    "aiUseAllowedFunctions": "ois:aiUseAllowedFunctions",
+    "aiUseDisclosureRequired": "ois:aiUseDisclosureRequired",
+    "aiUseReflectionRequired": "ois:aiUseReflectionRequired",
+
+    "hasPedagogyBlock": "ois:hasPedagogyBlock",
+    "usesTheme": { "@id": "ois:usesTheme", "@type": "@id" },
+    "usesPattern": { "@id": "ois:usesPattern", "@type": "@id" },
+
+    "name": "schema:name",
+    "description": "schema:description",
+    "version": "schema:version"
+  }
+}

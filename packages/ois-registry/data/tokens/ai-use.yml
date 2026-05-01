@@ -1,0 +1,60 @@
+- id: aiUse.policy
+  name: AI Use Policy
+  category: aiUse
+  type: enum
+  definition: The policy governing learner use of AI tools in this activity.
+  defaultValue: not-specified
+  aiGuidance: Never set to anything other than prohibited without also setting aiUse.disclosureRequired to true.
+  values:
+    - value: prohibited
+      definition: AI tools are not permitted in this activity.
+    - value: not-specified
+      definition: No AI use policy has been defined. Not recommended for new content.
+    - value: permitted-undisclosed
+      definition: AI use is permitted but disclosure is not required. Use sparingly.
+    - value: assisted-disclosed
+      definition: AI assistance is permitted and must be disclosed.
+    - value: collaborative-disclosed
+      definition: AI is used as a collaborative partner; disclosure and reflection required.
+    - value: experimental
+      definition: Learners are explicitly using AI as the subject of investigation.
+
+- id: aiUse.allowedFunctions
+  name: AI Allowed Functions
+  category: aiUse
+  type: enum-multi
+  definition: The specific AI functions permitted in this activity.
+  aiGuidance: Be specific. List only permitted functions. Never leave unspecified when aiUse.policy is not prohibited.
+  values:
+    - value: grammar-check
+      definition: AI may be used to check grammar and spelling.
+    - value: ideation
+      definition: AI may be used to generate or expand ideas.
+    - value: drafting
+      definition: AI may be used to draft text or outlines.
+    - value: research-assistance
+      definition: AI may be used to find or summarize information.
+    - value: code-generation
+      definition: AI may be used to generate code.
+    - value: image-generation
+      definition: AI may be used to generate images.
+    - value: feedback
+      definition: AI may be used to provide feedback on drafts.
+    - value: translation
+      definition: AI may be used for translation.
+    - value: all
+      definition: All AI functions are permitted.
+
+- id: aiUse.disclosureRequired
+  name: AI Disclosure Required
+  category: aiUse
+  type: boolean
+  definition: Whether learners must disclose their AI use in this activity.
+  defaultValue: false
+
+- id: aiUse.reflectionRequired
+  name: AI Reflection Required
+  category: aiUse
+  type: boolean
+  definition: Whether learners must submit a reflection on their AI use.
+  defaultValue: false

@@ -1,0 +1,21 @@
+- id: revision.required
+  name: Revision Required
+  category: revision
+  type: boolean
+  definition: Whether learners are required to revise their work after feedback.
+  defaultValue: false
+
+- id: revision.mode
+  name: Revision Mode
+  category: revision
+  type: enum
+  definition: The structure of the revision requirement.
+  values:
+    - value: optional
+      definition: Revision is available but not required.
+    - value: required-once
+      definition: One revision cycle is required.
+    - value: required-until-proficient
+      definition: The learner must revise until meeting the proficiency threshold.
+    - value: iterative-cycle
+      definition: Multiple structured revision cycles are built into the design.

@@ -1,0 +1,45 @@
+- id: scaffolding.level
+  name: Scaffolding Level
+  category: scaffolding
+  type: enum
+  definition: The degree of instructional support provided to the learner.
+  defaultValue: medium
+  aiGuidance: Match scaffolding level to learner experience. Beginners need high; advanced learners benefit from low to build agency.
+  values:
+    - value: none
+      definition: No scaffolding. Learner must self-direct entirely.
+      useWhen: Expert learners only.
+    - value: low
+      definition: Minimal prompts or guiding questions only.
+      useWhen: Intermediate to advanced learners with prior domain knowledge.
+    - value: medium
+      definition: Some structure, examples, or guiding questions provided.
+      useWhen: Mixed experience levels; most adult learners.
+    - value: high
+      definition: Worked examples, templates, checklists, and step-by-step guidance.
+      useWhen: Novice or early-stage learners; high-stakes tasks.
+    - value: adaptive
+      definition: Scaffolding adjusts dynamically based on learner progress.
+      useWhen: Platforms with adaptive learning capabilities.
+
+- id: scaffolding.type
+  name: Scaffolding Type
+  category: scaffolding
+  type: enum
+  definition: The primary modality of instructional support provided.
+  aiGuidance: Use in combination with scaffolding.level. If scaffolding.level is high, specify the scaffolding.type so AI agents can generate the right support materials.
+  values:
+    - value: worked-example
+      definition: A solved problem or completed example provided for reference.
+    - value: checklist
+      definition: A list of steps or criteria the learner can check off.
+    - value: template
+      definition: A partially completed structure for the learner to fill in.
+    - value: guided-steps
+      definition: A sequential set of instructions that walk the learner through the task.
+    - value: exemplar
+      definition: A high-quality example of a finished product for comparison.
+    - value: coaching
+      definition: Ongoing feedback from an instructor or peer throughout the process.
+    - value: none
+      definition: No scaffolding type. Used with scaffolding.level none.

@@ -1,0 +1,54 @@
+# Open Instructional Systems (OIS)
+
+A pedagogical design system vocabulary for learning experience metadata.
+
+> https://open-instructional-systems.org
+
+## Registry
+
+- Full registry (JSON): /ois-index.json
+- JSON-LD context: /ois-context.jsonld
+- Full specification: /llms-full.txt
+- Schemas: /schemas/
+
+## Token Groups (22 tokens)
+
+- accessibility.mode: The primary accessibility design orientation of the learning experience.
+- accessibility.mediaAlternatives: The accessible alternatives provided for media-based content.
+- agency.mode: The degree of learner choice and self-direction in the learning experience.
+- agency.choicePoint: The dimension(s) where learner choice is exercised.
+- aiUse.policy: The policy governing learner use of AI tools in this activity.
+- aiUse.allowedFunctions: The specific AI functions permitted in this activity.
+- aiUse.disclosureRequired: Whether learners must disclose their AI use in this activity.
+- aiUse.reflectionRequired: Whether learners must submit a reflection on their AI use.
+- assessment.evidence: The primary form of evidence collected to demonstrate learning.
+- assessment.mode: The purpose or function of the assessment in the learning arc.
+- collaboration.structure: How learners are organized for collaborative work.
+- collaboration.roleClarity: How explicitly roles are defined within collaborative work.
+- feedback.mode: Who provides feedback on learner work.
+- feedback.timing: When feedback is provided relative to the submission or activity.
+- localization.level: The depth of localization applied to the learning materials.
+- bandwidth.assumption: The assumed internet connectivity level for learners.
+- reflection.required: Whether structured reflection is a required component of the learning activity.
+- reflection.focus: The subject or lens of the required reflection.
+- revision.required: Whether learners are required to revise their work after feedback.
+- revision.mode: The structure of the revision requirement.
+- scaffolding.level: The degree of instructional support provided to the learner.
+- scaffolding.type: The primary modality of instructional support provided.
+
+## Patterns (1)
+
+- observe-analyze-create-critique-revise: A studio-based cycle where learners study exemplars, analyze structure, make original work, receive critique, and revise.
+
+## Themes (1)
+
+- constructivist-studio: A making-centred pedagogical style where learning happens through creating, critiquing, and revising work.
+
+## AI Agent Operating Rules
+
+1. NEVER generate instructional content from vague prompts alone.
+2. ALWAYS fetch /ois-index.json first.
+3. Select theme → select pattern → resolve tokens → validate → generate.
+4. NEVER invent token IDs or values not in the registry.
+5. NEVER permit AI use without disclosureRequired: true.
+6. ALWAYS output a transparency summary of pedagogical decisions.

@@ -1,0 +1,41 @@
+- id: feedback.mode
+  name: Feedback Mode
+  category: feedback
+  type: enum
+  definition: Who provides feedback on learner work.
+  defaultValue: instructor
+  values:
+    - value: none
+      definition: No feedback is given.
+    - value: self
+      definition: Learner evaluates their own work.
+    - value: peer
+      definition: Another learner provides feedback.
+    - value: instructor
+      definition: The instructor provides feedback.
+    - value: automated
+      definition: Feedback is system-generated.
+    - value: community
+      definition: Feedback comes from a community partner or external audience.
+    - value: peer-plus-instructor
+      definition: Both peer and instructor feedback are provided.
+    - value: mixed
+      definition: Multiple feedback sources are used.
+
+- id: feedback.timing
+  name: Feedback Timing
+  category: feedback
+  type: enum
+  definition: When feedback is provided relative to the submission or activity.
+  defaultValue: after-submission
+  values:
+    - value: before-submission
+      definition: Feedback is given before the learner finalizes work (e.g., draft review).
+    - value: during-process
+      definition: Feedback is given during the activity (e.g., coaching, in-process check-ins).
+    - value: after-submission
+      definition: Feedback is given after the learner submits.
+    - value: iterative
+      definition: Multiple rounds of feedback are built into the design.
+    - value: on-demand
+      definition: Learner requests feedback when ready.

@@ -1,0 +1,58 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://open-instructional-systems.org/schemas/ois-token.schema.json",
+  "title": "OIS Pedagogical Token",
+  "description": "A single OIS pedagogical token definition",
+  "type": "object",
+  "required": ["id", "name", "category", "type", "definition"],
+  "additionalProperties": false,
+  "properties": {
+    "id": {
+      "type": "string",
+      "description": "Dot-separated identifier, e.g. scaffolding.level",
+      "pattern": "^[a-z][a-zA-Z0-9]*\\.[a-z][a-zA-Z0-9]*$"
+    },
+    "name": {
+      "type": "string"
+    },
+    "category": {
+      "type": "string",
+      "enum": ["scaffolding", "agency", "feedback", "assessment", "revision", "reflection", "collaboration", "accessibility", "localization", "aiUse"]
+    },
+    "type": {
+      "type": "string",
+      "enum": ["enum", "boolean", "enum-multi", "enum-or-free"]
+    },
+    "values": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["value", "definition"],
+        "properties": {
+          "value": { "type": "string" },
+          "definition": { "type": "string" },
+          "useWhen": { "type": "string" }
+        }
+      }
+    },
+    "defaultValue": {
+      "oneOf": [
+        { "type": "string" },
+        { "type": "boolean" }
+      ]
+    },
+    "definition": { "type": "string" },
+    "useWhen": { "type": "string" },
+    "doNotUseWhen": { "type": "string" },
+    "examples": {
+      "type": "array",
+      "items": { "type": "string" }
+    },
+    "relatedTokens": {
+      "type": "array",
+      "items": { "type": "string" }
+    },
+    "oerSchemaMapping": { "type": "string" },
+    "aiGuidance": { "type": "string" }
+  }
+}

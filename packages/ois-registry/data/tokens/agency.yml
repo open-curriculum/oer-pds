@@ -1,0 +1,36 @@
+- id: agency.mode
+  name: Agency Mode
+  category: agency
+  type: enum
+  definition: The degree of learner choice and self-direction in the learning experience.
+  defaultValue: bounded-choice
+  values:
+    - value: fixed-path
+      definition: The learner follows a predetermined sequence with no choices.
+    - value: bounded-choice
+      definition: The learner chooses within defined options provided by the instructor.
+    - value: open-choice
+      definition: The learner defines their own direction within the domain.
+    - value: self-directed
+      definition: The learner sets goals, selects methods, and evaluates their own progress.
+
+- id: agency.choicePoint
+  name: Agency Choice Point
+  category: agency
+  type: enum-multi
+  definition: The dimension(s) where learner choice is exercised.
+  values:
+    - value: topic
+      definition: Learner chooses what to study or investigate.
+    - value: tool
+      definition: Learner chooses which tools or technologies to use.
+    - value: medium
+      definition: Learner chooses the output format or medium.
+    - value: sequence
+      definition: Learner chooses the order of activities.
+    - value: partner
+      definition: Learner chooses collaborators.
+    - value: deliverable
+      definition: Learner chooses the form of the final product.
+    - value: audience
+      definition: Learner chooses who their work is for.

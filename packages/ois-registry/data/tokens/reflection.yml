@@ -1,0 +1,27 @@
+- id: reflection.required
+  name: Reflection Required
+  category: reflection
+  type: boolean
+  definition: Whether structured reflection is a required component of the learning activity.
+  defaultValue: false
+
+- id: reflection.focus
+  name: Reflection Focus
+  category: reflection
+  type: enum-multi
+  definition: The subject or lens of the required reflection.
+  values:
+    - value: process
+      definition: Reflecting on how the learner approached the task.
+    - value: concept-transfer
+      definition: Reflecting on how concepts apply to other contexts.
+    - value: creative-choice
+      definition: Reflecting on aesthetic or design decisions made.
+    - value: ethical-use
+      definition: Reflecting on ethical dimensions, especially AI use or community impact.
+    - value: collaboration
+      definition: Reflecting on how the group worked together.
+    - value: failure-analysis
+      definition: Reflecting on what didn't work and why.
+    - value: metacognition
+      definition: Reflecting on one's own learning and thinking strategies.

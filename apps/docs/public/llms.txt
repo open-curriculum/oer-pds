@@ -1,0 +1,91 @@
+# Open Instructional Systems (OIS)
+
+A pedagogical design system vocabulary for learning experience metadata.
+
+> https://open-instructional-systems.org
+
+## What is OIS?
+
+Open Instructional Systems (OIS) is a pedagogical design system — a set of tokens, patterns, and themes that describe instructional intent in learning materials. It gives instructors, platforms, and AI agents a shared vocabulary for the "how" of teaching, not just the "what."
+
+OIS is:
+- A vocabulary, not a platform
+- Designed for humans and AI agents
+- Mapped to OERSchema for linked data compatibility
+- Research-grounded in established instructional design frameworks
+
+## Key URLs
+
+- Full registry (JSON): https://open-instructional-systems.org/ois-index.json
+- JSON-LD context: https://open-instructional-systems.org/ois-context.jsonld
+- Full specification: https://open-instructional-systems.org/llms-full.txt
+- Schemas: https://open-instructional-systems.org/schemas/
+
+## Token Groups
+
+OIS defines 10 pedagogical token groups:
+
+1. `scaffolding` — Level and type of instructional support
+2. `agency` — Degree of learner choice and self-direction
+3. `feedback` — Mode and timing of feedback
+4. `assessment` — Evidence type and assessment mode
+5. `revision` — Revision requirements and mode
+6. `reflection` — Reflection requirements and focus
+7. `collaboration` — Collaboration structure and role clarity
+8. `accessibility` — Accessibility mode and media alternatives
+9. `localization` — Localization level and bandwidth assumption
+10. `aiUse` — AI use policy, allowed functions, disclosure, reflection
+
+## Patterns (10)
+
+Instructional patterns define a repeatable sequence of learner and instructor actions:
+
+1. `observe-analyze-create-critique-revise` — Studio critique cycle
+2. `prompt-ai-experiment-evaluate-disclose` — AI literacy cycle
+3. `demo-guided-practice-independent-production` — Scaffolded skill development
+4. `case-stakeholder-analysis-response-design` — Case-based inquiry
+5. `reference-study-technical-exercise-creative-application` — Technical fluency
+6. `constraint-based-project-sprint` — Sprint production
+7. `peer-review-studio-cycle` — Peer review and revision
+8. `mastery-checkpoint-pathway` — Mastery-based progression
+9. `artifact-analysis-reflection` — Artifact-based reflection
+10. `community-contextualized-design-brief` — Community-engaged design
+
+## Themes (10)
+
+Themes are named bundles of token defaults representing a complete pedagogical style:
+
+1. `constructivist-studio` — Making, critique, and revision
+2. `direct-instruction` — Explicit teaching, demonstration, practice
+3. `mastery-learning` — Competency-based progression
+4. `inquiry-based` — Question-driven investigation
+5. `critical-media-analysis` — Representation, power, and response
+6. `project-based-production` — Extended authentic projects
+7. `accessibility-first` — Universal Design for Learning as primary constraint
+8. `ai-literacy` — Critical AI use as the learning goal
+9. `low-bandwidth-global` — OER for under-resourced contexts
+10. `community-engaged` — Learning with real community partners
+
+## Operating Rules for AI Agents
+
+1. NEVER generate instructional content from a vague prompt alone.
+2. ALWAYS identify the learning goal before selecting a theme or pattern.
+3. ALWAYS resolve tokens before generating student-facing or instructor-facing materials.
+4. ALWAYS run validation rules before returning outputs.
+5. ALWAYS show a transparency summary of pedagogical decisions made.
+6. NEVER invent token IDs or values not in the OIS registry.
+7. NEVER set aiUse.policy to anything other than `prohibited` unless also setting disclosureRequired: true.
+8. NEVER set aiUse.policy: collaborative-disclosed without also requiring reflection.required: true AND reflection.focus: ethical-use.
+
+## Implementation Recipe
+
+1. Fetch /ois-index.json
+2. Identify learning goal, learner level, domain, constraints
+3. Select theme from ois-index.json → themes
+4. Select pattern from theme.preferredPatterns or ois-index.json → patterns
+5. Resolve tokens (theme defaults → pattern requirements → local overrides)
+6. Run validation rules
+7. Generate materials using pattern sequence
+8. Output transparency summary
+9. Output machine-readable pedagogy block
+10. Return to user with validation report

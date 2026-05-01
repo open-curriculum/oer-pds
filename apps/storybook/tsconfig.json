@@ -1,4 +1,0 @@
-{
-  "extends": "@ds-starter/tsconfig/lib-react.json",
-  "include": [".storybook/*"]
-}

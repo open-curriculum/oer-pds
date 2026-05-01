@@ -1,0 +1,38 @@
+- id: accessibility.mode
+  name: Accessibility Mode
+  category: accessibility
+  type: enum
+  definition: The primary accessibility design orientation of the learning experience.
+  defaultValue: standard
+  values:
+    - value: standard
+      definition: Standard accessibility compliance (WCAG 2.1 AA).
+    - value: low-bandwidth
+      definition: Designed to function in limited connectivity environments.
+    - value: screen-reader-first
+      definition: Content is primarily designed for screen reader accessibility.
+    - value: multimodal
+      definition: Content is available in multiple sensory modalities.
+    - value: flexible-deadline
+      definition: Time-based constraints are minimized or eliminated.
+    - value: universal-design
+      definition: Full Universal Design for Learning principles applied.
+
+- id: accessibility.mediaAlternatives
+  name: Accessibility Media Alternatives
+  category: accessibility
+  type: enum-multi
+  definition: The accessible alternatives provided for media-based content.
+  values:
+    - value: captions
+      definition: Synchronized text captions for video or audio content.
+    - value: transcript
+      definition: Full text transcript of audio or video content.
+    - value: alt-text
+      definition: Text descriptions of images and visual content.
+    - value: printable
+      definition: Print-ready versions of all materials.
+    - value: audio-description
+      definition: Audio narration of visual information for video content.
+    - value: downloadable-assets
+      definition: All assets available for offline download.

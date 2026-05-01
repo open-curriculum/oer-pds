@@ -1,0 +1,853 @@
+{
+  "version": "0.1.0-alpha",
+  "generatedAt": "2026-05-01T20:57:53.740Z",
+  "tokens": [
+    {
+      "id": "accessibility.mode",
+      "name": "Accessibility Mode",
+      "category": "accessibility",
+      "type": "enum",
+      "definition": "The primary accessibility design orientation of the learning experience.",
+      "defaultValue": "standard",
+      "values": [
+        {
+          "value": "standard",
+          "definition": "Standard accessibility compliance (WCAG 2.1 AA)."
+        },
+        {
+          "value": "low-bandwidth",
+          "definition": "Designed to function in limited connectivity environments."
+        },
+        {
+          "value": "screen-reader-first",
+          "definition": "Content is primarily designed for screen reader accessibility."
+        },
+        {
+          "value": "multimodal",
+          "definition": "Content is available in multiple sensory modalities."
+        },
+        {
+          "value": "flexible-deadline",
+          "definition": "Time-based constraints are minimized or eliminated."
+        },
+        {
+          "value": "universal-design",
+          "definition": "Full Universal Design for Learning principles applied."
+        }
+      ]
+    },
+    {
+      "id": "accessibility.mediaAlternatives",
+      "name": "Accessibility Media Alternatives",
+      "category": "accessibility",
+      "type": "enum-multi",
+      "definition": "The accessible alternatives provided for media-based content.",
+      "values": [
+        {
+          "value": "captions",
+          "definition": "Synchronized text captions for video or audio content."
+        },
+        {
+          "value": "transcript",
+          "definition": "Full text transcript of audio or video content."
+        },
+        {
+          "value": "alt-text",
+          "definition": "Text descriptions of images and visual content."
+        },
+        {
+          "value": "printable",
+          "definition": "Print-ready versions of all materials."
+        },
+        {
+          "value": "audio-description",
+          "definition": "Audio narration of visual information for video content."
+        },
+        {
+          "value": "downloadable-assets",
+          "definition": "All assets available for offline download."
+        }
+      ]
+    },
+    {
+      "id": "agency.mode",
+      "name": "Agency Mode",
+      "category": "agency",
+      "type": "enum",
+      "definition": "The degree of learner choice and self-direction in the learning experience.",
+      "defaultValue": "bounded-choice",
+      "values": [
+        {
+          "value": "fixed-path",
+          "definition": "The learner follows a predetermined sequence with no choices."
+        },
+        {
+          "value": "bounded-choice",
+          "definition": "The learner chooses within defined options provided by the instructor."
+        },
+        {
+          "value": "open-choice",
+          "definition": "The learner defines their own direction within the domain."
+        },
+        {
+          "value": "self-directed",
+          "definition": "The learner sets goals, selects methods, and evaluates their own progress."
+        }
+      ]
+    },
+    {
+      "id": "agency.choicePoint",
+      "name": "Agency Choice Point",
+      "category": "agency",
+      "type": "enum-multi",
+      "definition": "The dimension(s) where learner choice is exercised.",
+      "values": [
+        {
+          "value": "topic",
+          "definition": "Learner chooses what to study or investigate."
+        },
+        {
+          "value": "tool",
+          "definition": "Learner chooses which tools or technologies to use."
+        },
+        {
+          "value": "medium",
+          "definition": "Learner chooses the output format or medium."
+        },
+        {
+          "value": "sequence",
+          "definition": "Learner chooses the order of activities."
+        },
+        {
+          "value": "partner",
+          "definition": "Learner chooses collaborators."
+        },
+        {
+          "value": "deliverable",
+          "definition": "Learner chooses the form of the final product."
+        },
+        {
+          "value": "audience",
+          "definition": "Learner chooses who their work is for."
+        }
+      ]
+    },
+    {
+      "id": "aiUse.policy",
+      "name": "AI Use Policy",
+      "category": "aiUse",
+      "type": "enum",
+      "definition": "The policy governing learner use of AI tools in this activity.",
+      "defaultValue": "not-specified",
+      "aiGuidance": "Never set to anything other than prohibited without also setting aiUse.disclosureRequired to true.",
+      "values": [
+        {
+          "value": "prohibited",
+          "definition": "AI tools are not permitted in this activity."
+        },
+        {
+          "value": "not-specified",
+          "definition": "No AI use policy has been defined. Not recommended for new content."
+        },
+        {
+          "value": "permitted-undisclosed",
+          "definition": "AI use is permitted but disclosure is not required. Use sparingly."
+        },
+        {
+          "value": "assisted-disclosed",
+          "definition": "AI assistance is permitted and must be disclosed."
+        },
+        {
+          "value": "collaborative-disclosed",
+          "definition": "AI is used as a collaborative partner; disclosure and reflection required."
+        },
+        {
+          "value": "experimental",
+          "definition": "Learners are explicitly using AI as the subject of investigation."
+        }
+      ]
+    },
+    {
+      "id": "aiUse.allowedFunctions",
+      "name": "AI Allowed Functions",
+      "category": "aiUse",
+      "type": "enum-multi",
+      "definition": "The specific AI functions permitted in this activity.",
+      "aiGuidance": "Be specific. List only permitted functions. Never leave unspecified when aiUse.policy is not prohibited.",
+      "values": [
+        {
+          "value": "grammar-check",
+          "definition": "AI may be used to check grammar and spelling."
+        },
+        {
+          "value": "ideation",
+          "definition": "AI may be used to generate or expand ideas."
+        },
+        {
+          "value": "drafting",
+          "definition": "AI may be used to draft text or outlines."
+        },
+        {
+          "value": "research-assistance",
+          "definition": "AI may be used to find or summarize information."
+        },
+        {
+          "value": "code-generation",
+          "definition": "AI may be used to generate code."
+        },
+        {
+          "value": "image-generation",
+          "definition": "AI may be used to generate images."
+        },
+        {
+          "value": "feedback",
+          "definition": "AI may be used to provide feedback on drafts."
+        },
+        {
+          "value": "translation",
+          "definition": "AI may be used for translation."
+        },
+        {
+          "value": "all",
+          "definition": "All AI functions are permitted."
+        }
+      ]
+    },
+    {
+      "id": "aiUse.disclosureRequired",
+      "name": "AI Disclosure Required",
+      "category": "aiUse",
+      "type": "boolean",
+      "definition": "Whether learners must disclose their AI use in this activity.",
+      "defaultValue": false
+    },
+    {
+      "id": "aiUse.reflectionRequired",
+      "name": "AI Reflection Required",
+      "category": "aiUse",
+      "type": "boolean",
+      "definition": "Whether learners must submit a reflection on their AI use.",
+      "defaultValue": false
+    },
+    {
+      "id": "assessment.evidence",
+      "name": "Assessment Evidence",
+      "category": "assessment",
+      "type": "enum",
+      "definition": "The primary form of evidence collected to demonstrate learning.",
+      "defaultValue": "artifact",
+      "values": [
+        {
+          "value": "quiz",
+          "definition": "A knowledge check or test with predetermined correct answers."
+        },
+        {
+          "value": "artifact",
+          "definition": "A tangible product created by the learner."
+        },
+        {
+          "value": "performance",
+          "definition": "A live or recorded demonstration of skill."
+        },
+        {
+          "value": "portfolio",
+          "definition": "A curated collection of work over time."
+        },
+        {
+          "value": "reflection",
+          "definition": "Written or recorded personal reflection on learning."
+        },
+        {
+          "value": "critique-notes",
+          "definition": "Documentation produced during a critique or review session."
+        },
+        {
+          "value": "process-documentation",
+          "definition": "Evidence of the learning process itself (sketches, drafts, logs)."
+        },
+        {
+          "value": "presentation",
+          "definition": "A structured presentation to an audience."
+        },
+        {
+          "value": "artifact-plus-reflection",
+          "definition": "A finished product accompanied by a required reflection."
+        }
+      ]
+    },
+    {
+      "id": "assessment.mode",
+      "name": "Assessment Mode",
+      "category": "assessment",
+      "type": "enum",
+      "definition": "The purpose or function of the assessment in the learning arc.",
+      "defaultValue": "formative",
+      "values": [
+        {
+          "value": "formative",
+          "definition": "Assessment used to guide ongoing learning; low-stakes."
+        },
+        {
+          "value": "summative",
+          "definition": "Assessment of learning at the end of a unit; higher-stakes."
+        },
+        {
+          "value": "diagnostic",
+          "definition": "Assessment used to identify prior knowledge or gaps before instruction."
+        },
+        {
+          "value": "ipsative",
+          "definition": "Assessment comparing learner to their own prior performance."
+        },
+        {
+          "value": "mastery",
+          "definition": "Assessment that must be passed at a threshold before advancement."
+        },
+        {
+          "value": "critique-based",
+          "definition": "Assessment conducted through structured group critique."
+        }
+      ]
+    },
+    {
+      "id": "collaboration.structure",
+      "name": "Collaboration Structure",
+      "category": "collaboration",
+      "type": "enum",
+      "definition": "How learners are organized for collaborative work.",
+      "defaultValue": "individual",
+      "values": [
+        {
+          "value": "individual",
+          "definition": "Each learner works alone."
+        },
+        {
+          "value": "pair",
+          "definition": "Learners work in pairs."
+        },
+        {
+          "value": "small-group",
+          "definition": "Learners work in groups of 3-6."
+        },
+        {
+          "value": "peer-review",
+          "definition": "Learners review each other's work in a structured exchange."
+        },
+        {
+          "value": "studio-critique",
+          "definition": "Work is shared and critiqued in a group critique format."
+        },
+        {
+          "value": "community-partner",
+          "definition": "Collaboration involves a real external community partner."
+        }
+      ]
+    },
+    {
+      "id": "collaboration.roleClarity",
+      "name": "Collaboration Role Clarity",
+      "category": "collaboration",
+      "type": "enum",
+      "definition": "How explicitly roles are defined within collaborative work.",
+      "defaultValue": "none",
+      "values": [
+        {
+          "value": "none",
+          "definition": "No role definitions given."
+        },
+        {
+          "value": "informal",
+          "definition": "Roles emerge organically without formal assignment."
+        },
+        {
+          "value": "assigned-roles",
+          "definition": "Specific roles are assigned by the instructor."
+        },
+        {
+          "value": "rotating-roles",
+          "definition": "Roles rotate across activities or sessions."
+        }
+      ]
+    },
+    {
+      "id": "feedback.mode",
+      "name": "Feedback Mode",
+      "category": "feedback",
+      "type": "enum",
+      "definition": "Who provides feedback on learner work.",
+      "defaultValue": "instructor",
+      "values": [
+        {
+          "value": "none",
+          "definition": "No feedback is given."
+        },
+        {
+          "value": "self",
+          "definition": "Learner evaluates their own work."
+        },
+        {
+          "value": "peer",
+          "definition": "Another learner provides feedback."
+        },
+        {
+          "value": "instructor",
+          "definition": "The instructor provides feedback."
+        },
+        {
+          "value": "automated",
+          "definition": "Feedback is system-generated."
+        },
+        {
+          "value": "community",
+          "definition": "Feedback comes from a community partner or external audience."
+        },
+        {
+          "value": "peer-plus-instructor",
+          "definition": "Both peer and instructor feedback are provided."
+        },
+        {
+          "value": "mixed",
+          "definition": "Multiple feedback sources are used."
+        }
+      ]
+    },
+    {
+      "id": "feedback.timing",
+      "name": "Feedback Timing",
+      "category": "feedback",
+      "type": "enum",
+      "definition": "When feedback is provided relative to the submission or activity.",
+      "defaultValue": "after-submission",
+      "values": [
+        {
+          "value": "before-submission",
+          "definition": "Feedback is given before the learner finalizes work (e.g., draft review)."
+        },
+        {
+          "value": "during-process",
+          "definition": "Feedback is given during the activity (e.g., coaching, in-process check-ins)."
+        },
+        {
+          "value": "after-submission",
+          "definition": "Feedback is given after the learner submits."
+        },
+        {
+          "value": "iterative",
+          "definition": "Multiple rounds of feedback are built into the design."
+        },
+        {
+          "value": "on-demand",
+          "definition": "Learner requests feedback when ready."
+        }
+      ]
+    },
+    {
+      "id": "localization.level",
+      "name": "Localization Level",
+      "category": "localization",
+      "type": "enum",
+      "definition": "The depth of localization applied to the learning materials.",
+      "defaultValue": "none",
+      "values": [
+        {
+          "value": "none",
+          "definition": "No localization. Original language and examples only."
+        },
+        {
+          "value": "language-only",
+          "definition": "Text is translated but examples remain from the original cultural context."
+        },
+        {
+          "value": "examples-localized",
+          "definition": "Both language and examples are adapted to the target cultural context."
+        },
+        {
+          "value": "culturally-adapted",
+          "definition": "Deeper cultural adaptation including values, norms, and local context."
+        },
+        {
+          "value": "community-co-designed",
+          "definition": "Materials were co-designed with members of the target community."
+        }
+      ]
+    },
+    {
+      "id": "bandwidth.assumption",
+      "name": "Bandwidth Assumption",
+      "category": "localization",
+      "type": "enum",
+      "definition": "The assumed internet connectivity level for learners.",
+      "defaultValue": "medium",
+      "values": [
+        {
+          "value": "low",
+          "definition": "Assumes limited or intermittent connectivity (< 1 Mbps)."
+        },
+        {
+          "value": "medium",
+          "definition": "Assumes moderate broadband connectivity."
+        },
+        {
+          "value": "high",
+          "definition": "Assumes reliable high-speed internet."
+        },
+        {
+          "value": "offline-capable",
+          "definition": "All materials must function without internet access."
+        }
+      ]
+    },
+    {
+      "id": "reflection.required",
+      "name": "Reflection Required",
+      "category": "reflection",
+      "type": "boolean",
+      "definition": "Whether structured reflection is a required component of the learning activity.",
+      "defaultValue": false
+    },
+    {
+      "id": "reflection.focus",
+      "name": "Reflection Focus",
+      "category": "reflection",
+      "type": "enum-multi",
+      "definition": "The subject or lens of the required reflection.",
+      "values": [
+        {
+          "value": "process",
+          "definition": "Reflecting on how the learner approached the task."
+        },
+        {
+          "value": "concept-transfer",
+          "definition": "Reflecting on how concepts apply to other contexts."
+        },
+        {
+          "value": "creative-choice",
+          "definition": "Reflecting on aesthetic or design decisions made."
+        },
+        {
+          "value": "ethical-use",
+          "definition": "Reflecting on ethical dimensions, especially AI use or community impact."
+        },
+        {
+          "value": "collaboration",
+          "definition": "Reflecting on how the group worked together."
+        },
+        {
+          "value": "failure-analysis",
+          "definition": "Reflecting on what didn't work and why."
+        },
+        {
+          "value": "metacognition",
+          "definition": "Reflecting on one's own learning and thinking strategies."
+        }
+      ]
+    },
+    {
+      "id": "revision.required",
+      "name": "Revision Required",
+      "category": "revision",
+      "type": "boolean",
+      "definition": "Whether learners are required to revise their work after feedback.",
+      "defaultValue": false
+    },
+    {
+      "id": "revision.mode",
+      "name": "Revision Mode",
+      "category": "revision",
+      "type": "enum",
+      "definition": "The structure of the revision requirement.",
+      "values": [
+        {
+          "value": "optional",
+          "definition": "Revision is available but not required."
+        },
+        {
+          "value": "required-once",
+          "definition": "One revision cycle is required."
+        },
+        {
+          "value": "required-until-proficient",
+          "definition": "The learner must revise until meeting the proficiency threshold."
+        },
+        {
+          "value": "iterative-cycle",
+          "definition": "Multiple structured revision cycles are built into the design."
+        }
+      ]
+    },
+    {
+      "id": "scaffolding.level",
+      "name": "Scaffolding Level",
+      "category": "scaffolding",
+      "type": "enum",
+      "definition": "The degree of instructional support provided to the learner.",
+      "defaultValue": "medium",
+      "aiGuidance": "Match scaffolding level to learner experience. Beginners need high; advanced learners benefit from low to build agency.",
+      "values": [
+        {
+          "value": "none",
+          "definition": "No scaffolding. Learner must self-direct entirely.",
+          "useWhen": "Expert learners only."
+        },
+        {
+          "value": "low",
+          "definition": "Minimal prompts or guiding questions only.",
+          "useWhen": "Intermediate to advanced learners with prior domain knowledge."
+        },
+        {
+          "value": "medium",
+          "definition": "Some structure, examples, or guiding questions provided.",
+          "useWhen": "Mixed experience levels; most adult learners."
+        },
+        {
+          "value": "high",
+          "definition": "Worked examples, templates, checklists, and step-by-step guidance.",
+          "useWhen": "Novice or early-stage learners; high-stakes tasks."
+        },
+        {
+          "value": "adaptive",
+          "definition": "Scaffolding adjusts dynamically based on learner progress.",
+          "useWhen": "Platforms with adaptive learning capabilities."
+        }
+      ]
+    },
+    {
+      "id": "scaffolding.type",
+      "name": "Scaffolding Type",
+      "category": "scaffolding",
+      "type": "enum",
+      "definition": "The primary modality of instructional support provided.",
+      "aiGuidance": "Use in combination with scaffolding.level. If scaffolding.level is high, specify the scaffolding.type so AI agents can generate the right support materials.",
+      "values": [
+        {
+          "value": "worked-example",
+          "definition": "A solved problem or completed example provided for reference."
+        },
+        {
+          "value": "checklist",
+          "definition": "A list of steps or criteria the learner can check off."
+        },
+        {
+          "value": "template",
+          "definition": "A partially completed structure for the learner to fill in."
+        },
+        {
+          "value": "guided-steps",
+          "definition": "A sequential set of instructions that walk the learner through the task."
+        },
+        {
+          "value": "exemplar",
+          "definition": "A high-quality example of a finished product for comparison."
+        },
+        {
+          "value": "coaching",
+          "definition": "Ongoing feedback from an instructor or peer throughout the process."
+        },
+        {
+          "value": "none",
+          "definition": "No scaffolding type. Used with scaffolding.level none."
+        }
+      ]
+    }
+  ],
+  "patterns": [
+    {
+      "id": "observe-analyze-create-critique-revise",
+      "name": "Observe, Analyze, Create, Critique, Revise",
+      "summary": "A studio-based cycle where learners study exemplars, analyze structure, make original work, receive critique, and revise.",
+      "problem": "How do you design a learning experience where making, feedback, and revision are the core of learning — not supplemental?",
+      "context": [
+        "Design, media production, writing, arts",
+        "Constructivist or studio pedagogy",
+        "Creative and technical skill development"
+      ],
+      "sequence": [
+        {
+          "phase": 1,
+          "label": "Observe",
+          "learnerAction": "Study 2-3 exemplars of finished work in the target form.",
+          "instructorAction": "Curate exemplars that represent the range of quality and approach. Prompt observation with guiding questions.",
+          "evidence": "Observation notes or annotation"
+        },
+        {
+          "phase": 2,
+          "label": "Analyze",
+          "learnerAction": "Identify patterns, techniques, decisions, and what makes each exemplar effective or not.",
+          "instructorAction": "Facilitate structured analysis using a common vocabulary or rubric.",
+          "evidence": "Written analysis or discussion contribution"
+        },
+        {
+          "phase": 3,
+          "label": "Create",
+          "learnerAction": "Produce original work in response to the brief.",
+          "instructorAction": "Circulate, offer coaching feedback during process.",
+          "evidence": "Draft or work in progress"
+        },
+        {
+          "phase": 4,
+          "label": "Critique",
+          "learnerAction": "Present work to peers; receive structured feedback using established criteria.",
+          "instructorAction": "Facilitate critique. Model feedback language. Keep critique focused on work, not person.",
+          "evidence": "Critique notes; feedback received log"
+        },
+        {
+          "phase": 5,
+          "label": "Revise",
+          "learnerAction": "Revise work based on critique. Document what changed and why.",
+          "instructorAction": "Review revision with attention to responsiveness to feedback.",
+          "evidence": "Revised artifact + revision documentation"
+        }
+      ],
+      "recommendedTokens": {
+        "scaffolding.level": "medium",
+        "agency.mode": "bounded-choice",
+        "feedback.mode": "peer-plus-instructor",
+        "feedback.timing": "before-submission",
+        "assessment.evidence": "artifact-plus-reflection",
+        "revision.required": true,
+        "revision.mode": "required-once"
+      },
+      "assessmentEvidence": [
+        "artifact-plus-reflection",
+        "critique-notes",
+        "process-documentation"
+      ],
+      "compatibleThemes": [
+        "constructivist-studio",
+        "project-based-production",
+        "critical-media-analysis"
+      ],
+      "aiGuidance": "When generating materials for this pattern, produce both a student-facing brief (phases 1-5 as instructions) and a studio critique guide for the instructor. Ensure the exemplars section specifies what to observe. Do not skip the revision phase."
+    }
+  ],
+  "themes": [
+    {
+      "id": "constructivist-studio",
+      "name": "Constructivist Studio",
+      "summary": "A making-centred pedagogical style where learning happens through creating, critiquing, and revising work.",
+      "description": "The constructivist studio treats the act of making as the primary site of learning. Learners build understanding through production, not reception. Critique is collaborative and ongoing. Revision is expected and valued.",
+      "tokens": {
+        "scaffolding.level": "medium",
+        "agency.mode": "bounded-choice",
+        "feedback.mode": "peer-plus-instructor",
+        "feedback.timing": "before-submission",
+        "assessment.evidence": "artifact-plus-reflection",
+        "assessment.mode": "formative",
+        "revision.required": true,
+        "revision.mode": "required-once",
+        "reflection.required": true,
+        "reflection.focus": "process",
+        "collaboration.structure": "studio-critique"
+      },
+      "preferredPatterns": [
+        "observe-analyze-create-critique-revise",
+        "peer-review-studio-cycle",
+        "constraint-based-project-sprint"
+      ],
+      "bestFor": [
+        "Design programs",
+        "Media production",
+        "Creative writing",
+        "Architecture",
+        "Art and visual communication"
+      ],
+      "aiGuidance": "When generating materials for this theme, foreground making. The project brief should lead with the deliverable and the critique structure, not a reading list. Include a studio critique guide. Reflection should focus on process and creative choices."
+    }
+  ],
+  "renderers": [],
+  "validationRules": [
+    {
+      "id": "objective-requires-evidence",
+      "name": "Learning Objective Requires Assessment Evidence",
+      "severity": "error",
+      "condition": {
+        "token": "assessment.evidence",
+        "present": false
+      },
+      "expected": {
+        "token": "assessment.evidence",
+        "present": true
+      },
+      "message": "No assessment evidence type is specified. Every learning activity must define how learning will be evidenced.",
+      "rationale": "Without a defined evidence type, there is no basis for evaluating whether learning occurred."
+    },
+    {
+      "id": "revision-requires-timely-feedback",
+      "name": "Revision Requires Pre-Submission Feedback",
+      "severity": "error",
+      "condition": {
+        "token": "revision.required",
+        "values": [
+          "true"
+        ]
+      },
+      "expected": {
+        "token": "feedback.timing",
+        "notValues": [
+          "after-submission"
+        ]
+      },
+      "message": "revision.required is true but feedback.timing is after-submission. Revision cannot be meaningfully performed without timely feedback.",
+      "rationale": "If feedback arrives only after submission, learners cannot revise in the same cycle."
+    },
+    {
+      "id": "ai-use-requires-disclosure",
+      "name": "AI Use Requires Disclosure",
+      "severity": "error",
+      "condition": {
+        "token": "aiUse.policy",
+        "notValues": [
+          "prohibited",
+          "not-specified"
+        ]
+      },
+      "expected": {
+        "token": "aiUse.disclosureRequired",
+        "values": [
+          "true"
+        ]
+      },
+      "message": "aiUse.policy permits AI use but aiUse.disclosureRequired is not set to true.",
+      "rationale": "Any non-prohibited AI use must require disclosure for academic integrity."
+    },
+    {
+      "id": "ai-collaborative-requires-reflection",
+      "name": "Collaborative AI Use Requires Reflection",
+      "severity": "error",
+      "condition": {
+        "token": "aiUse.policy",
+        "values": [
+          "collaborative-disclosed"
+        ]
+      },
+      "expected": {
+        "token": "reflection.required",
+        "values": [
+          "true"
+        ]
+      },
+      "message": "aiUse.policy is collaborative-disclosed but reflection.required is not true. Collaborative AI use requires reflection.",
+      "rationale": "Collaborative AI use involves the highest degree of AI integration. Without reflection, learners cannot develop critical AI literacy."
+    },
+    {
+      "id": "low-bandwidth-needs-alternatives",
+      "name": "Low Bandwidth Requires Downloadable Alternatives",
+      "severity": "warning",
+      "condition": {
+        "token": "bandwidth.assumption",
+        "values": [
+          "low",
+          "offline-capable"
+        ]
+      },
+      "expected": {
+        "token": "accessibility.mediaAlternatives",
+        "includes": [
+          "downloadable-assets"
+        ]
+      },
+      "message": "bandwidth.assumption is low or offline-capable but no downloadable-assets media alternative is specified.",
+      "rationale": "Low-bandwidth learners need downloadable assets to access content offline."
+    }
+  ]
+}

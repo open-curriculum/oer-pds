@@ -1,0 +1,373 @@
+# Open Instructional Systems — Full Specification
+
+Version: 0.1.0-alpha
+Generated: 2026-05-01T20:57:53.740Z
+
+---
+
+## What is OIS?
+
+Open Instructional Systems (OIS) is a pedagogical design system — a set of tokens, patterns, and themes that describe instructional intent in learning materials. It gives instructors, platforms, and AI agents a shared vocabulary for the "how" of teaching, not just the "what."
+
+---
+
+## Tokens
+
+### accessibility.mode
+Category: accessibility
+Type: enum
+Definition: The primary accessibility design orientation of the learning experience.
+Default: standard
+Values:
+    standard: Standard accessibility compliance (WCAG 2.1 AA).
+    low-bandwidth: Designed to function in limited connectivity environments.
+    screen-reader-first: Content is primarily designed for screen reader accessibility.
+    multimodal: Content is available in multiple sensory modalities.
+    flexible-deadline: Time-based constraints are minimized or eliminated.
+    universal-design: Full Universal Design for Learning principles applied.
+
+### accessibility.mediaAlternatives
+Category: accessibility
+Type: enum-multi
+Definition: The accessible alternatives provided for media-based content.
+Values:
+    captions: Synchronized text captions for video or audio content.
+    transcript: Full text transcript of audio or video content.
+    alt-text: Text descriptions of images and visual content.
+    printable: Print-ready versions of all materials.
+    audio-description: Audio narration of visual information for video content.
+    downloadable-assets: All assets available for offline download.
+
+### agency.mode
+Category: agency
+Type: enum
+Definition: The degree of learner choice and self-direction in the learning experience.
+Default: bounded-choice
+Values:
+    fixed-path: The learner follows a predetermined sequence with no choices.
+    bounded-choice: The learner chooses within defined options provided by the instructor.
+    open-choice: The learner defines their own direction within the domain.
+    self-directed: The learner sets goals, selects methods, and evaluates their own progress.
+
+### agency.choicePoint
+Category: agency
+Type: enum-multi
+Definition: The dimension(s) where learner choice is exercised.
+Values:
+    topic: Learner chooses what to study or investigate.
+    tool: Learner chooses which tools or technologies to use.
+    medium: Learner chooses the output format or medium.
+    sequence: Learner chooses the order of activities.
+    partner: Learner chooses collaborators.
+    deliverable: Learner chooses the form of the final product.
+    audience: Learner chooses who their work is for.
+
+### aiUse.policy
+Category: aiUse
+Type: enum
+Definition: The policy governing learner use of AI tools in this activity.
+Default: not-specified
+Values:
+    prohibited: AI tools are not permitted in this activity.
+    not-specified: No AI use policy has been defined. Not recommended for new content.
+    permitted-undisclosed: AI use is permitted but disclosure is not required. Use sparingly.
+    assisted-disclosed: AI assistance is permitted and must be disclosed.
+    collaborative-disclosed: AI is used as a collaborative partner; disclosure and reflection required.
+    experimental: Learners are explicitly using AI as the subject of investigation.
+AI Guidance: Never set to anything other than prohibited without also setting aiUse.disclosureRequired to true.
+
+### aiUse.allowedFunctions
+Category: aiUse
+Type: enum-multi
+Definition: The specific AI functions permitted in this activity.
+Values:
+    grammar-check: AI may be used to check grammar and spelling.
+    ideation: AI may be used to generate or expand ideas.
+    drafting: AI may be used to draft text or outlines.
+    research-assistance: AI may be used to find or summarize information.
+    code-generation: AI may be used to generate code.
+    image-generation: AI may be used to generate images.
+    feedback: AI may be used to provide feedback on drafts.
+    translation: AI may be used for translation.
+    all: All AI functions are permitted.
+AI Guidance: Be specific. List only permitted functions. Never leave unspecified when aiUse.policy is not prohibited.
+
+### aiUse.disclosureRequired
+Category: aiUse
+Type: boolean
+Definition: Whether learners must disclose their AI use in this activity.
+Default: false
+
+### aiUse.reflectionRequired
+Category: aiUse
+Type: boolean
+Definition: Whether learners must submit a reflection on their AI use.
+Default: false
+
+### assessment.evidence
+Category: assessment
+Type: enum
+Definition: The primary form of evidence collected to demonstrate learning.
+Default: artifact
+Values:
+    quiz: A knowledge check or test with predetermined correct answers.
+    artifact: A tangible product created by the learner.
+    performance: A live or recorded demonstration of skill.
+    portfolio: A curated collection of work over time.
+    reflection: Written or recorded personal reflection on learning.
+    critique-notes: Documentation produced during a critique or review session.
+    process-documentation: Evidence of the learning process itself (sketches, drafts, logs).
+    presentation: A structured presentation to an audience.
+    artifact-plus-reflection: A finished product accompanied by a required reflection.
+
+### assessment.mode
+Category: assessment
+Type: enum
+Definition: The purpose or function of the assessment in the learning arc.
+Default: formative
+Values:
+    formative: Assessment used to guide ongoing learning; low-stakes.
+    summative: Assessment of learning at the end of a unit; higher-stakes.
+    diagnostic: Assessment used to identify prior knowledge or gaps before instruction.
+    ipsative: Assessment comparing learner to their own prior performance.
+    mastery: Assessment that must be passed at a threshold before advancement.
+    critique-based: Assessment conducted through structured group critique.
+
+### collaboration.structure
+Category: collaboration
+Type: enum
+Definition: How learners are organized for collaborative work.
+Default: individual
+Values:
+    individual: Each learner works alone.
+    pair: Learners work in pairs.
+    small-group: Learners work in groups of 3-6.
+    peer-review: Learners review each other's work in a structured exchange.
+    studio-critique: Work is shared and critiqued in a group critique format.
+    community-partner: Collaboration involves a real external community partner.
+
+### collaboration.roleClarity
+Category: collaboration
+Type: enum
+Definition: How explicitly roles are defined within collaborative work.
+Default: none
+Values:
+    none: No role definitions given.
+    informal: Roles emerge organically without formal assignment.
+    assigned-roles: Specific roles are assigned by the instructor.
+    rotating-roles: Roles rotate across activities or sessions.
+
+### feedback.mode
+Category: feedback
+Type: enum
+Definition: Who provides feedback on learner work.
+Default: instructor
+Values:
+    none: No feedback is given.
+    self: Learner evaluates their own work.
+    peer: Another learner provides feedback.
+    instructor: The instructor provides feedback.
+    automated: Feedback is system-generated.
+    community: Feedback comes from a community partner or external audience.
+    peer-plus-instructor: Both peer and instructor feedback are provided.
+    mixed: Multiple feedback sources are used.
+
+### feedback.timing
+Category: feedback
+Type: enum
+Definition: When feedback is provided relative to the submission or activity.
+Default: after-submission
+Values:
+    before-submission: Feedback is given before the learner finalizes work (e.g., draft review).
+    during-process: Feedback is given during the activity (e.g., coaching, in-process check-ins).
+    after-submission: Feedback is given after the learner submits.
+    iterative: Multiple rounds of feedback are built into the design.
+    on-demand: Learner requests feedback when ready.
+
+### localization.level
+Category: localization
+Type: enum
+Definition: The depth of localization applied to the learning materials.
+Default: none
+Values:
+    none: No localization. Original language and examples only.
+    language-only: Text is translated but examples remain from the original cultural context.
+    examples-localized: Both language and examples are adapted to the target cultural context.
+    culturally-adapted: Deeper cultural adaptation including values, norms, and local context.
+    community-co-designed: Materials were co-designed with members of the target community.
+
+### bandwidth.assumption
+Category: localization
+Type: enum
+Definition: The assumed internet connectivity level for learners.
+Default: medium
+Values:
+    low: Assumes limited or intermittent connectivity (< 1 Mbps).
+    medium: Assumes moderate broadband connectivity.
+    high: Assumes reliable high-speed internet.
+    offline-capable: All materials must function without internet access.
+
+### reflection.required
+Category: reflection
+Type: boolean
+Definition: Whether structured reflection is a required component of the learning activity.
+Default: false
+
+### reflection.focus
+Category: reflection
+Type: enum-multi
+Definition: The subject or lens of the required reflection.
+Values:
+    process: Reflecting on how the learner approached the task.
+    concept-transfer: Reflecting on how concepts apply to other contexts.
+    creative-choice: Reflecting on aesthetic or design decisions made.
+    ethical-use: Reflecting on ethical dimensions, especially AI use or community impact.
+    collaboration: Reflecting on how the group worked together.
+    failure-analysis: Reflecting on what didn't work and why.
+    metacognition: Reflecting on one's own learning and thinking strategies.
+
+### revision.required
+Category: revision
+Type: boolean
+Definition: Whether learners are required to revise their work after feedback.
+Default: false
+
+### revision.mode
+Category: revision
+Type: enum
+Definition: The structure of the revision requirement.
+Values:
+    optional: Revision is available but not required.
+    required-once: One revision cycle is required.
+    required-until-proficient: The learner must revise until meeting the proficiency threshold.
+    iterative-cycle: Multiple structured revision cycles are built into the design.
+
+### scaffolding.level
+Category: scaffolding
+Type: enum
+Definition: The degree of instructional support provided to the learner.
+Default: medium
+Values:
+    none: No scaffolding. Learner must self-direct entirely. (use when: Expert learners only.)
+    low: Minimal prompts or guiding questions only. (use when: Intermediate to advanced learners with prior domain knowledge.)
+    medium: Some structure, examples, or guiding questions provided. (use when: Mixed experience levels; most adult learners.)
+    high: Worked examples, templates, checklists, and step-by-step guidance. (use when: Novice or early-stage learners; high-stakes tasks.)
+    adaptive: Scaffolding adjusts dynamically based on learner progress. (use when: Platforms with adaptive learning capabilities.)
+AI Guidance: Match scaffolding level to learner experience. Beginners need high; advanced learners benefit from low to build agency.
+
+### scaffolding.type
+Category: scaffolding
+Type: enum
+Definition: The primary modality of instructional support provided.
+Values:
+    worked-example: A solved problem or completed example provided for reference.
+    checklist: A list of steps or criteria the learner can check off.
+    template: A partially completed structure for the learner to fill in.
+    guided-steps: A sequential set of instructions that walk the learner through the task.
+    exemplar: A high-quality example of a finished product for comparison.
+    coaching: Ongoing feedback from an instructor or peer throughout the process.
+    none: No scaffolding type. Used with scaffolding.level none.
+AI Guidance: Use in combination with scaffolding.level. If scaffolding.level is high, specify the scaffolding.type so AI agents can generate the right support materials.
+
+
+---
+
+## Patterns
+
+### observe-analyze-create-critique-revise
+A studio-based cycle where learners study exemplars, analyze structure, make original work, receive critique, and revise.
+Problem: How do you design a learning experience where making, feedback, and revision are the core of learning — not supplemental?
+Sequence:
+  1. Observe
+     Learner: Study 2-3 exemplars of finished work in the target form.
+     Instructor: Curate exemplars that represent the range of quality and approach. Prompt observation with guiding questions.
+  2. Analyze
+     Learner: Identify patterns, techniques, decisions, and what makes each exemplar effective or not.
+     Instructor: Facilitate structured analysis using a common vocabulary or rubric.
+  3. Create
+     Learner: Produce original work in response to the brief.
+     Instructor: Circulate, offer coaching feedback during process.
+  4. Critique
+     Learner: Present work to peers; receive structured feedback using established criteria.
+     Instructor: Facilitate critique. Model feedback language. Keep critique focused on work, not person.
+  5. Revise
+     Learner: Revise work based on critique. Document what changed and why.
+     Instructor: Review revision with attention to responsiveness to feedback.
+AI Guidance: When generating materials for this pattern, produce both a student-facing brief (phases 1-5 as instructions) and a studio critique guide for the instructor. Ensure the exemplars section specifies what to observe. Do not skip the revision phase.
+
+
+---
+
+## Themes
+
+### constructivist-studio
+A making-centred pedagogical style where learning happens through creating, critiquing, and revising work.
+Token Defaults:
+  scaffolding.level: medium
+  agency.mode: bounded-choice
+  feedback.mode: peer-plus-instructor
+  feedback.timing: before-submission
+  assessment.evidence: artifact-plus-reflection
+  assessment.mode: formative
+  revision.required: true
+  revision.mode: required-once
+  reflection.required: true
+  reflection.focus: process
+  collaboration.structure: studio-critique
+Preferred Patterns: observe-analyze-create-critique-revise, peer-review-studio-cycle, constraint-based-project-sprint
+AI Guidance: When generating materials for this theme, foreground making. The project brief should lead with the deliverable and the critique structure, not a reading list. Include a studio critique guide. Reflection should focus on process and creative choices.
+
+
+---
+
+## Validation Rules
+
+### objective-requires-evidence [error]
+Learning Objective Requires Assessment Evidence
+If: assessment.evidence
+Then: assessment.evidence must be present
+Message: No assessment evidence type is specified. Every learning activity must define how learning will be evidenced.
+Rationale: Without a defined evidence type, there is no basis for evaluating whether learning occurred.
+
+### revision-requires-timely-feedback [error]
+Revision Requires Pre-Submission Feedback
+If: revision.required in [true]
+Then: feedback.timing
+Message: revision.required is true but feedback.timing is after-submission. Revision cannot be meaningfully performed without timely feedback.
+Rationale: If feedback arrives only after submission, learners cannot revise in the same cycle.
+
+### ai-use-requires-disclosure [error]
+AI Use Requires Disclosure
+If: aiUse.policy not in [prohibited, not-specified]
+Then: aiUse.disclosureRequired must be [true]
+Message: aiUse.policy permits AI use but aiUse.disclosureRequired is not set to true.
+Rationale: Any non-prohibited AI use must require disclosure for academic integrity.
+
+### ai-collaborative-requires-reflection [error]
+Collaborative AI Use Requires Reflection
+If: aiUse.policy in [collaborative-disclosed]
+Then: reflection.required must be [true]
+Message: aiUse.policy is collaborative-disclosed but reflection.required is not true. Collaborative AI use requires reflection.
+Rationale: Collaborative AI use involves the highest degree of AI integration. Without reflection, learners cannot develop critical AI literacy.
+
+### low-bandwidth-needs-alternatives [warning]
+Low Bandwidth Requires Downloadable Alternatives
+If: bandwidth.assumption in [low, offline-capable]
+Then: accessibility.mediaAlternatives must include [downloadable-assets]
+Message: bandwidth.assumption is low or offline-capable but no downloadable-assets media alternative is specified.
+Rationale: Low-bandwidth learners need downloadable assets to access content offline.
+
+---
+
+## Implementation Recipe
+
+1. Fetch /ois-index.json
+2. Identify learning goal, learner level, domain, constraints
+3. Select theme from themes
+4. Select pattern from theme.preferredPatterns
+5. Resolve tokens (theme defaults → pattern requirements → local overrides)
+6. Run validation rules
+7. Generate materials using pattern sequence
+8. Output transparency summary
+9. Output machine-readable pedagogy block
+10. Return to user with validation report

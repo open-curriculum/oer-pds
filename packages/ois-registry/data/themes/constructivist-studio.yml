@@ -1,0 +1,27 @@
+id: constructivist-studio
+name: Constructivist Studio
+summary: A making-centred pedagogical style where learning happens through creating, critiquing, and revising work.
+description: The constructivist studio treats the act of making as the primary site of learning. Learners build understanding through production, not reception. Critique is collaborative and ongoing. Revision is expected and valued.
+tokens:
+  scaffolding.level: medium
+  agency.mode: bounded-choice
+  feedback.mode: peer-plus-instructor
+  feedback.timing: before-submission
+  assessment.evidence: artifact-plus-reflection
+  assessment.mode: formative
+  revision.required: true
+  revision.mode: required-once
+  reflection.required: true
+  reflection.focus: process
+  collaboration.structure: studio-critique
+preferredPatterns:
+  - observe-analyze-create-critique-revise
+  - peer-review-studio-cycle
+  - constraint-based-project-sprint
+bestFor:
+  - Design programs
+  - Media production
+  - Creative writing
+  - Architecture
+  - Art and visual communication
+aiGuidance: When generating materials for this theme, foreground making. The project brief should lead with the deliverable and the critique structure, not a reading list. Include a studio critique guide. Reflection should focus on process and creative choices.
