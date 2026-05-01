@@ -1,0 +1,43 @@
+id: mastery-checkpoint-pathway
+name: Mastery Checkpoint Pathway
+summary: Learners progress through skill levels, demonstrating mastery at each checkpoint before advancing.
+problem: How do you ensure all learners reach genuine proficiency before moving to the next skill level?
+context:
+  - Technical and vocational courses
+  - Competency-based programs
+  - Certification preparation
+  - Any course where prerequisite mastery matters
+sequence:
+  - phase: 1
+    label: Skill Introduction
+    learnerAction: Review the learning objective and mastery criteria for this checkpoint. Understand what proficiency looks like before beginning.
+    instructorAction: Present the skill in context. Make the mastery criteria explicit. Connect to prior skills.
+    evidence: criteria acknowledgment
+  - phase: 2
+    label: Scaffolded Practice
+    learnerAction: Work through scaffolded practice exercises from guided to independent. Identify where errors occur and use them as learning signals.
+    instructorAction: Provide worked examples, then remove scaffolding gradually. Allow unlimited low-stakes attempts.
+    evidence: practice attempts (formative, ungraded)
+  - phase: 3
+    label: Checkpoint Attempt
+    learnerAction: Attempt the mastery checkpoint. This is a genuine demonstration, not a practice exercise.
+    instructorAction: Evaluate against explicit mastery criteria. Pass or not-yet. If not-yet, provide specific feedback on gaps.
+    evidence: checkpoint attempt
+  - phase: 4
+    label: Remediation and Re-attempt (if needed)
+    learnerAction: If not-yet, address specific gaps identified in feedback. Attempt additional practice. Re-attempt the checkpoint.
+    instructorAction: Facilitate targeted remediation. Ensure the re-attempt tests the same objective with a parallel (not identical) task.
+    evidence: revised attempt (if applicable)
+recommendedTokens:
+  scaffolding.level: high
+  scaffolding.type: worked-example
+  agency.mode: fixed-path
+  feedback.mode: instructor
+  feedback.timing: after-submission
+  assessment.evidence: quiz
+  assessment.mode: summative
+  revision.required: "true"
+  revision.mode: until-mastery
+assessmentEvidence: [practice-attempts, checkpoint-attempt, mastery-demonstration]
+compatibleThemes: [mastery-learning, direct-instruction]
+aiGuidance: When generating checkpoint assessments, ensure the mastery criteria are specific and observable. Scaffolded practice and checkpoint should test the same skill with different tasks. Mastery is binary (pass/not-yet) — not a gradient.

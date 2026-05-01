@@ -1,0 +1,42 @@
+id: constraint-based-project-sprint
+name: Constraint-Based Project Sprint
+summary: Learners produce an artifact under explicit constraints, emphasizing rapid iteration and decisive creative choices.
+problem: How do you develop creative confidence and decision-making speed in learners who over-plan and under-produce?
+context:
+  - Advanced production and design courses
+  - Portfolio-building courses
+  - Game jams and hackathon-style courses
+  - Any course emphasizing production throughput over perfection
+sequence:
+  - phase: 1
+    label: Brief and Constraints
+    learnerAction: Receive the project brief and explicit constraints (time limit, material restrictions, required elements, excluded approaches). Ask clarifying questions.
+    instructorAction: State constraints clearly and explain their purpose. Constraints should be meaningful, not arbitrary.
+    evidence: constraint acknowledgment
+  - phase: 2
+    label: Rapid Ideation
+    learnerAction: Generate multiple divergent ideas (3–5 minimum) before committing to any. Use sketches, outlines, or quick prototypes.
+    instructorAction: Facilitate timed ideation. Encourage quantity over quality at this phase.
+    evidence: idea documentation
+  - phase: 3
+    label: Committed Production
+    learnerAction: Select one direction and produce a complete artifact within the allotted time. Prioritize completion over perfection.
+    instructorAction: Set and hold firm time limits. Resist requests for extensions — deadline pressure is pedagogically intentional.
+    evidence: completed artifact (even if rough)
+  - phase: 4
+    label: Process Debrief
+    learnerAction: "Reflect on the constraints: which helped, which hurt, what decisions you would change, and what the constraint revealed about your process."
+    instructorAction: "Facilitate whole-class debrief. Focus on creative decision-making under pressure."
+    evidence: process reflection
+recommendedTokens:
+  scaffolding.level: low
+  agency.mode: open-choice
+  feedback.mode: peer
+  feedback.timing: after-submission
+  assessment.evidence: artifact-plus-reflection
+  revision.required: "false"
+  reflection.required: "true"
+  reflection.focus: process
+assessmentEvidence: [completed-artifact, process-reflection]
+compatibleThemes: [project-based-production, constructivist-studio]
+aiGuidance: Generate constraints that are specific and meaningful. Avoid constraints that merely restrict scope without shaping creative decisions. The debrief prompt should ask about constraint experience, not just artifact quality.

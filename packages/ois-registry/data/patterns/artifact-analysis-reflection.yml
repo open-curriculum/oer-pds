@@ -1,0 +1,41 @@
+id: artifact-analysis-reflection
+name: Artifact Analysis Reflection
+summary: Learners closely analyze an existing artifact, then reflect on its significance, method, and meaning.
+problem: How do you develop close reading and critical analysis skills through artifact engagement?
+context:
+  - Humanities, media studies, cultural analysis
+  - History and archival work
+  - Retrospective learning (analyzing your own past work)
+  - Any course emphasizing interpretive or analytical skills
+sequence:
+  - phase: 1
+    label: Artifact Encounter
+    learnerAction: Encounter the artifact without interpretive guidance. Note your initial reactions, observations, and questions.
+    instructorAction: Select artifact and withhold context. Ask for unguided first impressions before providing background.
+    evidence: initial observation notes
+  - phase: 2
+    label: Contextual Analysis
+    learnerAction: Learn the context of the artifact's creation (historical, cultural, authorial). Re-examine the artifact through that context. Note how your reading shifts.
+    instructorAction: Provide relevant contextual information. Facilitate discussion of how context changes interpretation.
+    evidence: revised analysis notes
+  - phase: 3
+    label: Close Reading
+    learnerAction: Conduct a structured close reading using an analysis framework (semiotics, rhetorical analysis, formal analysis, etc.). Document specific evidence from the artifact.
+    instructorAction: Provide the analysis framework. Require evidence citation from the artifact itself.
+    evidence: structured close reading with evidence
+  - phase: 4
+    label: Significance Reflection
+    learnerAction: Write a reflection on what this artifact means, why it matters, and what you understand differently having studied it.
+    instructorAction: Assess both the analytical rigor of the close reading and the depth of the significance reflection.
+    evidence: written reflection
+recommendedTokens:
+  scaffolding.level: medium
+  agency.mode: bounded-choice
+  feedback.mode: instructor
+  assessment.evidence: reflection
+  revision.required: "false"
+  reflection.required: "true"
+  reflection.focus: outcome
+assessmentEvidence: [observation-notes, close-reading, significance-reflection]
+compatibleThemes: [critical-media-analysis, inquiry-based]
+aiGuidance: When generating close reading prompts, specify the analysis framework explicitly. Do not ask for "what do you think?" — ask for evidence-anchored claims. The significance reflection should push beyond description to interpretation and personal meaning-making.

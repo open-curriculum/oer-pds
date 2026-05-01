@@ -1,6 +1,6 @@
 {
   "version": "0.1.0-alpha",
-  "generatedAt": "2026-05-01T20:57:53.740Z",
+  "generatedAt": "2026-05-01T21:18:31.741Z",
   "tokens": [
     {
       "id": "accessibility.mode",
@@ -150,6 +150,10 @@
           "definition": "No AI use policy has been defined. Not recommended for new content."
         },
         {
+          "value": "instructor-specified",
+          "definition": "The instructor will specify AI use rules outside this content block."
+        },
+        {
           "value": "permitted-undisclosed",
           "definition": "AI use is permitted but disclosure is not required. Use sparingly."
         },
@@ -176,40 +180,40 @@
       "aiGuidance": "Be specific. List only permitted functions. Never leave unspecified when aiUse.policy is not prohibited.",
       "values": [
         {
-          "value": "grammar-check",
-          "definition": "AI may be used to check grammar and spelling."
+          "value": "brainstorming",
+          "definition": "AI may be used to brainstorm and generate initial ideas."
         },
         {
-          "value": "ideation",
-          "definition": "AI may be used to generate or expand ideas."
+          "value": "outlining",
+          "definition": "AI may be used to create outlines and structural plans."
         },
         {
-          "value": "drafting",
-          "definition": "AI may be used to draft text or outlines."
+          "value": "debugging",
+          "definition": "AI may be used to debug code or identify logical errors."
         },
         {
-          "value": "research-assistance",
-          "definition": "AI may be used to find or summarize information."
+          "value": "critique",
+          "definition": "AI may be used to critique drafts or designs."
         },
         {
-          "value": "code-generation",
-          "definition": "AI may be used to generate code."
+          "value": "feedback",
+          "definition": "AI may be used to provide feedback on drafts or work-in-progress."
+        },
+        {
+          "value": "reference-generation",
+          "definition": "AI may be used to generate or locate references and sources."
         },
         {
           "value": "image-generation",
           "definition": "AI may be used to generate images."
         },
         {
-          "value": "feedback",
-          "definition": "AI may be used to provide feedback on drafts."
+          "value": "code-generation",
+          "definition": "AI may be used to generate code."
         },
         {
-          "value": "translation",
-          "definition": "AI may be used for translation."
-        },
-        {
-          "value": "all",
-          "definition": "All AI functions are permitted."
+          "value": "final-artifact-generation",
+          "definition": "AI may be used to generate the final submission artifact."
         }
       ]
     },
@@ -652,6 +656,379 @@
   ],
   "patterns": [
     {
+      "id": "artifact-analysis-reflection",
+      "name": "Artifact Analysis Reflection",
+      "summary": "Learners closely analyze an existing artifact, then reflect on its significance, method, and meaning.",
+      "problem": "How do you develop close reading and critical analysis skills through artifact engagement?",
+      "context": [
+        "Humanities, media studies, cultural analysis",
+        "History and archival work",
+        "Retrospective learning (analyzing your own past work)",
+        "Any course emphasizing interpretive or analytical skills"
+      ],
+      "sequence": [
+        {
+          "phase": 1,
+          "label": "Artifact Encounter",
+          "learnerAction": "Encounter the artifact without interpretive guidance. Note your initial reactions, observations, and questions.",
+          "instructorAction": "Select artifact and withhold context. Ask for unguided first impressions before providing background.",
+          "evidence": "initial observation notes"
+        },
+        {
+          "phase": 2,
+          "label": "Contextual Analysis",
+          "learnerAction": "Learn the context of the artifact's creation (historical, cultural, authorial). Re-examine the artifact through that context. Note how your reading shifts.",
+          "instructorAction": "Provide relevant contextual information. Facilitate discussion of how context changes interpretation.",
+          "evidence": "revised analysis notes"
+        },
+        {
+          "phase": 3,
+          "label": "Close Reading",
+          "learnerAction": "Conduct a structured close reading using an analysis framework (semiotics, rhetorical analysis, formal analysis, etc.). Document specific evidence from the artifact.",
+          "instructorAction": "Provide the analysis framework. Require evidence citation from the artifact itself.",
+          "evidence": "structured close reading with evidence"
+        },
+        {
+          "phase": 4,
+          "label": "Significance Reflection",
+          "learnerAction": "Write a reflection on what this artifact means, why it matters, and what you understand differently having studied it.",
+          "instructorAction": "Assess both the analytical rigor of the close reading and the depth of the significance reflection.",
+          "evidence": "written reflection"
+        }
+      ],
+      "recommendedTokens": {
+        "scaffolding.level": "medium",
+        "agency.mode": "bounded-choice",
+        "feedback.mode": "instructor",
+        "assessment.evidence": "reflection",
+        "revision.required": "false",
+        "reflection.required": "true",
+        "reflection.focus": "outcome"
+      },
+      "assessmentEvidence": [
+        "observation-notes",
+        "close-reading",
+        "significance-reflection"
+      ],
+      "compatibleThemes": [
+        "critical-media-analysis",
+        "inquiry-based"
+      ],
+      "aiGuidance": "When generating close reading prompts, specify the analysis framework explicitly. Do not ask for \"what do you think?\" — ask for evidence-anchored claims. The significance reflection should push beyond description to interpretation and personal meaning-making."
+    },
+    {
+      "id": "case-stakeholder-analysis-response-design",
+      "name": "Case, Stakeholder Analysis, Response Design",
+      "summary": "Learners examine a complex case, analyze the perspectives of affected stakeholders, and design a justified response.",
+      "problem": "How do you develop ethical reasoning and policy thinking in courses where there are no simple right answers?",
+      "context": [
+        "Social science, policy, ethics, law",
+        "Business and organizational courses",
+        "Health professions",
+        "Community-engaged courses"
+      ],
+      "sequence": [
+        {
+          "phase": 1,
+          "label": "Case Presentation",
+          "learnerAction": "Read, watch, or listen to a case study representing a complex real-world problem. Take notes on the key facts, actors, and tensions.",
+          "instructorAction": "Present or curate the case. Provide sufficient context for learners to understand complexity. Do not resolve tensions prematurely.",
+          "evidence": "case notes"
+        },
+        {
+          "phase": 2,
+          "label": "Stakeholder Identification",
+          "learnerAction": "Identify all stakeholders affected by the situation. Document each stakeholder's interests, constraints, and likely perspective.",
+          "instructorAction": "Provide a stakeholder analysis scaffold. Ensure learners include marginalized and non-obvious stakeholders.",
+          "evidence": "stakeholder map or matrix"
+        },
+        {
+          "phase": 3,
+          "label": "Perspective Analysis",
+          "learnerAction": "Write or present a brief perspective statement from each key stakeholder's point of view. Identify tensions between stakeholder interests.",
+          "instructorAction": "Facilitate perspective-taking discussion. Challenge oversimplifications.",
+          "evidence": "perspective statements"
+        },
+        {
+          "phase": 4,
+          "label": "Response Design",
+          "learnerAction": "Design and justify a response to the case that acknowledges stakeholder interests and states trade-offs explicitly.",
+          "instructorAction": "Assess response on clarity of reasoning, acknowledgment of complexity, and quality of justification — not on position taken.",
+          "evidence": "written response with rationale"
+        }
+      ],
+      "recommendedTokens": {
+        "scaffolding.level": "medium",
+        "agency.mode": "bounded-choice",
+        "feedback.mode": "instructor",
+        "assessment.evidence": "reflection",
+        "revision.required": "true",
+        "collaboration.structure": "small-group"
+      },
+      "assessmentEvidence": [
+        "stakeholder-analysis",
+        "perspective-statements",
+        "written-response"
+      ],
+      "compatibleThemes": [
+        "inquiry-based",
+        "critical-media-analysis",
+        "community-engaged"
+      ],
+      "aiGuidance": "When generating content for this pattern, do not resolve the case tensions. Provide a rich, ambiguous case. Scaffold the stakeholder analysis before the response design phase. The assessment should not privilege any single political or ethical stance."
+    },
+    {
+      "id": "community-contextualized-design-brief",
+      "name": "Community-Contextualized Design Brief",
+      "summary": "Learners design a real artifact for a real community partner, contextualizing all production decisions in community needs.",
+      "problem": "How do you create authentic learning experiences that generate real value for real people outside the classroom?",
+      "context": [
+        "Service-learning and community-engaged courses",
+        "Social design and participatory design",
+        "Professional practice simulations",
+        "Courses with explicit equity and social justice goals"
+      ],
+      "sequence": [
+        {
+          "phase": 1,
+          "label": "Community Partner Introduction",
+          "learnerAction": "Meet or learn about the community partner. Document the partner's context, needs, constraints, and goals. Resist proposing solutions at this stage.",
+          "instructorAction": "Arrange community partner engagement. Scaffold active listening. Suppress the \"design instinct\" to jump to solutions.",
+          "evidence": "community context documentation"
+        },
+        {
+          "phase": 2,
+          "label": "Needs Analysis",
+          "learnerAction": "Analyze the partner's needs through the lens of this course's skills and knowledge. Identify what you can realistically offer and what is beyond scope.",
+          "instructorAction": "Guide learners to calibrate ambition to capacity. Ensure learners are not over-promising.",
+          "evidence": "scope-aligned needs analysis"
+        },
+        {
+          "phase": 3,
+          "label": "Design and Iteration",
+          "learnerAction": "Design an artifact addressing a specific documented need. Share drafts or prototypes with the partner for feedback. Revise in response to partner input.",
+          "instructorAction": "Facilitate partner feedback sessions. Ensure learners are listening, not defending.",
+          "evidence": "draft artifact plus partner feedback documentation"
+        },
+        {
+          "phase": 4,
+          "label": "Delivery and Reflection",
+          "learnerAction": "Deliver the final artifact to the partner. Reflect on the design process, the community context, your role, and what you would do differently.",
+          "instructorAction": "Assess both artifact quality and quality of reflection on community engagement.",
+          "evidence": "final artifact, delivery documentation, reflection"
+        }
+      ],
+      "recommendedTokens": {
+        "scaffolding.level": "medium",
+        "agency.mode": "bounded-choice",
+        "feedback.mode": "peer-plus-instructor",
+        "assessment.evidence": "artifact-plus-reflection",
+        "revision.required": "true",
+        "revision.mode": "multiple-drafts",
+        "reflection.required": "true",
+        "reflection.focus": "ethical-use",
+        "collaboration.structure": "small-group"
+      },
+      "assessmentEvidence": [
+        "community-context-doc",
+        "needs-analysis",
+        "draft-artifact",
+        "partner-feedback-doc",
+        "reflection",
+        "final-artifact"
+      ],
+      "compatibleThemes": [
+        "community-engaged",
+        "project-based-production"
+      ],
+      "aiGuidance": "When generating design briefs for this pattern, center the community partner's actual stated needs. Do not invent a community or fabricate needs. If generating a simulated partner, make the simulation explicit. Reflection should engage with power dynamics and positionality, not just process description."
+    },
+    {
+      "id": "constraint-based-project-sprint",
+      "name": "Constraint-Based Project Sprint",
+      "summary": "Learners produce an artifact under explicit constraints, emphasizing rapid iteration and decisive creative choices.",
+      "problem": "How do you develop creative confidence and decision-making speed in learners who over-plan and under-produce?",
+      "context": [
+        "Advanced production and design courses",
+        "Portfolio-building courses",
+        "Game jams and hackathon-style courses",
+        "Any course emphasizing production throughput over perfection"
+      ],
+      "sequence": [
+        {
+          "phase": 1,
+          "label": "Brief and Constraints",
+          "learnerAction": "Receive the project brief and explicit constraints (time limit, material restrictions, required elements, excluded approaches). Ask clarifying questions.",
+          "instructorAction": "State constraints clearly and explain their purpose. Constraints should be meaningful, not arbitrary.",
+          "evidence": "constraint acknowledgment"
+        },
+        {
+          "phase": 2,
+          "label": "Rapid Ideation",
+          "learnerAction": "Generate multiple divergent ideas (3–5 minimum) before committing to any. Use sketches, outlines, or quick prototypes.",
+          "instructorAction": "Facilitate timed ideation. Encourage quantity over quality at this phase.",
+          "evidence": "idea documentation"
+        },
+        {
+          "phase": 3,
+          "label": "Committed Production",
+          "learnerAction": "Select one direction and produce a complete artifact within the allotted time. Prioritize completion over perfection.",
+          "instructorAction": "Set and hold firm time limits. Resist requests for extensions — deadline pressure is pedagogically intentional.",
+          "evidence": "completed artifact (even if rough)"
+        },
+        {
+          "phase": 4,
+          "label": "Process Debrief",
+          "learnerAction": "Reflect on the constraints: which helped, which hurt, what decisions you would change, and what the constraint revealed about your process.",
+          "instructorAction": "Facilitate whole-class debrief. Focus on creative decision-making under pressure.",
+          "evidence": "process reflection"
+        }
+      ],
+      "recommendedTokens": {
+        "scaffolding.level": "low",
+        "agency.mode": "open-choice",
+        "feedback.mode": "peer",
+        "feedback.timing": "after-submission",
+        "assessment.evidence": "artifact-plus-reflection",
+        "revision.required": "false",
+        "reflection.required": "true",
+        "reflection.focus": "process"
+      },
+      "assessmentEvidence": [
+        "completed-artifact",
+        "process-reflection"
+      ],
+      "compatibleThemes": [
+        "project-based-production",
+        "constructivist-studio"
+      ],
+      "aiGuidance": "Generate constraints that are specific and meaningful. Avoid constraints that merely restrict scope without shaping creative decisions. The debrief prompt should ask about constraint experience, not just artifact quality."
+    },
+    {
+      "id": "demo-guided-practice-independent-production",
+      "name": "Demo, Guided Practice, Independent Production",
+      "summary": "Instructor demonstrates a skill or technique, learners practice with support, then apply independently.",
+      "problem": "How do you teach procedural or technical skills to novices who need to see before they do?",
+      "context": [
+        "Technical and vocational courses",
+        "Software and tools training",
+        "Studio skills instruction",
+        "Any first-exposure procedural learning"
+      ],
+      "sequence": [
+        {
+          "phase": 1,
+          "label": "Demonstration",
+          "learnerAction": "Observe the instructor demonstration. Take notes on each step and note points of difficulty or confusion.",
+          "instructorAction": "Demonstrate the target skill step-by-step while narrating decisions and common mistakes. Use think-aloud protocol.",
+          "evidence": "observation notes"
+        },
+        {
+          "phase": 2,
+          "label": "Guided Practice",
+          "learnerAction": "Attempt the skill with a provided scaffold (template, checklist, guided worksheet, or worked example). Ask questions as needed.",
+          "instructorAction": "Circulate or monitor asynchronous submissions. Provide targeted feedback. Allow multiple attempts on the guided exercise.",
+          "evidence": "completed guided exercise"
+        },
+        {
+          "phase": 3,
+          "label": "Formative Check",
+          "learnerAction": "Receive instructor or peer feedback on guided practice. Identify gaps and revise before independent work.",
+          "instructorAction": "Provide written or verbal feedback. Identify patterns across class and address common errors.",
+          "evidence": "feedback received and documented"
+        },
+        {
+          "phase": 4,
+          "label": "Independent Production",
+          "learnerAction": "Apply the skill without scaffolding to a new but analogous task. Produce the final artifact.",
+          "instructorAction": "Assess independently produced work against criteria. Offer revision opportunity if appropriate.",
+          "evidence": "independent artifact"
+        }
+      ],
+      "recommendedTokens": {
+        "scaffolding.level": "high",
+        "scaffolding.type": "worked-example",
+        "agency.mode": "fixed-path",
+        "feedback.mode": "instructor",
+        "feedback.timing": "before-submission",
+        "assessment.evidence": "artifact",
+        "assessment.mode": "formative",
+        "revision.required": "false"
+      },
+      "assessmentEvidence": [
+        "guided-exercise",
+        "independent-artifact"
+      ],
+      "compatibleThemes": [
+        "direct-instruction",
+        "mastery-learning"
+      ],
+      "aiGuidance": "When generating content for this pattern, produce a demonstration walkthrough first, then a scaffolded exercise version, then an independent exercise version. Each version should clearly state its scaffolding level."
+    },
+    {
+      "id": "mastery-checkpoint-pathway",
+      "name": "Mastery Checkpoint Pathway",
+      "summary": "Learners progress through skill levels, demonstrating mastery at each checkpoint before advancing.",
+      "problem": "How do you ensure all learners reach genuine proficiency before moving to the next skill level?",
+      "context": [
+        "Technical and vocational courses",
+        "Competency-based programs",
+        "Certification preparation",
+        "Any course where prerequisite mastery matters"
+      ],
+      "sequence": [
+        {
+          "phase": 1,
+          "label": "Skill Introduction",
+          "learnerAction": "Review the learning objective and mastery criteria for this checkpoint. Understand what proficiency looks like before beginning.",
+          "instructorAction": "Present the skill in context. Make the mastery criteria explicit. Connect to prior skills.",
+          "evidence": "criteria acknowledgment"
+        },
+        {
+          "phase": 2,
+          "label": "Scaffolded Practice",
+          "learnerAction": "Work through scaffolded practice exercises from guided to independent. Identify where errors occur and use them as learning signals.",
+          "instructorAction": "Provide worked examples, then remove scaffolding gradually. Allow unlimited low-stakes attempts.",
+          "evidence": "practice attempts (formative, ungraded)"
+        },
+        {
+          "phase": 3,
+          "label": "Checkpoint Attempt",
+          "learnerAction": "Attempt the mastery checkpoint. This is a genuine demonstration, not a practice exercise.",
+          "instructorAction": "Evaluate against explicit mastery criteria. Pass or not-yet. If not-yet, provide specific feedback on gaps.",
+          "evidence": "checkpoint attempt"
+        },
+        {
+          "phase": 4,
+          "label": "Remediation and Re-attempt (if needed)",
+          "learnerAction": "If not-yet, address specific gaps identified in feedback. Attempt additional practice. Re-attempt the checkpoint.",
+          "instructorAction": "Facilitate targeted remediation. Ensure the re-attempt tests the same objective with a parallel (not identical) task.",
+          "evidence": "revised attempt (if applicable)"
+        }
+      ],
+      "recommendedTokens": {
+        "scaffolding.level": "high",
+        "scaffolding.type": "worked-example",
+        "agency.mode": "fixed-path",
+        "feedback.mode": "instructor",
+        "feedback.timing": "after-submission",
+        "assessment.evidence": "quiz",
+        "assessment.mode": "summative",
+        "revision.required": "true",
+        "revision.mode": "until-mastery"
+      },
+      "assessmentEvidence": [
+        "practice-attempts",
+        "checkpoint-attempt",
+        "mastery-demonstration"
+      ],
+      "compatibleThemes": [
+        "mastery-learning",
+        "direct-instruction"
+      ],
+      "aiGuidance": "When generating checkpoint assessments, ensure the mastery criteria are specific and observable. Scaffolded practice and checkpoint should test the same skill with different tasks. Mastery is binary (pass/not-yet) — not a gradient."
+    },
+    {
       "id": "observe-analyze-create-critique-revise",
       "name": "Observe, Analyze, Create, Critique, Revise",
       "summary": "A studio-based cycle where learners study exemplars, analyze structure, make original work, receive critique, and revise.",
@@ -718,9 +1095,315 @@
         "critical-media-analysis"
       ],
       "aiGuidance": "When generating materials for this pattern, produce both a student-facing brief (phases 1-5 as instructions) and a studio critique guide for the instructor. Ensure the exemplars section specifies what to observe. Do not skip the revision phase."
+    },
+    {
+      "id": "peer-review-studio-cycle",
+      "name": "Peer Review Studio Cycle",
+      "summary": "Learners produce a draft, give and receive structured peer critique, then revise based on feedback.",
+      "problem": "How do you build a culture of critical feedback and iterative improvement in a writing or production course?",
+      "context": [
+        "Writing and composition courses",
+        "Studio arts and design",
+        "Any course with iterative production and revision",
+        "Courses emphasizing collaborative learning"
+      ],
+      "sequence": [
+        {
+          "phase": 1,
+          "label": "Draft Production",
+          "learnerAction": "Produce a complete first draft or prototype. Label it clearly as a draft and identify two or three areas you want feedback on.",
+          "instructorAction": "Set clear draft submission requirements. Clarify what \"complete draft\" means — not a rough outline.",
+          "evidence": "submitted draft with feedback requests"
+        },
+        {
+          "phase": 2,
+          "label": "Peer Critique",
+          "learnerAction": "Review an assigned peer's draft using a structured critique guide. Provide specific, evidence-based feedback. Avoid vague praise or criticism.",
+          "instructorAction": "Provide a critique guide with explicit criteria. Facilitate brief norms discussion before critique begins.",
+          "evidence": "written critique with criteria citations"
+        },
+        {
+          "phase": 3,
+          "label": "Feedback Reception",
+          "learnerAction": "Read all peer feedback. Identify patterns. Ask clarifying questions if needed. Do not defend your draft at this stage.",
+          "instructorAction": "Facilitate structured feedback reception (optional). Ensure learners are reading, not dismissing, peer feedback.",
+          "evidence": "documented feedback summary"
+        },
+        {
+          "phase": 4,
+          "label": "Revision",
+          "learnerAction": "Revise the artifact in response to feedback. Document which feedback you acted on and why, and which you chose not to use and why.",
+          "instructorAction": "Review revision documentation alongside final artifact. Assess the quality of revision reasoning, not just the artifact.",
+          "evidence": "revised artifact plus revision memo"
+        }
+      ],
+      "recommendedTokens": {
+        "scaffolding.level": "medium",
+        "agency.mode": "bounded-choice",
+        "feedback.mode": "peer-plus-instructor",
+        "feedback.timing": "before-submission",
+        "assessment.evidence": "artifact-plus-reflection",
+        "revision.required": "true",
+        "revision.mode": "required-once",
+        "collaboration.structure": "peer-review",
+        "collaboration.roleClarity": "structured"
+      },
+      "assessmentEvidence": [
+        "draft",
+        "peer-critique",
+        "revision-memo",
+        "revised-artifact"
+      ],
+      "compatibleThemes": [
+        "constructivist-studio",
+        "project-based-production"
+      ],
+      "aiGuidance": "When generating critique guides, provide specific criteria anchored to the learning objectives — not generic writing advice. The revision memo is as important as the artifact. Assess reasoning, not just outcomes."
+    },
+    {
+      "id": "prompt-ai-experiment-evaluate-disclose",
+      "name": "Prompt, AI Experiment, Evaluate, Disclose",
+      "summary": "Learners craft a prompt, run an AI experiment, critically evaluate the output, and disclose their process.",
+      "problem": "How do you teach critical AI use when learners lack frameworks for evaluating AI output?",
+      "context": [
+        "AI literacy courses",
+        "Digital media and communications",
+        "Any course that permits or requires AI tool use"
+      ],
+      "sequence": [
+        {
+          "phase": 1,
+          "label": "Prompt Design",
+          "learnerAction": "Design and document a prompt intended to produce a specified outcome. Consider specificity, context, and constraints.",
+          "instructorAction": "Provide exemplar prompts and non-examples. Facilitate discussion of what makes a prompt effective.",
+          "evidence": "documented prompt with rationale"
+        },
+        {
+          "phase": 2,
+          "label": "AI Experiment",
+          "learnerAction": "Run the prompt through one or more AI tools. Document the outputs without editing them.",
+          "instructorAction": "Ensure access to appropriate tools. Clarify ethical and policy constraints on tool use.",
+          "evidence": "raw AI output documented"
+        },
+        {
+          "phase": 3,
+          "label": "Evaluate Output",
+          "learnerAction": "Evaluate the AI output against explicit criteria: accuracy, bias, gaps, usefulness, limitations. Revise the prompt if needed and document iterations.",
+          "instructorAction": "Provide an evaluation rubric. Facilitate whole-class discussion of common AI failure modes.",
+          "evidence": "written evaluation with criteria citations"
+        },
+        {
+          "phase": 4,
+          "label": "Disclose and Reflect",
+          "learnerAction": "Complete an AI Use Disclosure (AIUL) documenting which tools were used, what functions they served, and what the learner contributed.",
+          "instructorAction": "Review disclosures for completeness and accuracy.",
+          "evidence": "completed AIUL declaration"
+        }
+      ],
+      "recommendedTokens": {
+        "scaffolding.level": "medium",
+        "agency.mode": "bounded-choice",
+        "feedback.mode": "instructor",
+        "assessment.evidence": "reflection",
+        "revision.required": "true",
+        "aiUse.policy": "experimental",
+        "aiUse.allowedFunctions": [
+          "brainstorming",
+          "feedback",
+          "image-generation",
+          "code-generation",
+          "final-artifact-generation"
+        ],
+        "aiUse.disclosureRequired": "true",
+        "aiUse.reflectionRequired": "true"
+      },
+      "assessmentEvidence": [
+        "prompt-documentation",
+        "ai-output-documentation",
+        "written-evaluation",
+        "aiul-declaration"
+      ],
+      "compatibleThemes": [
+        "ai-literacy",
+        "inquiry-based"
+      ],
+      "aiGuidance": "When scaffolding this pattern, provide explicit prompt design criteria and evaluation rubrics. Do not allow learners to submit AI output without evaluation. The AIUL declaration is required, not optional."
+    },
+    {
+      "id": "reference-study-technical-exercise-creative-application",
+      "name": "Reference Study, Technical Exercise, Creative Application",
+      "summary": "Learners study exemplars, complete a technical exercise to build foundational skill, then apply it creatively.",
+      "problem": "How do you help learners move from technical proficiency to creative ownership?",
+      "context": [
+        "Design and visual arts",
+        "Music composition and production",
+        "Writing-intensive courses",
+        "Engineering and architecture",
+        "Any field combining technical skill and creative judgment"
+      ],
+      "sequence": [
+        {
+          "phase": 1,
+          "label": "Reference Study",
+          "learnerAction": "Study a curated set of exemplary works from practitioners in the field. Document specific techniques, decisions, and effects observed.",
+          "instructorAction": "Curate exemplars representing diverse approaches and contexts. Provide an observation guide.",
+          "evidence": "reference study notes"
+        },
+        {
+          "phase": 2,
+          "label": "Technical Exercise",
+          "learnerAction": "Complete a constrained technical exercise that isolates a specific technique observed in the reference study. Focus on precision and control.",
+          "instructorAction": "Provide step-by-step guidance. Allow multiple attempts. Give targeted technical feedback.",
+          "evidence": "completed technical exercise"
+        },
+        {
+          "phase": 3,
+          "label": "Technique Reflection",
+          "learnerAction": "Reflect on what the technique does and why practitioners might choose to use or avoid it.",
+          "instructorAction": "Facilitate brief discussion connecting technique to context and intention.",
+          "evidence": "brief reflection note"
+        },
+        {
+          "phase": 4,
+          "label": "Creative Application",
+          "learnerAction": "Apply the studied technique(s) in an original work of your own design. Make intentional choices and document them.",
+          "instructorAction": "Assess both the quality of technique and the intentionality of creative decisions.",
+          "evidence": "original artifact with design statement"
+        }
+      ],
+      "recommendedTokens": {
+        "scaffolding.level": "medium",
+        "scaffolding.type": "worked-example",
+        "agency.mode": "bounded-choice",
+        "feedback.mode": "instructor",
+        "feedback.timing": "before-submission",
+        "assessment.evidence": "artifact-plus-reflection",
+        "revision.required": "true"
+      },
+      "assessmentEvidence": [
+        "reference-study-notes",
+        "technical-exercise",
+        "original-artifact",
+        "design-statement"
+      ],
+      "compatibleThemes": [
+        "constructivist-studio",
+        "project-based-production"
+      ],
+      "aiGuidance": "When generating exemplars for this pattern, include diverse practitioners and contexts. The creative application phase should specify that learners state their intention — not just submit a product."
     }
   ],
   "themes": [
+    {
+      "id": "accessibility-first",
+      "name": "Accessibility-First",
+      "summary": "A Universal Design for Learning (UDL) style where accessibility is the primary design constraint, not an afterthought.",
+      "tokens": {
+        "scaffolding.level": "medium",
+        "scaffolding.type": "multiple-means",
+        "agency.mode": "bounded-choice",
+        "feedback.mode": "instructor",
+        "feedback.timing": "ongoing",
+        "assessment.evidence": "portfolio",
+        "assessment.mode": "formative",
+        "revision.required": "true",
+        "revision.mode": "required-once",
+        "reflection.required": "true",
+        "reflection.focus": "process",
+        "collaboration.structure": "optional",
+        "accessibility.mode": "screen-reader-first",
+        "accessibility.mediaAlternatives": [
+          "alt-text",
+          "captions",
+          "transcript",
+          "downloadable-assets"
+        ],
+        "localization.level": "translated",
+        "bandwidth.assumption": "low",
+        "aiUse.policy": "assisted-disclosed"
+      },
+      "preferredPatterns": [
+        "demo-guided-practice-independent-production",
+        "mastery-checkpoint-pathway"
+      ],
+      "rendererProfiles": [
+        "lesson-page",
+        "student-checklist",
+        "lms-assignment"
+      ],
+      "aiGuidance": "When applying this theme, every media asset must have an accessible alternative. Assessment evidence must not privilege any single modality. Provide multiple means of representation, expression, and engagement as defined by UDL. Assume all learners may have assistive technology needs."
+    },
+    {
+      "id": "ai-literacy",
+      "name": "AI Literacy",
+      "summary": "A critical AI use style where AI tools are the subject of investigation — how they work, what they produce, and what they mean.",
+      "tokens": {
+        "scaffolding.level": "medium",
+        "scaffolding.type": "guided-questions",
+        "agency.mode": "bounded-choice",
+        "feedback.mode": "instructor",
+        "feedback.timing": "before-submission",
+        "assessment.evidence": "artifact-plus-reflection",
+        "assessment.mode": "formative",
+        "revision.required": "true",
+        "revision.mode": "required-once",
+        "reflection.required": "true",
+        "reflection.focus": "ethical-use",
+        "collaboration.structure": "small-group",
+        "aiUse.policy": "experimental",
+        "aiUse.allowedFunctions": [
+          "brainstorming",
+          "outlining",
+          "critique",
+          "feedback",
+          "image-generation",
+          "code-generation",
+          "final-artifact-generation"
+        ],
+        "aiUse.disclosureRequired": "true",
+        "aiUse.reflectionRequired": "true"
+      },
+      "preferredPatterns": [
+        "prompt-ai-experiment-evaluate-disclose",
+        "artifact-analysis-reflection"
+      ],
+      "rendererProfiles": [
+        "project-brief",
+        "aiul-declaration",
+        "instructor-facilitation-guide"
+      ],
+      "aiGuidance": "When applying this theme, AI tools are required, not optional. Learners must document their AI use, evaluate its outputs, and reflect on its implications. Assessment criteria must reward critical evaluation over AI output quality. The AI Use Disclosure (AIUL) is a required deliverable."
+    },
+    {
+      "id": "community-engaged",
+      "name": "Community-Engaged",
+      "summary": "A participatory learning style where real community partners shape the learning brief and receive real deliverables.",
+      "tokens": {
+        "scaffolding.level": "medium",
+        "agency.mode": "bounded-choice",
+        "feedback.mode": "peer-plus-instructor",
+        "feedback.timing": "before-submission",
+        "assessment.evidence": "artifact-plus-reflection",
+        "assessment.mode": "summative",
+        "revision.required": "true",
+        "revision.mode": "multiple-drafts",
+        "reflection.required": "true",
+        "reflection.focus": "ethical-use",
+        "collaboration.structure": "small-group",
+        "collaboration.roleClarity": "assigned",
+        "localization.level": "co-created",
+        "aiUse.policy": "instructor-specified"
+      },
+      "preferredPatterns": [
+        "community-contextualized-design-brief",
+        "case-stakeholder-analysis-response-design"
+      ],
+      "rendererProfiles": [
+        "project-brief",
+        "instructor-facilitation-guide"
+      ],
+      "aiGuidance": "When applying this theme, the community partner's needs must frame the design brief. Learner reflection must address positionality, power, and what the learner's role is relative to the community. Simulated community partners are acceptable but must be explicitly labeled as simulations. Assessment should weigh community benefit and reflective depth, not just artifact quality."
+    },
     {
       "id": "constructivist-studio",
       "name": "Constructivist Studio",
@@ -752,6 +1435,196 @@
         "Art and visual communication"
       ],
       "aiGuidance": "When generating materials for this theme, foreground making. The project brief should lead with the deliverable and the critique structure, not a reading list. Include a studio critique guide. Reflection should focus on process and creative choices."
+    },
+    {
+      "id": "critical-media-analysis",
+      "name": "Critical Media Analysis",
+      "summary": "A representation-focused style where learners analyze how media constructs meaning, power, and identity, and respond creatively.",
+      "tokens": {
+        "scaffolding.level": "medium",
+        "scaffolding.type": "guided-questions",
+        "agency.mode": "bounded-choice",
+        "feedback.mode": "instructor",
+        "feedback.timing": "before-submission",
+        "assessment.evidence": "artifact-plus-reflection",
+        "assessment.mode": "formative",
+        "revision.required": "true",
+        "revision.mode": "required-once",
+        "reflection.required": "true",
+        "reflection.focus": "ethical-use",
+        "collaboration.structure": "small-group",
+        "aiUse.policy": "assisted-disclosed"
+      },
+      "preferredPatterns": [
+        "artifact-analysis-reflection",
+        "observe-analyze-create-critique-revise"
+      ],
+      "rendererProfiles": [
+        "project-brief",
+        "studio-critique-guide"
+      ],
+      "aiGuidance": "When applying this theme, analytical frameworks must be named explicitly (semiotics, representation theory, framing analysis, etc.). Creative response assignments should require learners to make and state intentional choices that engage with the critical analysis. Assessment criteria must reward analytical rigor, not ideological agreement."
+    },
+    {
+      "id": "direct-instruction",
+      "name": "Direct Instruction",
+      "summary": "An explicit, instructor-led teaching style with demonstration, guided practice, and skill verification.",
+      "tokens": {
+        "scaffolding.level": "high",
+        "scaffolding.type": "worked-example",
+        "agency.mode": "fixed-path",
+        "feedback.mode": "instructor",
+        "feedback.timing": "after-submission",
+        "assessment.evidence": "quiz",
+        "assessment.mode": "formative",
+        "revision.required": "false",
+        "reflection.required": "false",
+        "collaboration.structure": "none",
+        "aiUse.policy": "prohibited"
+      },
+      "preferredPatterns": [
+        "demo-guided-practice-independent-production",
+        "mastery-checkpoint-pathway"
+      ],
+      "rendererProfiles": [
+        "lesson-page",
+        "student-checklist",
+        "lms-assignment"
+      ],
+      "aiGuidance": "When applying this theme, lead with explicit learning objectives and connect each activity directly to an objective. Worked examples should precede practice. Assessments should test the same skill demonstrated. Keep agency minimal — the learner's job at this stage is to master the defined skill."
+    },
+    {
+      "id": "inquiry-based",
+      "name": "Inquiry-Based",
+      "summary": "A question-driven investigative style where learners generate and pursue their own inquiries with instructor support.",
+      "tokens": {
+        "scaffolding.level": "medium",
+        "scaffolding.type": "guided-questions",
+        "agency.mode": "open-choice",
+        "feedback.mode": "instructor",
+        "feedback.timing": "ongoing",
+        "assessment.evidence": "reflection",
+        "assessment.mode": "formative",
+        "revision.required": "true",
+        "revision.mode": "multiple-drafts",
+        "reflection.required": "true",
+        "reflection.focus": "process",
+        "collaboration.structure": "small-group",
+        "aiUse.policy": "assisted-disclosed"
+      },
+      "preferredPatterns": [
+        "artifact-analysis-reflection",
+        "case-stakeholder-analysis-response-design"
+      ],
+      "rendererProfiles": [
+        "project-brief",
+        "instructor-facilitation-guide"
+      ],
+      "aiGuidance": "When applying this theme, open with a question rather than a statement. Assessment criteria should reward quality of inquiry process as much as quality of conclusions. Resist giving answers too early — sustained productive discomfort is pedagogically valuable here."
+    },
+    {
+      "id": "low-bandwidth-global",
+      "name": "Low-Bandwidth Global",
+      "summary": "An OER delivery style designed for under-resourced and offline contexts, prioritizing downloadable assets and low-tech alternatives.",
+      "tokens": {
+        "scaffolding.level": "high",
+        "scaffolding.type": "checklist",
+        "agency.mode": "fixed-path",
+        "feedback.mode": "instructor",
+        "feedback.timing": "after-submission",
+        "assessment.evidence": "quiz",
+        "assessment.mode": "formative",
+        "revision.required": "false",
+        "reflection.required": "false",
+        "collaboration.structure": "none",
+        "accessibility.mode": "screen-reader-first",
+        "accessibility.mediaAlternatives": [
+          "alt-text",
+          "transcript",
+          "downloadable-assets",
+          "print-friendly"
+        ],
+        "localization.level": "culturally-adapted",
+        "bandwidth.assumption": "offline-capable",
+        "aiUse.policy": "prohibited"
+      },
+      "preferredPatterns": [
+        "demo-guided-practice-independent-production",
+        "mastery-checkpoint-pathway"
+      ],
+      "rendererProfiles": [
+        "lesson-page",
+        "student-checklist",
+        "lms-assignment"
+      ],
+      "aiGuidance": "When applying this theme, every content element must have a low-bandwidth or offline equivalent. No auto-playing media. All assets must be downloadable. Avoid external service dependencies that require internet access at time of use. Assessment must be completable offline or via asynchronous submission."
+    },
+    {
+      "id": "mastery-learning",
+      "name": "Mastery Learning",
+      "summary": "A competency-based style where learners demonstrate proficiency before advancing, with unlimited revision until mastery.",
+      "tokens": {
+        "scaffolding.level": "high",
+        "scaffolding.type": "checklist",
+        "agency.mode": "fixed-path",
+        "feedback.mode": "instructor",
+        "feedback.timing": "after-submission",
+        "assessment.evidence": "quiz",
+        "assessment.mode": "summative",
+        "revision.required": "true",
+        "revision.mode": "until-mastery",
+        "reflection.required": "false",
+        "collaboration.structure": "none",
+        "aiUse.policy": "prohibited"
+      },
+      "preferredPatterns": [
+        "mastery-checkpoint-pathway",
+        "demo-guided-practice-independent-production"
+      ],
+      "rendererProfiles": [
+        "student-checklist",
+        "rubric-aligned-assessment",
+        "lms-assignment"
+      ],
+      "aiGuidance": "When applying this theme, make mastery criteria explicit and observable before the activity begins. Assessment is pass/not-yet — never graded on a curve. Re-attempts test the same objective with a parallel (not identical) task. Progress should be gated by demonstrated competency, not time spent."
+    },
+    {
+      "id": "project-based-production",
+      "name": "Project-Based Production",
+      "summary": "An extended authentic project style where learners produce a real artifact for a real or simulated audience through iterative development.",
+      "tokens": {
+        "scaffolding.level": "low",
+        "agency.mode": "bounded-choice",
+        "feedback.mode": "peer-plus-instructor",
+        "feedback.timing": "before-submission",
+        "assessment.evidence": "artifact-plus-reflection",
+        "assessment.mode": "summative",
+        "revision.required": "true",
+        "revision.mode": "multiple-drafts",
+        "reflection.required": "true",
+        "reflection.focus": "design-decisions",
+        "collaboration.structure": "small-group",
+        "collaboration.roleClarity": "assigned",
+        "aiUse.policy": "collaborative-disclosed",
+        "aiUse.allowedFunctions": [
+          "brainstorming",
+          "outlining",
+          "feedback",
+          "reference-generation"
+        ],
+        "aiUse.disclosureRequired": "true"
+      },
+      "preferredPatterns": [
+        "observe-analyze-create-critique-revise",
+        "peer-review-studio-cycle",
+        "community-contextualized-design-brief"
+      ],
+      "rendererProfiles": [
+        "project-brief",
+        "studio-critique-guide",
+        "instructor-facilitation-guide"
+      ],
+      "aiGuidance": "When applying this theme, ensure the project brief specifies a real or simulated audience with real constraints. Multiple feedback cycles before final submission are required, not optional. Assessment should weigh process documentation alongside final product quality."
     }
   ],
   "renderers": [],

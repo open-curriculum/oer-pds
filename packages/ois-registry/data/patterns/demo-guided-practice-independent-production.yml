@@ -1,0 +1,42 @@
+id: demo-guided-practice-independent-production
+name: Demo, Guided Practice, Independent Production
+summary: Instructor demonstrates a skill or technique, learners practice with support, then apply independently.
+problem: How do you teach procedural or technical skills to novices who need to see before they do?
+context:
+  - Technical and vocational courses
+  - Software and tools training
+  - Studio skills instruction
+  - Any first-exposure procedural learning
+sequence:
+  - phase: 1
+    label: Demonstration
+    learnerAction: Observe the instructor demonstration. Take notes on each step and note points of difficulty or confusion.
+    instructorAction: Demonstrate the target skill step-by-step while narrating decisions and common mistakes. Use think-aloud protocol.
+    evidence: observation notes
+  - phase: 2
+    label: Guided Practice
+    learnerAction: Attempt the skill with a provided scaffold (template, checklist, guided worksheet, or worked example). Ask questions as needed.
+    instructorAction: Circulate or monitor asynchronous submissions. Provide targeted feedback. Allow multiple attempts on the guided exercise.
+    evidence: completed guided exercise
+  - phase: 3
+    label: Formative Check
+    learnerAction: Receive instructor or peer feedback on guided practice. Identify gaps and revise before independent work.
+    instructorAction: Provide written or verbal feedback. Identify patterns across class and address common errors.
+    evidence: feedback received and documented
+  - phase: 4
+    label: Independent Production
+    learnerAction: Apply the skill without scaffolding to a new but analogous task. Produce the final artifact.
+    instructorAction: Assess independently produced work against criteria. Offer revision opportunity if appropriate.
+    evidence: independent artifact
+recommendedTokens:
+  scaffolding.level: high
+  scaffolding.type: worked-example
+  agency.mode: fixed-path
+  feedback.mode: instructor
+  feedback.timing: before-submission
+  assessment.evidence: artifact
+  assessment.mode: formative
+  revision.required: "false"
+assessmentEvidence: [guided-exercise, independent-artifact]
+compatibleThemes: [direct-instruction, mastery-learning]
+aiGuidance: When generating content for this pattern, produce a demonstration walkthrough first, then a scaffolded exercise version, then an independent exercise version. Each version should clearly state its scaffolding level.

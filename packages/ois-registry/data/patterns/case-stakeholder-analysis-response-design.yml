@@ -1,0 +1,40 @@
+id: case-stakeholder-analysis-response-design
+name: Case, Stakeholder Analysis, Response Design
+summary: Learners examine a complex case, analyze the perspectives of affected stakeholders, and design a justified response.
+problem: How do you develop ethical reasoning and policy thinking in courses where there are no simple right answers?
+context:
+  - Social science, policy, ethics, law
+  - Business and organizational courses
+  - Health professions
+  - Community-engaged courses
+sequence:
+  - phase: 1
+    label: Case Presentation
+    learnerAction: Read, watch, or listen to a case study representing a complex real-world problem. Take notes on the key facts, actors, and tensions.
+    instructorAction: Present or curate the case. Provide sufficient context for learners to understand complexity. Do not resolve tensions prematurely.
+    evidence: case notes
+  - phase: 2
+    label: Stakeholder Identification
+    learnerAction: Identify all stakeholders affected by the situation. Document each stakeholder's interests, constraints, and likely perspective.
+    instructorAction: Provide a stakeholder analysis scaffold. Ensure learners include marginalized and non-obvious stakeholders.
+    evidence: stakeholder map or matrix
+  - phase: 3
+    label: Perspective Analysis
+    learnerAction: Write or present a brief perspective statement from each key stakeholder's point of view. Identify tensions between stakeholder interests.
+    instructorAction: Facilitate perspective-taking discussion. Challenge oversimplifications.
+    evidence: perspective statements
+  - phase: 4
+    label: Response Design
+    learnerAction: Design and justify a response to the case that acknowledges stakeholder interests and states trade-offs explicitly.
+    instructorAction: Assess response on clarity of reasoning, acknowledgment of complexity, and quality of justification — not on position taken.
+    evidence: written response with rationale
+recommendedTokens:
+  scaffolding.level: medium
+  agency.mode: bounded-choice
+  feedback.mode: instructor
+  assessment.evidence: reflection
+  revision.required: "true"
+  collaboration.structure: small-group
+assessmentEvidence: [stakeholder-analysis, perspective-statements, written-response]
+compatibleThemes: [inquiry-based, critical-media-analysis, community-engaged]
+aiGuidance: When generating content for this pattern, do not resolve the case tensions. Provide a rich, ambiguous case. Scaffold the stakeholder analysis before the response design phase. The assessment should not privilege any single political or ethical stance.

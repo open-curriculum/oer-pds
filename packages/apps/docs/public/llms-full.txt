@@ -1,7 +1,7 @@
 # Open Instructional Systems — Full Specification
 
 Version: 0.1.0-alpha
-Generated: 2026-05-01T20:57:53.740Z
+Generated: 2026-05-01T21:18:31.741Z
 
 ---
 
@@ -70,6 +70,7 @@ Default: not-specified
 Values:
     prohibited: AI tools are not permitted in this activity.
     not-specified: No AI use policy has been defined. Not recommended for new content.
+    instructor-specified: The instructor will specify AI use rules outside this content block.
     permitted-undisclosed: AI use is permitted but disclosure is not required. Use sparingly.
     assisted-disclosed: AI assistance is permitted and must be disclosed.
     collaborative-disclosed: AI is used as a collaborative partner; disclosure and reflection required.
@@ -81,15 +82,15 @@ Category: aiUse
 Type: enum-multi
 Definition: The specific AI functions permitted in this activity.
 Values:
-    grammar-check: AI may be used to check grammar and spelling.
-    ideation: AI may be used to generate or expand ideas.
-    drafting: AI may be used to draft text or outlines.
-    research-assistance: AI may be used to find or summarize information.
-    code-generation: AI may be used to generate code.
+    brainstorming: AI may be used to brainstorm and generate initial ideas.
+    outlining: AI may be used to create outlines and structural plans.
+    debugging: AI may be used to debug code or identify logical errors.
+    critique: AI may be used to critique drafts or designs.
+    feedback: AI may be used to provide feedback on drafts or work-in-progress.
+    reference-generation: AI may be used to generate or locate references and sources.
     image-generation: AI may be used to generate images.
-    feedback: AI may be used to provide feedback on drafts.
-    translation: AI may be used for translation.
-    all: All AI functions are permitted.
+    code-generation: AI may be used to generate code.
+    final-artifact-generation: AI may be used to generate the final submission artifact.
 AI Guidance: Be specific. List only permitted functions. Never leave unspecified when aiUse.policy is not prohibited.
 
 ### aiUse.disclosureRequired
@@ -274,6 +275,114 @@ AI Guidance: Use in combination with scaffolding.level. If scaffolding.level is 
 
 ## Patterns
 
+### artifact-analysis-reflection
+Learners closely analyze an existing artifact, then reflect on its significance, method, and meaning.
+Problem: How do you develop close reading and critical analysis skills through artifact engagement?
+Sequence:
+  1. Artifact Encounter
+     Learner: Encounter the artifact without interpretive guidance. Note your initial reactions, observations, and questions.
+     Instructor: Select artifact and withhold context. Ask for unguided first impressions before providing background.
+  2. Contextual Analysis
+     Learner: Learn the context of the artifact's creation (historical, cultural, authorial). Re-examine the artifact through that context. Note how your reading shifts.
+     Instructor: Provide relevant contextual information. Facilitate discussion of how context changes interpretation.
+  3. Close Reading
+     Learner: Conduct a structured close reading using an analysis framework (semiotics, rhetorical analysis, formal analysis, etc.). Document specific evidence from the artifact.
+     Instructor: Provide the analysis framework. Require evidence citation from the artifact itself.
+  4. Significance Reflection
+     Learner: Write a reflection on what this artifact means, why it matters, and what you understand differently having studied it.
+     Instructor: Assess both the analytical rigor of the close reading and the depth of the significance reflection.
+AI Guidance: When generating close reading prompts, specify the analysis framework explicitly. Do not ask for "what do you think?" — ask for evidence-anchored claims. The significance reflection should push beyond description to interpretation and personal meaning-making.
+
+### case-stakeholder-analysis-response-design
+Learners examine a complex case, analyze the perspectives of affected stakeholders, and design a justified response.
+Problem: How do you develop ethical reasoning and policy thinking in courses where there are no simple right answers?
+Sequence:
+  1. Case Presentation
+     Learner: Read, watch, or listen to a case study representing a complex real-world problem. Take notes on the key facts, actors, and tensions.
+     Instructor: Present or curate the case. Provide sufficient context for learners to understand complexity. Do not resolve tensions prematurely.
+  2. Stakeholder Identification
+     Learner: Identify all stakeholders affected by the situation. Document each stakeholder's interests, constraints, and likely perspective.
+     Instructor: Provide a stakeholder analysis scaffold. Ensure learners include marginalized and non-obvious stakeholders.
+  3. Perspective Analysis
+     Learner: Write or present a brief perspective statement from each key stakeholder's point of view. Identify tensions between stakeholder interests.
+     Instructor: Facilitate perspective-taking discussion. Challenge oversimplifications.
+  4. Response Design
+     Learner: Design and justify a response to the case that acknowledges stakeholder interests and states trade-offs explicitly.
+     Instructor: Assess response on clarity of reasoning, acknowledgment of complexity, and quality of justification — not on position taken.
+AI Guidance: When generating content for this pattern, do not resolve the case tensions. Provide a rich, ambiguous case. Scaffold the stakeholder analysis before the response design phase. The assessment should not privilege any single political or ethical stance.
+
+### community-contextualized-design-brief
+Learners design a real artifact for a real community partner, contextualizing all production decisions in community needs.
+Problem: How do you create authentic learning experiences that generate real value for real people outside the classroom?
+Sequence:
+  1. Community Partner Introduction
+     Learner: Meet or learn about the community partner. Document the partner's context, needs, constraints, and goals. Resist proposing solutions at this stage.
+     Instructor: Arrange community partner engagement. Scaffold active listening. Suppress the "design instinct" to jump to solutions.
+  2. Needs Analysis
+     Learner: Analyze the partner's needs through the lens of this course's skills and knowledge. Identify what you can realistically offer and what is beyond scope.
+     Instructor: Guide learners to calibrate ambition to capacity. Ensure learners are not over-promising.
+  3. Design and Iteration
+     Learner: Design an artifact addressing a specific documented need. Share drafts or prototypes with the partner for feedback. Revise in response to partner input.
+     Instructor: Facilitate partner feedback sessions. Ensure learners are listening, not defending.
+  4. Delivery and Reflection
+     Learner: Deliver the final artifact to the partner. Reflect on the design process, the community context, your role, and what you would do differently.
+     Instructor: Assess both artifact quality and quality of reflection on community engagement.
+AI Guidance: When generating design briefs for this pattern, center the community partner's actual stated needs. Do not invent a community or fabricate needs. If generating a simulated partner, make the simulation explicit. Reflection should engage with power dynamics and positionality, not just process description.
+
+### constraint-based-project-sprint
+Learners produce an artifact under explicit constraints, emphasizing rapid iteration and decisive creative choices.
+Problem: How do you develop creative confidence and decision-making speed in learners who over-plan and under-produce?
+Sequence:
+  1. Brief and Constraints
+     Learner: Receive the project brief and explicit constraints (time limit, material restrictions, required elements, excluded approaches). Ask clarifying questions.
+     Instructor: State constraints clearly and explain their purpose. Constraints should be meaningful, not arbitrary.
+  2. Rapid Ideation
+     Learner: Generate multiple divergent ideas (3–5 minimum) before committing to any. Use sketches, outlines, or quick prototypes.
+     Instructor: Facilitate timed ideation. Encourage quantity over quality at this phase.
+  3. Committed Production
+     Learner: Select one direction and produce a complete artifact within the allotted time. Prioritize completion over perfection.
+     Instructor: Set and hold firm time limits. Resist requests for extensions — deadline pressure is pedagogically intentional.
+  4. Process Debrief
+     Learner: Reflect on the constraints: which helped, which hurt, what decisions you would change, and what the constraint revealed about your process.
+     Instructor: Facilitate whole-class debrief. Focus on creative decision-making under pressure.
+AI Guidance: Generate constraints that are specific and meaningful. Avoid constraints that merely restrict scope without shaping creative decisions. The debrief prompt should ask about constraint experience, not just artifact quality.
+
+### demo-guided-practice-independent-production
+Instructor demonstrates a skill or technique, learners practice with support, then apply independently.
+Problem: How do you teach procedural or technical skills to novices who need to see before they do?
+Sequence:
+  1. Demonstration
+     Learner: Observe the instructor demonstration. Take notes on each step and note points of difficulty or confusion.
+     Instructor: Demonstrate the target skill step-by-step while narrating decisions and common mistakes. Use think-aloud protocol.
+  2. Guided Practice
+     Learner: Attempt the skill with a provided scaffold (template, checklist, guided worksheet, or worked example). Ask questions as needed.
+     Instructor: Circulate or monitor asynchronous submissions. Provide targeted feedback. Allow multiple attempts on the guided exercise.
+  3. Formative Check
+     Learner: Receive instructor or peer feedback on guided practice. Identify gaps and revise before independent work.
+     Instructor: Provide written or verbal feedback. Identify patterns across class and address common errors.
+  4. Independent Production
+     Learner: Apply the skill without scaffolding to a new but analogous task. Produce the final artifact.
+     Instructor: Assess independently produced work against criteria. Offer revision opportunity if appropriate.
+AI Guidance: When generating content for this pattern, produce a demonstration walkthrough first, then a scaffolded exercise version, then an independent exercise version. Each version should clearly state its scaffolding level.
+
+### mastery-checkpoint-pathway
+Learners progress through skill levels, demonstrating mastery at each checkpoint before advancing.
+Problem: How do you ensure all learners reach genuine proficiency before moving to the next skill level?
+Sequence:
+  1. Skill Introduction
+     Learner: Review the learning objective and mastery criteria for this checkpoint. Understand what proficiency looks like before beginning.
+     Instructor: Present the skill in context. Make the mastery criteria explicit. Connect to prior skills.
+  2. Scaffolded Practice
+     Learner: Work through scaffolded practice exercises from guided to independent. Identify where errors occur and use them as learning signals.
+     Instructor: Provide worked examples, then remove scaffolding gradually. Allow unlimited low-stakes attempts.
+  3. Checkpoint Attempt
+     Learner: Attempt the mastery checkpoint. This is a genuine demonstration, not a practice exercise.
+     Instructor: Evaluate against explicit mastery criteria. Pass or not-yet. If not-yet, provide specific feedback on gaps.
+  4. Remediation and Re-attempt (if needed)
+     Learner: If not-yet, address specific gaps identified in feedback. Attempt additional practice. Re-attempt the checkpoint.
+     Instructor: Facilitate targeted remediation. Ensure the re-attempt tests the same objective with a parallel (not identical) task.
+AI Guidance: When generating checkpoint assessments, ensure the mastery criteria are specific and observable. Scaffolded practice and checkpoint should test the same skill with different tasks. Mastery is binary (pass/not-yet) — not a gradient.
+
 ### observe-analyze-create-critique-revise
 A studio-based cycle where learners study exemplars, analyze structure, make original work, receive critique, and revise.
 Problem: How do you design a learning experience where making, feedback, and revision are the core of learning — not supplemental?
@@ -295,10 +404,129 @@ Sequence:
      Instructor: Review revision with attention to responsiveness to feedback.
 AI Guidance: When generating materials for this pattern, produce both a student-facing brief (phases 1-5 as instructions) and a studio critique guide for the instructor. Ensure the exemplars section specifies what to observe. Do not skip the revision phase.
 
+### peer-review-studio-cycle
+Learners produce a draft, give and receive structured peer critique, then revise based on feedback.
+Problem: How do you build a culture of critical feedback and iterative improvement in a writing or production course?
+Sequence:
+  1. Draft Production
+     Learner: Produce a complete first draft or prototype. Label it clearly as a draft and identify two or three areas you want feedback on.
+     Instructor: Set clear draft submission requirements. Clarify what "complete draft" means — not a rough outline.
+  2. Peer Critique
+     Learner: Review an assigned peer's draft using a structured critique guide. Provide specific, evidence-based feedback. Avoid vague praise or criticism.
+     Instructor: Provide a critique guide with explicit criteria. Facilitate brief norms discussion before critique begins.
+  3. Feedback Reception
+     Learner: Read all peer feedback. Identify patterns. Ask clarifying questions if needed. Do not defend your draft at this stage.
+     Instructor: Facilitate structured feedback reception (optional). Ensure learners are reading, not dismissing, peer feedback.
+  4. Revision
+     Learner: Revise the artifact in response to feedback. Document which feedback you acted on and why, and which you chose not to use and why.
+     Instructor: Review revision documentation alongside final artifact. Assess the quality of revision reasoning, not just the artifact.
+AI Guidance: When generating critique guides, provide specific criteria anchored to the learning objectives — not generic writing advice. The revision memo is as important as the artifact. Assess reasoning, not just outcomes.
+
+### prompt-ai-experiment-evaluate-disclose
+Learners craft a prompt, run an AI experiment, critically evaluate the output, and disclose their process.
+Problem: How do you teach critical AI use when learners lack frameworks for evaluating AI output?
+Sequence:
+  1. Prompt Design
+     Learner: Design and document a prompt intended to produce a specified outcome. Consider specificity, context, and constraints.
+     Instructor: Provide exemplar prompts and non-examples. Facilitate discussion of what makes a prompt effective.
+  2. AI Experiment
+     Learner: Run the prompt through one or more AI tools. Document the outputs without editing them.
+     Instructor: Ensure access to appropriate tools. Clarify ethical and policy constraints on tool use.
+  3. Evaluate Output
+     Learner: Evaluate the AI output against explicit criteria: accuracy, bias, gaps, usefulness, limitations. Revise the prompt if needed and document iterations.
+     Instructor: Provide an evaluation rubric. Facilitate whole-class discussion of common AI failure modes.
+  4. Disclose and Reflect
+     Learner: Complete an AI Use Disclosure (AIUL) documenting which tools were used, what functions they served, and what the learner contributed.
+     Instructor: Review disclosures for completeness and accuracy.
+AI Guidance: When scaffolding this pattern, provide explicit prompt design criteria and evaluation rubrics. Do not allow learners to submit AI output without evaluation. The AIUL declaration is required, not optional.
+
+### reference-study-technical-exercise-creative-application
+Learners study exemplars, complete a technical exercise to build foundational skill, then apply it creatively.
+Problem: How do you help learners move from technical proficiency to creative ownership?
+Sequence:
+  1. Reference Study
+     Learner: Study a curated set of exemplary works from practitioners in the field. Document specific techniques, decisions, and effects observed.
+     Instructor: Curate exemplars representing diverse approaches and contexts. Provide an observation guide.
+  2. Technical Exercise
+     Learner: Complete a constrained technical exercise that isolates a specific technique observed in the reference study. Focus on precision and control.
+     Instructor: Provide step-by-step guidance. Allow multiple attempts. Give targeted technical feedback.
+  3. Technique Reflection
+     Learner: Reflect on what the technique does and why practitioners might choose to use or avoid it.
+     Instructor: Facilitate brief discussion connecting technique to context and intention.
+  4. Creative Application
+     Learner: Apply the studied technique(s) in an original work of your own design. Make intentional choices and document them.
+     Instructor: Assess both the quality of technique and the intentionality of creative decisions.
+AI Guidance: When generating exemplars for this pattern, include diverse practitioners and contexts. The creative application phase should specify that learners state their intention — not just submit a product.
+
 
 ---
 
 ## Themes
+
+### accessibility-first
+A Universal Design for Learning (UDL) style where accessibility is the primary design constraint, not an afterthought.
+Token Defaults:
+  scaffolding.level: medium
+  scaffolding.type: multiple-means
+  agency.mode: bounded-choice
+  feedback.mode: instructor
+  feedback.timing: ongoing
+  assessment.evidence: portfolio
+  assessment.mode: formative
+  revision.required: true
+  revision.mode: required-once
+  reflection.required: true
+  reflection.focus: process
+  collaboration.structure: optional
+  accessibility.mode: screen-reader-first
+  accessibility.mediaAlternatives: alt-text, captions, transcript, downloadable-assets
+  localization.level: translated
+  bandwidth.assumption: low
+  aiUse.policy: assisted-disclosed
+Preferred Patterns: demo-guided-practice-independent-production, mastery-checkpoint-pathway
+AI Guidance: When applying this theme, every media asset must have an accessible alternative. Assessment evidence must not privilege any single modality. Provide multiple means of representation, expression, and engagement as defined by UDL. Assume all learners may have assistive technology needs.
+
+### ai-literacy
+A critical AI use style where AI tools are the subject of investigation — how they work, what they produce, and what they mean.
+Token Defaults:
+  scaffolding.level: medium
+  scaffolding.type: guided-questions
+  agency.mode: bounded-choice
+  feedback.mode: instructor
+  feedback.timing: before-submission
+  assessment.evidence: artifact-plus-reflection
+  assessment.mode: formative
+  revision.required: true
+  revision.mode: required-once
+  reflection.required: true
+  reflection.focus: ethical-use
+  collaboration.structure: small-group
+  aiUse.policy: experimental
+  aiUse.allowedFunctions: brainstorming, outlining, critique, feedback, image-generation, code-generation, final-artifact-generation
+  aiUse.disclosureRequired: true
+  aiUse.reflectionRequired: true
+Preferred Patterns: prompt-ai-experiment-evaluate-disclose, artifact-analysis-reflection
+AI Guidance: When applying this theme, AI tools are required, not optional. Learners must document their AI use, evaluate its outputs, and reflect on its implications. Assessment criteria must reward critical evaluation over AI output quality. The AI Use Disclosure (AIUL) is a required deliverable.
+
+### community-engaged
+A participatory learning style where real community partners shape the learning brief and receive real deliverables.
+Token Defaults:
+  scaffolding.level: medium
+  agency.mode: bounded-choice
+  feedback.mode: peer-plus-instructor
+  feedback.timing: before-submission
+  assessment.evidence: artifact-plus-reflection
+  assessment.mode: summative
+  revision.required: true
+  revision.mode: multiple-drafts
+  reflection.required: true
+  reflection.focus: ethical-use
+  collaboration.structure: small-group
+  collaboration.roleClarity: assigned
+  localization.level: co-created
+  aiUse.policy: instructor-specified
+Preferred Patterns: community-contextualized-design-brief, case-stakeholder-analysis-response-design
+AI Guidance: When applying this theme, the community partner's needs must frame the design brief. Learner reflection must address positionality, power, and what the learner's role is relative to the community. Simulated community partners are acceptable but must be explicitly labeled as simulations. Assessment should weigh community benefit and reflective depth, not just artifact quality.
 
 ### constructivist-studio
 A making-centred pedagogical style where learning happens through creating, critiquing, and revising work.
@@ -316,6 +544,121 @@ Token Defaults:
   collaboration.structure: studio-critique
 Preferred Patterns: observe-analyze-create-critique-revise, peer-review-studio-cycle, constraint-based-project-sprint
 AI Guidance: When generating materials for this theme, foreground making. The project brief should lead with the deliverable and the critique structure, not a reading list. Include a studio critique guide. Reflection should focus on process and creative choices.
+
+### critical-media-analysis
+A representation-focused style where learners analyze how media constructs meaning, power, and identity, and respond creatively.
+Token Defaults:
+  scaffolding.level: medium
+  scaffolding.type: guided-questions
+  agency.mode: bounded-choice
+  feedback.mode: instructor
+  feedback.timing: before-submission
+  assessment.evidence: artifact-plus-reflection
+  assessment.mode: formative
+  revision.required: true
+  revision.mode: required-once
+  reflection.required: true
+  reflection.focus: ethical-use
+  collaboration.structure: small-group
+  aiUse.policy: assisted-disclosed
+Preferred Patterns: artifact-analysis-reflection, observe-analyze-create-critique-revise
+AI Guidance: When applying this theme, analytical frameworks must be named explicitly (semiotics, representation theory, framing analysis, etc.). Creative response assignments should require learners to make and state intentional choices that engage with the critical analysis. Assessment criteria must reward analytical rigor, not ideological agreement.
+
+### direct-instruction
+An explicit, instructor-led teaching style with demonstration, guided practice, and skill verification.
+Token Defaults:
+  scaffolding.level: high
+  scaffolding.type: worked-example
+  agency.mode: fixed-path
+  feedback.mode: instructor
+  feedback.timing: after-submission
+  assessment.evidence: quiz
+  assessment.mode: formative
+  revision.required: false
+  reflection.required: false
+  collaboration.structure: none
+  aiUse.policy: prohibited
+Preferred Patterns: demo-guided-practice-independent-production, mastery-checkpoint-pathway
+AI Guidance: When applying this theme, lead with explicit learning objectives and connect each activity directly to an objective. Worked examples should precede practice. Assessments should test the same skill demonstrated. Keep agency minimal — the learner's job at this stage is to master the defined skill.
+
+### inquiry-based
+A question-driven investigative style where learners generate and pursue their own inquiries with instructor support.
+Token Defaults:
+  scaffolding.level: medium
+  scaffolding.type: guided-questions
+  agency.mode: open-choice
+  feedback.mode: instructor
+  feedback.timing: ongoing
+  assessment.evidence: reflection
+  assessment.mode: formative
+  revision.required: true
+  revision.mode: multiple-drafts
+  reflection.required: true
+  reflection.focus: process
+  collaboration.structure: small-group
+  aiUse.policy: assisted-disclosed
+Preferred Patterns: artifact-analysis-reflection, case-stakeholder-analysis-response-design
+AI Guidance: When applying this theme, open with a question rather than a statement. Assessment criteria should reward quality of inquiry process as much as quality of conclusions. Resist giving answers too early — sustained productive discomfort is pedagogically valuable here.
+
+### low-bandwidth-global
+An OER delivery style designed for under-resourced and offline contexts, prioritizing downloadable assets and low-tech alternatives.
+Token Defaults:
+  scaffolding.level: high
+  scaffolding.type: checklist
+  agency.mode: fixed-path
+  feedback.mode: instructor
+  feedback.timing: after-submission
+  assessment.evidence: quiz
+  assessment.mode: formative
+  revision.required: false
+  reflection.required: false
+  collaboration.structure: none
+  accessibility.mode: screen-reader-first
+  accessibility.mediaAlternatives: alt-text, transcript, downloadable-assets, print-friendly
+  localization.level: culturally-adapted
+  bandwidth.assumption: offline-capable
+  aiUse.policy: prohibited
+Preferred Patterns: demo-guided-practice-independent-production, mastery-checkpoint-pathway
+AI Guidance: When applying this theme, every content element must have a low-bandwidth or offline equivalent. No auto-playing media. All assets must be downloadable. Avoid external service dependencies that require internet access at time of use. Assessment must be completable offline or via asynchronous submission.
+
+### mastery-learning
+A competency-based style where learners demonstrate proficiency before advancing, with unlimited revision until mastery.
+Token Defaults:
+  scaffolding.level: high
+  scaffolding.type: checklist
+  agency.mode: fixed-path
+  feedback.mode: instructor
+  feedback.timing: after-submission
+  assessment.evidence: quiz
+  assessment.mode: summative
+  revision.required: true
+  revision.mode: until-mastery
+  reflection.required: false
+  collaboration.structure: none
+  aiUse.policy: prohibited
+Preferred Patterns: mastery-checkpoint-pathway, demo-guided-practice-independent-production
+AI Guidance: When applying this theme, make mastery criteria explicit and observable before the activity begins. Assessment is pass/not-yet — never graded on a curve. Re-attempts test the same objective with a parallel (not identical) task. Progress should be gated by demonstrated competency, not time spent.
+
+### project-based-production
+An extended authentic project style where learners produce a real artifact for a real or simulated audience through iterative development.
+Token Defaults:
+  scaffolding.level: low
+  agency.mode: bounded-choice
+  feedback.mode: peer-plus-instructor
+  feedback.timing: before-submission
+  assessment.evidence: artifact-plus-reflection
+  assessment.mode: summative
+  revision.required: true
+  revision.mode: multiple-drafts
+  reflection.required: true
+  reflection.focus: design-decisions
+  collaboration.structure: small-group
+  collaboration.roleClarity: assigned
+  aiUse.policy: collaborative-disclosed
+  aiUse.allowedFunctions: brainstorming, outlining, feedback, reference-generation
+  aiUse.disclosureRequired: true
+Preferred Patterns: observe-analyze-create-critique-revise, peer-review-studio-cycle, community-contextualized-design-brief
+AI Guidance: When applying this theme, ensure the project brief specifies a real or simulated audience with real constraints. Multiple feedback cycles before final submission are required, not optional. Assessment should weigh process documentation alongside final product quality.
 
 
 ---

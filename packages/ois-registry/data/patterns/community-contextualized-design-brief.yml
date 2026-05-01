@@ -1,0 +1,43 @@
+id: community-contextualized-design-brief
+name: Community-Contextualized Design Brief
+summary: Learners design a real artifact for a real community partner, contextualizing all production decisions in community needs.
+problem: How do you create authentic learning experiences that generate real value for real people outside the classroom?
+context:
+  - Service-learning and community-engaged courses
+  - Social design and participatory design
+  - Professional practice simulations
+  - Courses with explicit equity and social justice goals
+sequence:
+  - phase: 1
+    label: Community Partner Introduction
+    learnerAction: Meet or learn about the community partner. Document the partner's context, needs, constraints, and goals. Resist proposing solutions at this stage.
+    instructorAction: Arrange community partner engagement. Scaffold active listening. Suppress the "design instinct" to jump to solutions.
+    evidence: community context documentation
+  - phase: 2
+    label: Needs Analysis
+    learnerAction: Analyze the partner's needs through the lens of this course's skills and knowledge. Identify what you can realistically offer and what is beyond scope.
+    instructorAction: Guide learners to calibrate ambition to capacity. Ensure learners are not over-promising.
+    evidence: scope-aligned needs analysis
+  - phase: 3
+    label: Design and Iteration
+    learnerAction: Design an artifact addressing a specific documented need. Share drafts or prototypes with the partner for feedback. Revise in response to partner input.
+    instructorAction: Facilitate partner feedback sessions. Ensure learners are listening, not defending.
+    evidence: draft artifact plus partner feedback documentation
+  - phase: 4
+    label: Delivery and Reflection
+    learnerAction: Deliver the final artifact to the partner. Reflect on the design process, the community context, your role, and what you would do differently.
+    instructorAction: Assess both artifact quality and quality of reflection on community engagement.
+    evidence: final artifact, delivery documentation, reflection
+recommendedTokens:
+  scaffolding.level: medium
+  agency.mode: bounded-choice
+  feedback.mode: peer-plus-instructor
+  assessment.evidence: artifact-plus-reflection
+  revision.required: "true"
+  revision.mode: multiple-drafts
+  reflection.required: "true"
+  reflection.focus: ethical-use
+  collaboration.structure: small-group
+assessmentEvidence: [community-context-doc, needs-analysis, draft-artifact, partner-feedback-doc, reflection, final-artifact]
+compatibleThemes: [community-engaged, project-based-production]
+aiGuidance: When generating design briefs for this pattern, center the community partner's actual stated needs. Do not invent a community or fabricate needs. If generating a simulated partner, make the simulation explicit. Reflection should engage with power dynamics and positionality, not just process description.

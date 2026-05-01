@@ -1,0 +1,28 @@
+id: project-based-production
+name: Project-Based Production
+summary: An extended authentic project style where learners produce a real artifact for a real or simulated audience through iterative development.
+tokens:
+  scaffolding.level: low
+  agency.mode: bounded-choice
+  feedback.mode: peer-plus-instructor
+  feedback.timing: before-submission
+  assessment.evidence: artifact-plus-reflection
+  assessment.mode: summative
+  revision.required: "true"
+  revision.mode: multiple-drafts
+  reflection.required: "true"
+  reflection.focus: design-decisions
+  collaboration.structure: small-group
+  collaboration.roleClarity: assigned
+  aiUse.policy: collaborative-disclosed
+  aiUse.allowedFunctions: [brainstorming, outlining, feedback, reference-generation]
+  aiUse.disclosureRequired: "true"
+preferredPatterns:
+  - observe-analyze-create-critique-revise
+  - peer-review-studio-cycle
+  - community-contextualized-design-brief
+rendererProfiles:
+  - project-brief
+  - studio-critique-guide
+  - instructor-facilitation-guide
+aiGuidance: When applying this theme, ensure the project brief specifies a real or simulated audience with real constraints. Multiple feedback cycles before final submission are required, not optional. Assessment should weigh process documentation alongside final product quality.

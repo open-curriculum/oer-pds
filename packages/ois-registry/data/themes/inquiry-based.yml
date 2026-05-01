@@ -1,0 +1,24 @@
+id: inquiry-based
+name: Inquiry-Based
+summary: A question-driven investigative style where learners generate and pursue their own inquiries with instructor support.
+tokens:
+  scaffolding.level: medium
+  scaffolding.type: guided-questions
+  agency.mode: open-choice
+  feedback.mode: instructor
+  feedback.timing: ongoing
+  assessment.evidence: reflection
+  assessment.mode: formative
+  revision.required: "true"
+  revision.mode: multiple-drafts
+  reflection.required: "true"
+  reflection.focus: process
+  collaboration.structure: small-group
+  aiUse.policy: assisted-disclosed
+preferredPatterns:
+  - artifact-analysis-reflection
+  - case-stakeholder-analysis-response-design
+rendererProfiles:
+  - project-brief
+  - instructor-facilitation-guide
+aiGuidance: When applying this theme, open with a question rather than a statement. Assessment criteria should reward quality of inquiry process as much as quality of conclusions. Resist giving answers too early — sustained productive discomfort is pedagogically valuable here.

@@ -1,0 +1,43 @@
+id: peer-review-studio-cycle
+name: Peer Review Studio Cycle
+summary: Learners produce a draft, give and receive structured peer critique, then revise based on feedback.
+problem: How do you build a culture of critical feedback and iterative improvement in a writing or production course?
+context:
+  - Writing and composition courses
+  - Studio arts and design
+  - Any course with iterative production and revision
+  - Courses emphasizing collaborative learning
+sequence:
+  - phase: 1
+    label: Draft Production
+    learnerAction: Produce a complete first draft or prototype. Label it clearly as a draft and identify two or three areas you want feedback on.
+    instructorAction: Set clear draft submission requirements. Clarify what "complete draft" means — not a rough outline.
+    evidence: submitted draft with feedback requests
+  - phase: 2
+    label: Peer Critique
+    learnerAction: Review an assigned peer's draft using a structured critique guide. Provide specific, evidence-based feedback. Avoid vague praise or criticism.
+    instructorAction: Provide a critique guide with explicit criteria. Facilitate brief norms discussion before critique begins.
+    evidence: written critique with criteria citations
+  - phase: 3
+    label: Feedback Reception
+    learnerAction: Read all peer feedback. Identify patterns. Ask clarifying questions if needed. Do not defend your draft at this stage.
+    instructorAction: Facilitate structured feedback reception (optional). Ensure learners are reading, not dismissing, peer feedback.
+    evidence: documented feedback summary
+  - phase: 4
+    label: Revision
+    learnerAction: Revise the artifact in response to feedback. Document which feedback you acted on and why, and which you chose not to use and why.
+    instructorAction: Review revision documentation alongside final artifact. Assess the quality of revision reasoning, not just the artifact.
+    evidence: revised artifact plus revision memo
+recommendedTokens:
+  scaffolding.level: medium
+  agency.mode: bounded-choice
+  feedback.mode: peer-plus-instructor
+  feedback.timing: before-submission
+  assessment.evidence: artifact-plus-reflection
+  revision.required: "true"
+  revision.mode: required-once
+  collaboration.structure: peer-review
+  collaboration.roleClarity: structured
+assessmentEvidence: [draft, peer-critique, revision-memo, revised-artifact]
+compatibleThemes: [constructivist-studio, project-based-production]
+aiGuidance: When generating critique guides, provide specific criteria anchored to the learning objectives — not generic writing advice. The revision memo is as important as the artifact. Assess reasoning, not just outcomes.

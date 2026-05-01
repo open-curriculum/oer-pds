@@ -1,0 +1,42 @@
+id: reference-study-technical-exercise-creative-application
+name: Reference Study, Technical Exercise, Creative Application
+summary: Learners study exemplars, complete a technical exercise to build foundational skill, then apply it creatively.
+problem: How do you help learners move from technical proficiency to creative ownership?
+context:
+  - Design and visual arts
+  - Music composition and production
+  - Writing-intensive courses
+  - Engineering and architecture
+  - Any field combining technical skill and creative judgment
+sequence:
+  - phase: 1
+    label: Reference Study
+    learnerAction: Study a curated set of exemplary works from practitioners in the field. Document specific techniques, decisions, and effects observed.
+    instructorAction: Curate exemplars representing diverse approaches and contexts. Provide an observation guide.
+    evidence: reference study notes
+  - phase: 2
+    label: Technical Exercise
+    learnerAction: Complete a constrained technical exercise that isolates a specific technique observed in the reference study. Focus on precision and control.
+    instructorAction: Provide step-by-step guidance. Allow multiple attempts. Give targeted technical feedback.
+    evidence: completed technical exercise
+  - phase: 3
+    label: Technique Reflection
+    learnerAction: Reflect on what the technique does and why practitioners might choose to use or avoid it.
+    instructorAction: Facilitate brief discussion connecting technique to context and intention.
+    evidence: brief reflection note
+  - phase: 4
+    label: Creative Application
+    learnerAction: Apply the studied technique(s) in an original work of your own design. Make intentional choices and document them.
+    instructorAction: Assess both the quality of technique and the intentionality of creative decisions.
+    evidence: original artifact with design statement
+recommendedTokens:
+  scaffolding.level: medium
+  scaffolding.type: worked-example
+  agency.mode: bounded-choice
+  feedback.mode: instructor
+  feedback.timing: before-submission
+  assessment.evidence: artifact-plus-reflection
+  revision.required: "true"
+assessmentEvidence: [reference-study-notes, technical-exercise, original-artifact, design-statement]
+compatibleThemes: [constructivist-studio, project-based-production]
+aiGuidance: When generating exemplars for this pattern, include diverse practitioners and contexts. The creative application phase should specify that learners state their intention — not just submit a product.

@@ -1,0 +1,27 @@
+id: low-bandwidth-global
+name: Low-Bandwidth Global
+summary: An OER delivery style designed for under-resourced and offline contexts, prioritizing downloadable assets and low-tech alternatives.
+tokens:
+  scaffolding.level: high
+  scaffolding.type: checklist
+  agency.mode: fixed-path
+  feedback.mode: instructor
+  feedback.timing: after-submission
+  assessment.evidence: quiz
+  assessment.mode: formative
+  revision.required: "false"
+  reflection.required: "false"
+  collaboration.structure: none
+  accessibility.mode: screen-reader-first
+  accessibility.mediaAlternatives: [alt-text, transcript, downloadable-assets, print-friendly]
+  localization.level: culturally-adapted
+  bandwidth.assumption: offline-capable
+  aiUse.policy: prohibited
+preferredPatterns:
+  - demo-guided-practice-independent-production
+  - mastery-checkpoint-pathway
+rendererProfiles:
+  - lesson-page
+  - student-checklist
+  - lms-assignment
+aiGuidance: When applying this theme, every content element must have a low-bandwidth or offline equivalent. No auto-playing media. All assets must be downloadable. Avoid external service dependencies that require internet access at time of use. Assessment must be completable offline or via asynchronous submission.

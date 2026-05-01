@@ -1,0 +1,29 @@
+id: accessibility-first
+name: Accessibility-First
+summary: A Universal Design for Learning (UDL) style where accessibility is the primary design constraint, not an afterthought.
+tokens:
+  scaffolding.level: medium
+  scaffolding.type: multiple-means
+  agency.mode: bounded-choice
+  feedback.mode: instructor
+  feedback.timing: ongoing
+  assessment.evidence: portfolio
+  assessment.mode: formative
+  revision.required: "true"
+  revision.mode: required-once
+  reflection.required: "true"
+  reflection.focus: process
+  collaboration.structure: optional
+  accessibility.mode: screen-reader-first
+  accessibility.mediaAlternatives: [alt-text, captions, transcript, downloadable-assets]
+  localization.level: translated
+  bandwidth.assumption: low
+  aiUse.policy: assisted-disclosed
+preferredPatterns:
+  - demo-guided-practice-independent-production
+  - mastery-checkpoint-pathway
+rendererProfiles:
+  - lesson-page
+  - student-checklist
+  - lms-assignment
+aiGuidance: When applying this theme, every media asset must have an accessible alternative. Assessment evidence must not privilege any single modality. Provide multiple means of representation, expression, and engagement as defined by UDL. Assume all learners may have assistive technology needs.

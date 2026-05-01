@@ -1,0 +1,42 @@
+id: prompt-ai-experiment-evaluate-disclose
+name: Prompt, AI Experiment, Evaluate, Disclose
+summary: Learners craft a prompt, run an AI experiment, critically evaluate the output, and disclose their process.
+problem: How do you teach critical AI use when learners lack frameworks for evaluating AI output?
+context:
+  - AI literacy courses
+  - Digital media and communications
+  - Any course that permits or requires AI tool use
+sequence:
+  - phase: 1
+    label: Prompt Design
+    learnerAction: Design and document a prompt intended to produce a specified outcome. Consider specificity, context, and constraints.
+    instructorAction: Provide exemplar prompts and non-examples. Facilitate discussion of what makes a prompt effective.
+    evidence: documented prompt with rationale
+  - phase: 2
+    label: AI Experiment
+    learnerAction: Run the prompt through one or more AI tools. Document the outputs without editing them.
+    instructorAction: Ensure access to appropriate tools. Clarify ethical and policy constraints on tool use.
+    evidence: raw AI output documented
+  - phase: 3
+    label: Evaluate Output
+    learnerAction: "Evaluate the AI output against explicit criteria: accuracy, bias, gaps, usefulness, limitations. Revise the prompt if needed and document iterations."
+    instructorAction: "Provide an evaluation rubric. Facilitate whole-class discussion of common AI failure modes."
+    evidence: written evaluation with criteria citations
+  - phase: 4
+    label: Disclose and Reflect
+    learnerAction: Complete an AI Use Disclosure (AIUL) documenting which tools were used, what functions they served, and what the learner contributed.
+    instructorAction: Review disclosures for completeness and accuracy.
+    evidence: completed AIUL declaration
+recommendedTokens:
+  scaffolding.level: medium
+  agency.mode: bounded-choice
+  feedback.mode: instructor
+  assessment.evidence: reflection
+  revision.required: "true"
+  aiUse.policy: experimental
+  aiUse.allowedFunctions: [brainstorming, feedback, image-generation, code-generation, final-artifact-generation]
+  aiUse.disclosureRequired: "true"
+  aiUse.reflectionRequired: "true"
+assessmentEvidence: [prompt-documentation, ai-output-documentation, written-evaluation, aiul-declaration]
+compatibleThemes: [ai-literacy, inquiry-based]
+aiGuidance: When scaffolding this pattern, provide explicit prompt design criteria and evaluation rubrics. Do not allow learners to submit AI output without evaluation. The AIUL declaration is required, not optional.

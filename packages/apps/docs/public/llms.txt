@@ -36,13 +36,31 @@ A pedagogical design system vocabulary for learning experience metadata.
 - scaffolding.level: The degree of instructional support provided to the learner.
 - scaffolding.type: The primary modality of instructional support provided.
 
-## Patterns (1)
+## Patterns (10)
 
+- artifact-analysis-reflection: Learners closely analyze an existing artifact, then reflect on its significance, method, and meaning.
+- case-stakeholder-analysis-response-design: Learners examine a complex case, analyze the perspectives of affected stakeholders, and design a justified response.
+- community-contextualized-design-brief: Learners design a real artifact for a real community partner, contextualizing all production decisions in community needs.
+- constraint-based-project-sprint: Learners produce an artifact under explicit constraints, emphasizing rapid iteration and decisive creative choices.
+- demo-guided-practice-independent-production: Instructor demonstrates a skill or technique, learners practice with support, then apply independently.
+- mastery-checkpoint-pathway: Learners progress through skill levels, demonstrating mastery at each checkpoint before advancing.
 - observe-analyze-create-critique-revise: A studio-based cycle where learners study exemplars, analyze structure, make original work, receive critique, and revise.
+- peer-review-studio-cycle: Learners produce a draft, give and receive structured peer critique, then revise based on feedback.
+- prompt-ai-experiment-evaluate-disclose: Learners craft a prompt, run an AI experiment, critically evaluate the output, and disclose their process.
+- reference-study-technical-exercise-creative-application: Learners study exemplars, complete a technical exercise to build foundational skill, then apply it creatively.
 
-## Themes (1)
+## Themes (10)
 
+- accessibility-first: A Universal Design for Learning (UDL) style where accessibility is the primary design constraint, not an afterthought.
+- ai-literacy: A critical AI use style where AI tools are the subject of investigation — how they work, what they produce, and what they mean.
+- community-engaged: A participatory learning style where real community partners shape the learning brief and receive real deliverables.
 - constructivist-studio: A making-centred pedagogical style where learning happens through creating, critiquing, and revising work.
+- critical-media-analysis: A representation-focused style where learners analyze how media constructs meaning, power, and identity, and respond creatively.
+- direct-instruction: An explicit, instructor-led teaching style with demonstration, guided practice, and skill verification.
+- inquiry-based: A question-driven investigative style where learners generate and pursue their own inquiries with instructor support.
+- low-bandwidth-global: An OER delivery style designed for under-resourced and offline contexts, prioritizing downloadable assets and low-tech alternatives.
+- mastery-learning: A competency-based style where learners demonstrate proficiency before advancing, with unlimited revision until mastery.
+- project-based-production: An extended authentic project style where learners produce a real artifact for a real or simulated audience through iterative development.
 
 ## AI Agent Operating Rules
 

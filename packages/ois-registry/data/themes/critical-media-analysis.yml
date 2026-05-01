@@ -1,0 +1,24 @@
+id: critical-media-analysis
+name: Critical Media Analysis
+summary: A representation-focused style where learners analyze how media constructs meaning, power, and identity, and respond creatively.
+tokens:
+  scaffolding.level: medium
+  scaffolding.type: guided-questions
+  agency.mode: bounded-choice
+  feedback.mode: instructor
+  feedback.timing: before-submission
+  assessment.evidence: artifact-plus-reflection
+  assessment.mode: formative
+  revision.required: "true"
+  revision.mode: required-once
+  reflection.required: "true"
+  reflection.focus: ethical-use
+  collaboration.structure: small-group
+  aiUse.policy: assisted-disclosed
+preferredPatterns:
+  - artifact-analysis-reflection
+  - observe-analyze-create-critique-revise
+rendererProfiles:
+  - project-brief
+  - studio-critique-guide
+aiGuidance: When applying this theme, analytical frameworks must be named explicitly (semiotics, representation theory, framing analysis, etc.). Creative response assignments should require learners to make and state intentional choices that engage with the critical analysis. Assessment criteria must reward analytical rigor, not ideological agreement.

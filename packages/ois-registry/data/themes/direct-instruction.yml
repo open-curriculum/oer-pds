@@ -1,0 +1,23 @@
+id: direct-instruction
+name: Direct Instruction
+summary: An explicit, instructor-led teaching style with demonstration, guided practice, and skill verification.
+tokens:
+  scaffolding.level: high
+  scaffolding.type: worked-example
+  agency.mode: fixed-path
+  feedback.mode: instructor
+  feedback.timing: after-submission
+  assessment.evidence: quiz
+  assessment.mode: formative
+  revision.required: "false"
+  reflection.required: "false"
+  collaboration.structure: none
+  aiUse.policy: prohibited
+preferredPatterns:
+  - demo-guided-practice-independent-production
+  - mastery-checkpoint-pathway
+rendererProfiles:
+  - lesson-page
+  - student-checklist
+  - lms-assignment
+aiGuidance: When applying this theme, lead with explicit learning objectives and connect each activity directly to an objective. Worked examples should precede practice. Assessments should test the same skill demonstrated. Keep agency minimal — the learner's job at this stage is to master the defined skill.

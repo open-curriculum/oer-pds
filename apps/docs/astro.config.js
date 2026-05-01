@@ -2,7 +2,7 @@ import { defineConfig } from 'astro/config';
 import starlight from '@astrojs/starlight';
 
 export default defineConfig({
-  site: 'https://open-curriculum.github.io',
+  site: 'https://www.open-curriculum.org',
   base: '/oer-pds',
   integrations: [
     starlight({
@@ -30,7 +30,15 @@ export default defineConfig({
       ],
       sidebar: [
         {
-          label: 'Overview',
+          label: 'Start Here',
+          items: [
+            { label: 'Getting Started', link: '/getting-started' },
+            { label: 'About OIS', link: '/about' },
+            { label: 'Glossary', link: '/glossary' },
+          ],
+        },
+        {
+          label: 'Concepts',
           items: [
             {
               label: 'What is OIS?',
@@ -39,6 +47,26 @@ export default defineConfig({
             {
               label: 'Pedagogical Styling',
               link: '/concepts/pedagogical-styling',
+            },
+            {
+              label: 'Pedagogical Tokens',
+              link: '/concepts/pedagogical-tokens',
+            },
+            {
+              label: 'Instructional Patterns',
+              link: '/concepts/instructional-patterns',
+            },
+            {
+              label: 'Pedagogical Themes',
+              link: '/concepts/pedagogical-themes',
+            },
+            {
+              label: 'Renderer Profiles',
+              link: '/concepts/renderer-profiles',
+            },
+            {
+              label: 'Validation Rules',
+              link: '/concepts/validation-rules',
             },
             {
               label: 'Relationship to OERSchema',

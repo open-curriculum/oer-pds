@@ -1,0 +1,25 @@
+id: community-engaged
+name: Community-Engaged
+summary: A participatory learning style where real community partners shape the learning brief and receive real deliverables.
+tokens:
+  scaffolding.level: medium
+  agency.mode: bounded-choice
+  feedback.mode: peer-plus-instructor
+  feedback.timing: before-submission
+  assessment.evidence: artifact-plus-reflection
+  assessment.mode: summative
+  revision.required: "true"
+  revision.mode: multiple-drafts
+  reflection.required: "true"
+  reflection.focus: ethical-use
+  collaboration.structure: small-group
+  collaboration.roleClarity: assigned
+  localization.level: co-created
+  aiUse.policy: instructor-specified
+preferredPatterns:
+  - community-contextualized-design-brief
+  - case-stakeholder-analysis-response-design
+rendererProfiles:
+  - project-brief
+  - instructor-facilitation-guide
+aiGuidance: When applying this theme, the community partner's needs must frame the design brief. Learner reflection must address positionality, power, and what the learner's role is relative to the community. Simulated community partners are acceptable but must be explicitly labeled as simulations. Assessment should weigh community benefit and reflective depth, not just artifact quality.

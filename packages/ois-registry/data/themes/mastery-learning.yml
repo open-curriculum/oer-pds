@@ -1,0 +1,24 @@
+id: mastery-learning
+name: Mastery Learning
+summary: A competency-based style where learners demonstrate proficiency before advancing, with unlimited revision until mastery.
+tokens:
+  scaffolding.level: high
+  scaffolding.type: checklist
+  agency.mode: fixed-path
+  feedback.mode: instructor
+  feedback.timing: after-submission
+  assessment.evidence: quiz
+  assessment.mode: summative
+  revision.required: "true"
+  revision.mode: until-mastery
+  reflection.required: "false"
+  collaboration.structure: none
+  aiUse.policy: prohibited
+preferredPatterns:
+  - mastery-checkpoint-pathway
+  - demo-guided-practice-independent-production
+rendererProfiles:
+  - student-checklist
+  - rubric-aligned-assessment
+  - lms-assignment
+aiGuidance: When applying this theme, make mastery criteria explicit and observable before the activity begins. Assessment is pass/not-yet — never graded on a curve. Re-attempts test the same objective with a parallel (not identical) task. Progress should be gated by demonstrated competency, not time spent.

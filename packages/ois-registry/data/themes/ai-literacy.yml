@@ -1,0 +1,28 @@
+id: ai-literacy
+name: AI Literacy
+summary: A critical AI use style where AI tools are the subject of investigation — how they work, what they produce, and what they mean.
+tokens:
+  scaffolding.level: medium
+  scaffolding.type: guided-questions
+  agency.mode: bounded-choice
+  feedback.mode: instructor
+  feedback.timing: before-submission
+  assessment.evidence: artifact-plus-reflection
+  assessment.mode: formative
+  revision.required: "true"
+  revision.mode: required-once
+  reflection.required: "true"
+  reflection.focus: ethical-use
+  collaboration.structure: small-group
+  aiUse.policy: experimental
+  aiUse.allowedFunctions: [brainstorming, outlining, critique, feedback, image-generation, code-generation, final-artifact-generation]
+  aiUse.disclosureRequired: "true"
+  aiUse.reflectionRequired: "true"
+preferredPatterns:
+  - prompt-ai-experiment-evaluate-disclose
+  - artifact-analysis-reflection
+rendererProfiles:
+  - project-brief
+  - aiul-declaration
+  - instructor-facilitation-guide
+aiGuidance: When applying this theme, AI tools are required, not optional. Learners must document their AI use, evaluate its outputs, and reflect on its implications. Assessment criteria must reward critical evaluation over AI output quality. The AI Use Disclosure (AIUL) is a required deliverable.

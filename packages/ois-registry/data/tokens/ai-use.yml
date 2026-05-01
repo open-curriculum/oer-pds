@@ -10,6 +10,8 @@
       definition: AI tools are not permitted in this activity.
     - value: not-specified
       definition: No AI use policy has been defined. Not recommended for new content.
+    - value: instructor-specified
+      definition: The instructor will specify AI use rules outside this content block.
     - value: permitted-undisclosed
       definition: AI use is permitted but disclosure is not required. Use sparingly.
     - value: assisted-disclosed
@@ -26,24 +28,24 @@
   definition: The specific AI functions permitted in this activity.
   aiGuidance: Be specific. List only permitted functions. Never leave unspecified when aiUse.policy is not prohibited.
   values:
-    - value: grammar-check
-      definition: AI may be used to check grammar and spelling.
-    - value: ideation
-      definition: AI may be used to generate or expand ideas.
-    - value: drafting
-      definition: AI may be used to draft text or outlines.
-    - value: research-assistance
-      definition: AI may be used to find or summarize information.
-    - value: code-generation
-      definition: AI may be used to generate code.
+    - value: brainstorming
+      definition: AI may be used to brainstorm and generate initial ideas.
+    - value: outlining
+      definition: AI may be used to create outlines and structural plans.
+    - value: debugging
+      definition: AI may be used to debug code or identify logical errors.
+    - value: critique
+      definition: AI may be used to critique drafts or designs.
+    - value: feedback
+      definition: AI may be used to provide feedback on drafts or work-in-progress.
+    - value: reference-generation
+      definition: AI may be used to generate or locate references and sources.
     - value: image-generation
       definition: AI may be used to generate images.
-    - value: feedback
-      definition: AI may be used to provide feedback on drafts.
-    - value: translation
-      definition: AI may be used for translation.
-    - value: all
-      definition: All AI functions are permitted.
+    - value: code-generation
+      definition: AI may be used to generate code.
+    - value: final-artifact-generation
+      definition: AI may be used to generate the final submission artifact.
 
 - id: aiUse.disclosureRequired
   name: AI Disclosure Required
