@@ -1,8 +1,5 @@
 name: Post-Merge
 
-env:
-  VERCEL_ORG_ID: ${{ secrets.VERCEL_ORG_ID }}
-
 on:
   push:
     branches: [main]
@@ -11,28 +8,3 @@ jobs:
   quality_control:
     name: Quality-Check
     uses: ./.github/workflows/quality-check.yaml
-
-  deploy_docs_dev:
-    name: Deploy-Docs-Dev
-    timeout-minutes: 30
-    runs-on: ubuntu-latest
-    needs: quality_control
-    env:
-      VERCEL_PROJECT_ID: ${{ secrets.VERCEL_PROJECT_DOCS_ID }}
-
-    steps:
-      - name: Checkout
-        uses: actions/checkout@v4
-
-      - name: Printout
-        uses: ./.github/actions/printout
-
-      - name: Setup
-        uses: ./.github/actions/setup
-
-      - name: Deploy
-        uses: ./.github/actions/deploy-docs
-        with:
-          mode: 'dev'
-          vercel_token: ${{ secrets.VERCEL_TOKEN }}
-          app_dir: ./apps/docs

@@ -9,9 +9,6 @@ on:
   # for debug purposes
   workflow_dispatch:
 
-env:
-  VERCEL_ORG_ID: ${{ secrets.VERCEL_ORG_ID }}
-
 concurrency:
   group: ${{ github.workflow }}-${{ github.ref }}
 
@@ -41,27 +38,3 @@ jobs:
         env:
           NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-
-  deploy_docs_dev:
-    name: Deploy-Docs-Prod
-    timeout-minutes: 30
-    runs-on: ubuntu-latest
-    env:
-      VERCEL_PROJECT_ID: ${{ secrets.VERCEL_PROJECT_DOCS_ID }}
-
-    steps:
-      - name: Checkout
-        uses: actions/checkout@v4
-
-      - name: Printout
-        uses: ./.github/actions/printout
-
-      - name: Setup
-        uses: ./.github/actions/setup
-
-      - name: Deploy
-        uses: ./.github/actions/deploy-docs
-        with:
-          mode: 'prod'
-          vercel_token: ${{ secrets.VERCEL_TOKEN }}
-          app_dir: ./apps/docs
