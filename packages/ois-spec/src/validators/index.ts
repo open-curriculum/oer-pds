@@ -1,23 +1,28 @@
-import { z } from "zod";
+import { z } from 'zod';
 
 // ─────────────────────────────────────────────
 // Token validators
 // ─────────────────────────────────────────────
 
 export const TokenCategorySchema = z.enum([
-  "scaffolding",
-  "agency",
-  "feedback",
-  "assessment",
-  "revision",
-  "reflection",
-  "collaboration",
-  "accessibility",
-  "localization",
-  "aiUse",
+  'scaffolding',
+  'agency',
+  'feedback',
+  'assessment',
+  'revision',
+  'reflection',
+  'collaboration',
+  'accessibility',
+  'localization',
+  'aiUse',
 ]);
 
-export const TokenTypeSchema = z.enum(["enum", "boolean", "enum-multi", "enum-or-free"]);
+export const TokenTypeSchema = z.enum([
+  'enum',
+  'boolean',
+  'enum-multi',
+  'enum-or-free',
+]);
 
 export const TokenValueSchema = z.object({
   value: z.string(),
@@ -60,7 +65,9 @@ export const InstructionalPatternSchema = z.object({
   problem: z.string().optional(),
   context: z.array(z.string()).optional(),
   sequence: z.array(PatternPhaseSchema),
-  recommendedTokens: z.record(z.union([z.string(), z.boolean(), z.array(z.string())])).optional(),
+  recommendedTokens: z
+    .record(z.union([z.string(), z.boolean(), z.array(z.string())]))
+    .optional(),
   assessmentEvidence: z.array(z.string()).optional(),
   compatibleThemes: z.array(z.string()).optional(),
   aiGuidance: z.string().optional(),
@@ -87,16 +94,16 @@ export const PedagogicalThemeSchema = z.object({
 // ─────────────────────────────────────────────
 
 export const RendererOutputTypeSchema = z.enum([
-  "student-facing-assignment",
-  "student-facing-content",
-  "facilitation-guide",
-  "student-checklist",
-  "instructor-guide",
-  "assessment-rubric",
-  "ai-disclosure",
-  "course-map",
-  "lms-assignment",
-  "ai-context-package",
+  'student-facing-assignment',
+  'student-facing-content',
+  'facilitation-guide',
+  'student-checklist',
+  'instructor-guide',
+  'assessment-rubric',
+  'ai-disclosure',
+  'course-map',
+  'lms-assignment',
+  'ai-context-package',
 ]);
 
 export const RendererProfileSchema = z.object({
@@ -114,7 +121,7 @@ export const RendererProfileSchema = z.object({
 // Validation Rule validators
 // ─────────────────────────────────────────────
 
-export const ValidationSeveritySchema = z.enum(["error", "warning", "info"]);
+export const ValidationSeveritySchema = z.enum(['error', 'warning', 'info']);
 
 export const ValidationConditionSchema = z.object({
   token: z.string(),
@@ -161,5 +168,7 @@ export const OISIndexSchema = z.object({
 export const PedagogyBlockSchema = z.object({
   theme: z.string().optional(),
   pattern: z.string().optional(),
-  tokens: z.record(z.union([z.string(), z.boolean(), z.array(z.string())])).optional(),
+  tokens: z
+    .record(z.union([z.string(), z.boolean(), z.array(z.string())]))
+    .optional(),
 });

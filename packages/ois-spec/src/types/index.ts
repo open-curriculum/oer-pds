@@ -3,18 +3,18 @@
 // ─────────────────────────────────────────────
 
 export type TokenCategory =
-  | "scaffolding"
-  | "agency"
-  | "feedback"
-  | "assessment"
-  | "revision"
-  | "reflection"
-  | "collaboration"
-  | "accessibility"
-  | "localization"
-  | "aiUse";
+  | 'scaffolding'
+  | 'agency'
+  | 'feedback'
+  | 'assessment'
+  | 'revision'
+  | 'reflection'
+  | 'collaboration'
+  | 'accessibility'
+  | 'localization'
+  | 'aiUse';
 
-export type TokenType = "enum" | "boolean" | "enum-multi" | "enum-or-free";
+export type TokenType = 'enum' | 'boolean' | 'enum-multi' | 'enum-or-free';
 
 export interface TokenValue {
   value: string;
@@ -84,16 +84,16 @@ export interface PedagogicalTheme {
 // ─────────────────────────────────────────────
 
 export type RendererOutputType =
-  | "student-facing-assignment"
-  | "student-facing-content"
-  | "facilitation-guide"
-  | "student-checklist"
-  | "instructor-guide"
-  | "assessment-rubric"
-  | "ai-disclosure"
-  | "course-map"
-  | "lms-assignment"
-  | "ai-context-package";
+  | 'student-facing-assignment'
+  | 'student-facing-content'
+  | 'facilitation-guide'
+  | 'student-checklist'
+  | 'instructor-guide'
+  | 'assessment-rubric'
+  | 'ai-disclosure'
+  | 'course-map'
+  | 'lms-assignment'
+  | 'ai-context-package';
 
 export interface RendererProfile {
   id: string;
@@ -110,7 +110,7 @@ export interface RendererProfile {
 // Validation Rules
 // ─────────────────────────────────────────────
 
-export type ValidationSeverity = "error" | "warning" | "info";
+export type ValidationSeverity = 'error' | 'warning' | 'info';
 
 export interface ValidationCondition {
   token: string;
