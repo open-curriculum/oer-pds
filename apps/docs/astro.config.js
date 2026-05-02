@@ -1,9 +1,11 @@
 import { defineConfig } from 'astro/config';
 import starlight from '@astrojs/starlight';
 
+const base = '/oer-pds';
+
 export default defineConfig({
   site: 'https://www.open-curriculum.org',
-  base: '/oer-pds',
+  base,
   integrations: [
     starlight({
       title: 'Open Instructional Systems',
@@ -23,7 +25,7 @@ export default defineConfig({
           attrs: {
             rel: 'alternate',
             type: 'application/json',
-            href: '/ois-index.json',
+            href: `${base}/ois-index.json`,
             title: 'OIS Registry Index',
           },
         },
