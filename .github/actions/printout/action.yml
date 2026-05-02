@@ -2,6 +2,7 @@
 # prints inputs
 
 name: Printout
+description: Print workflow dispatch inputs for debugging
 runs:
   using: 'composite'
   steps:

@@ -2,6 +2,7 @@
 # installs pnpm and dependencies
 
 name: pnpm and Node setup
+description: Install pnpm, set up Node.js, and install workspace dependencies
 runs:
   using: 'composite'
   steps:

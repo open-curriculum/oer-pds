@@ -40,4 +40,4 @@ If you run commands inside `apps/docs`, make sure generated registry assets alre
 
 ## Deployment
 
-The documentation site is built as a static Astro app and deployed through GitHub Actions using the workflow at `.github/workflows/deploy-docs.yaml`.
+The documentation site is built as a static Astro app and deployed through GitHub Actions using the workflow at `.github/workflows/deploy-docs.yml`.

@@ -112,7 +112,7 @@ pnpm release
 
 ## Docs and Publishing
 
-The public docs site is built from `apps/docs` and deployed through GitHub Actions. The GitHub Pages deployment workflow lives at `.github/workflows/deploy-docs.yaml`.
+The public docs site is built from `apps/docs` and deployed through GitHub Actions. The GitHub Pages deployment workflow lives at `.github/workflows/deploy-docs.yml`.
 
 Registry generation also copies the latest machine-readable artifacts into `apps/docs/public` so the docs site can publish them directly.
 

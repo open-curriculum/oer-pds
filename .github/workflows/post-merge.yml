@@ -7,4 +7,4 @@ on:
 jobs:
   quality_control:
     name: Quality-Check
-    uses: ./.github/workflows/quality-check.yaml
+    uses: ./.github/workflows/quality-check.yml
