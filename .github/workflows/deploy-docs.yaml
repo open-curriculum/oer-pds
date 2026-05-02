@@ -1,92 +1,68 @@
-name: Deploy Docs
-env:
-  VERCEL_ORG_ID: ${{ secrets.VERCEL_ORG_ID }}
+name: Deploy OIS Docs to GitHub Pages
 
 on:
+  push:
+    branches: [main]
+    paths:
+      - 'apps/docs/**'
+      - 'packages/ois-spec/**'
+      - 'packages/ois-registry/**'
+      - '.github/workflows/deploy-docs.yaml'
   workflow_dispatch:
-    inputs:
-      deploy_mode:
-        description: 'Mode'
-        type: choice
-        options: ['dev', 'prod']
-        required: false
-        default: 'dev'
-      deploy_docs:
-        description: 'Documentation'
-        type: boolean
-        required: false
-        default: true
-      deploy_storybook:
-        description: 'Storybook'
-        type: boolean
-        required: false
-        default: true
 
-  workflow_call:
-    inputs:
-      deploy_mode:
-        description: 'Mode'
-        type: string
-        required: false
-        default: 'dev'
-      deploy_docs:
-        description: 'Documentation'
-        type: boolean
-        required: false
-        default: true
-      deploy_storybook:
-        description: 'Storybook'
-        type: boolean
-        required: false
-        default: true
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: pages
+  cancel-in-progress: false
 
 jobs:
-  deploy_docs:
-    if: ${{ github.event.inputs.deploy_docs == 'true' }}
-    name: Deploy-Docs
-    timeout-minutes: 30
+  build:
+    name: Build
     runs-on: ubuntu-latest
-    env:
-      VERCEL_PROJECT_ID: ${{ secrets.VERCEL_PROJECT_DOCS_ID }}
-
     steps:
       - name: Checkout
         uses: actions/checkout@v4
 
-      - name: Printout
-        uses: ./.github/actions/printout
+      - name: Setup pnpm
+        uses: pnpm/action-setup@v4
 
-      - name: Setup
-        uses: ./.github/actions/setup
-
-      - name: Deploy
-        uses: ./.github/actions/deploy-docs
+      - name: Setup Node
+        uses: actions/setup-node@v4
         with:
-          mode: ${{ github.event.inputs.deploy_mode }}
-          vercel_token: ${{ secrets.VERCEL_TOKEN }}
-          app_dir: ./apps/docs
+          node-version: 24
+          cache: pnpm
 
-  deploy_storybook:
-    if: ${{ github.event.inputs.deploy_storybook == 'true' }}
-    name: Deploy-Storybook
-    timeout-minutes: 30
+      - name: Install dependencies
+        run: pnpm install --frozen-lockfile
+
+      - name: Build ois-spec
+        run: pnpm --filter @ois/spec build
+
+      - name: Generate registry (ois-index.json + llms files)
+        run: pnpm --filter @ois/registry generate
+
+      - name: Build docs
+        run: pnpm --filter ois-docs build
+
+      - name: Upload Pages artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: apps/docs/dist
+
+  deploy:
+    name: Deploy
+    needs: build
     runs-on: ubuntu-latest
-    env:
-      VERCEL_PROJECT_ID: ${{ secrets.VERCEL_PROJECT_STORYBOOK_ID }}
-
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
     steps:
-      - name: Checkout
-        uses: actions/checkout@v4
-
-      - name: Printout
-        uses: ./.github/actions/printout
-
-      - name: Setup
-        uses: ./.github/actions/setup
-
-      - name: Deploy
-        uses: ./.github/actions/deploy-docs
-        with:
-          mode: ${{ github.event.inputs.deploy_mode }}
-          vercel_token: ${{ secrets.VERCEL_TOKEN }}
-          app_dir: ./apps/storybook
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
+        env:
+          FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: true

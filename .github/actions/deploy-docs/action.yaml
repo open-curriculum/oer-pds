@@ -2,14 +2,18 @@
 # deploys documentation in dev and prod modes
 
 name: Deploy Docs
+description: Build and deploy a Vercel app from the provided app directory
 inputs:
   vercel_token:
+    description: 'Vercel API token used for pull, build, and deploy commands'
     required: true
 
   app_dir:
+    description: 'Relative path to the app directory to build and deploy'
     required: true
 
   mode:
+    description: 'Deployment mode to use for Vercel build and deploy steps'
     required: false
     default: 'dev'
 
@@ -18,7 +22,8 @@ runs:
 
   steps:
     - name: Build App
-      run: pnpm build:doc
+      working-directory: ${{ inputs.app_dir }}
+      run: pnpm build
       shell: bash
 
     - name: Install Vercel CLI

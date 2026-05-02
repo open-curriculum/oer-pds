@@ -1,23 +1,7 @@
-# @ds-starter/tsconfig
+# @ois/tsconfig
 
-## 0.2.0
+This changelog was inherited from the starter template used to initialize the repository.
 
-### Minor Changes
+Legacy starter-template entries were removed during the OIS migration.
 
-- 1fd92bd: meta information updates
-
-## 0.1.0
-
-### Minor Changes
-
-- 5ae783e: unicornix integration
-
-### Patch Changes
-
-- 05a4d78: release preparations
-
-## 0.0.1
-
-### Patch Changes
-
-- changelog init
+Future changes to the shared TypeScript config package will be recorded here.

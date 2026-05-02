@@ -1,10 +1,10 @@
 {
-  "name": "@ds-starter/tsconfig",
+  "name": "@ois/tsconfig",
   "version": "0.2.0",
-  "author": "Evgeny Khoroshilov (https://github.com/XOP)",
+  "author": "Open Curriculum",
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "https://github.com/XOP/design-system-starter"
+    "url": "https://github.com/open-curriculum/oer-pds"
   }
 }
