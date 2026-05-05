@@ -1,11 +1,11 @@
 ---
-title: Open Instructional Systems
+title: OER Design System
 description: A pedagogical design system for open education — tokens, patterns, themes, renderers, and validation rules for making instructional intent portable, adaptable, automatable, and researchable.
 template: splash
 hero:
-  tagline: OER made educational content shareable. OERSchema made it machine-readable. Open Instructional Systems make it pedagogically reusable.
+  tagline: OER made educational content shareable. OERSchema made it machine-readable. OER Design System makes instructional design reusable.
   actions:
-    - text: What is OIS?
+    - text: What is the OER Design System?
       link: concepts/open-instructional-systems
       icon: right-arrow
       variant: primary
@@ -21,9 +21,9 @@ import { Card, CardGrid, LinkCard } from '@astrojs/starlight/components';
 
 ## What is this?
 
-**Open Instructional Systems (OIS)** is a pedagogical design system for open education. It provides a shared vocabulary for describing, applying, adapting, validating, and automating instructional design decisions in open educational materials.
+**OER Design System** is a pedagogical design system for open education. It provides a shared vocabulary for describing, applying, adapting, validating, and automating instructional design decisions in open educational materials.
 
-OIS is not a platform. It is a **reference library and vocabulary** — like a design token system, but for pedagogy instead of visual style.
+It is not a platform. It is a **reference library and vocabulary** — like a design token system, but for pedagogy instead of visual style.
 
 <CardGrid stagger>
   <Card title="Pedagogical Tokens" icon="puzzle">
@@ -42,7 +42,7 @@ OIS is not a platform. It is a **reference library and vocabulary** — like a d
     [Browse themes →](themes/)
   </Card>
   <Card title="For AI Agents" icon="rocket">
-    Machine-readable `llms.txt`, JSON Schemas, and a full OIS index so AI tools can discover and apply the system correctly.
+    Machine-readable `llms.txt`, JSON Schemas, and a full registry index so AI tools can discover and apply the system correctly.
 
     [AI agent guide →](ai/)
   </Card>
@@ -50,7 +50,7 @@ OIS is not a platform. It is a **reference library and vocabulary** — like a d
 
 ## Core Design Principle
 
-> **OIS provides pedagogical "styles" for learning materials — not visual styles, but instructional styles.**
+> **The OER Design System provides pedagogical "styles" for learning materials — not visual styles, but instructional styles.**
 
 The same lesson content can be structured as direct instruction, a constructivist studio project, a mastery checkpoint pathway, or a critical media analysis exercise — using the **same content object**, different tokens and patterns.
 
@@ -60,9 +60,9 @@ The same lesson content can be structured as direct instruction, a constructivis
 |-------|------------------|
 | **OERSchema** | What the learning resource *is* and how its educational parts relate |
 | **AIUL** | Conditions under which AI use is permitted in a learning activity |
-| **OIS** | How the learning experience is pedagogically structured, styled, adapted, and validated |
+| **OER Design System** | How the learning experience is pedagogically structured, styled, adapted, and validated |
 
-OIS sits beside OERSchema as a pedagogical design layer, and treats AIUL as one token family (`aiUse.*`) within the broader system.
+The OER Design System sits beside OERSchema as a pedagogical design layer, and treats AIUL as one token family (`aiUse.*`) within the broader system.
 
 ## Machine-Readable Files
 
@@ -73,13 +73,13 @@ AI agents and automation tools can discover and apply this system through static
 | [`llms.txt`](llms.txt) | LLM discovery and operating rules |
 | [`llms-full.txt`](llms-full.txt) | Full specification for AI agents |
 | [`ois-index.json`](ois-index.json) | Normalized registry of all tokens, patterns, themes, renderers, and validation rules |
-| [`ois-context.jsonld`](ois-context.jsonld) | JSON-LD context for OIS vocabulary |
+| [`ois-context.jsonld`](ois-context.jsonld) | JSON-LD context for the OER Design System vocabulary |
 
 JSON Schemas for each object type are available at [`schemas/`](schemas/).
 
 ## Version
 
-Current version: **OIS Profile 0.1** (draft)
+Current version: **OER Design System Profile 0.1** (draft)
 
 This is an open specification. Contributions, feedback, and implementations are welcome.
 

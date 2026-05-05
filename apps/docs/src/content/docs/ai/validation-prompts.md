@@ -3,14 +3,14 @@ title: Validation Prompts
 description: Prompt templates for using AI to validate token bundles and identify pedagogy block errors.
 ---
 
-AI agents can use these prompt templates to validate OIS token bundles before generating content, or to check existing content for inconsistencies.
+AI agents can use these prompt templates to validate OER Design System token bundles before generating content, or to check existing content for inconsistencies.
 
 ## System Prompt: Token Bundle Validator
 
 Include this in your AI system prompt when building tools that check pedagogy blocks:
 
 ```
-You are an OIS (Open Instructional Systems) validation assistant.
+You are an OER Design System validation assistant.
 
 Given a pedagogy block (YAML or JSON), check it against the following validation rules and report any errors, warnings, or suggestions.
 
@@ -49,7 +49,7 @@ Return a JSON object:
 ## User Prompt: Validate a Pedagogy Block
 
 ```
-Validate this pedagogy block against OIS validation rules:
+Validate this pedagogy block against OER Design System validation rules:
 
 [PASTE PEDAGOGY BLOCK YAML OR JSON HERE]
 

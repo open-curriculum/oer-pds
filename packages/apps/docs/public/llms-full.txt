@@ -1,13 +1,13 @@
-# Open Instructional Systems — Full Specification
+# OER Design System — Full Specification
 
 Version: 0.1.0-alpha
-Generated: 2026-05-02T22:34:45.861Z
+Generated: 2026-05-02T23:13:41.769Z
 
 ---
 
-## What is OIS?
+## What is the OER Design System?
 
-Open Instructional Systems (OIS) is a pedagogical design system — a set of tokens, patterns, and themes that describe instructional intent in learning materials. It gives instructors, platforms, and AI agents a shared vocabulary for the "how" of teaching, not just the "what."
+OER Design System is a pedagogical design system — a set of tokens, patterns, and themes that describe instructional intent in learning materials. It gives instructors, platforms, and AI agents a shared vocabulary for the "how" of teaching, not just the "what."
 
 ---
 

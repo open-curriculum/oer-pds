@@ -1,15 +1,15 @@
 ---
 title: AI Agent Readiness
-description: How AI agents should discover, understand, and apply Open Instructional Systems to generate, adapt, and validate instructional materials.
+description: How AI agents should discover, understand, and apply the OER Design System to generate, adapt, and validate instructional materials.
 sidebar:
   order: 4
 ---
 
-AI agent readiness is a first-class design goal of OIS.
+AI agent readiness is a first-class design goal of the OER Design System.
 
 AI agents — including coding assistants, course builders, curriculum generators, and LMS automation tools — should be able to:
 
-- Discover the OIS vocabulary
+- Discover the OER Design System vocabulary
 - Understand token definitions and valid values
 - Select appropriate instructional patterns
 - Apply pedagogical themes
@@ -20,7 +20,7 @@ AI agents — including coding assistants, course builders, curriculum generator
 
 ## Machine-Readable Files
 
-OIS publishes the following static files specifically for AI agent consumption:
+The OER Design System publishes the following static files specifically for AI agent consumption:
 
 | File | URL | Purpose |
 |------|-----|---------|
@@ -43,7 +43,7 @@ This rule exists to prevent AI from generating generic, superficially coherent b
 When an AI agent is asked to design, generate, or adapt a learning experience:
 
 1. **Parse the instructional context** — identify learning goals, learner level, domain, and constraints
-2. **Select a pedagogical theme** from the OIS theme library that fits the context
+2. **Select a pedagogical theme** from the OER Design System theme library that fits the context
 3. **Select an instructional pattern** appropriate for the activity type and learning goal
 4. **Apply pedagogical tokens** — use theme defaults, override only when justified
 5. **Generate or adapt the learning experience** using the pattern as a sequence guide
@@ -54,15 +54,15 @@ When an AI agent is asked to design, generate, or adapt a learning experience:
 
 ## What AI Agents Should NOT Do
 
-- Invent token names, values, or pattern IDs not in the OIS registry
+- Invent token names, values, or pattern IDs not in the registry
 - Apply themes without checking their required token values
 - Skip validation when assembling multi-activity modules
 - Generate AI-permitted activities without including disclosure and reflection requirements
 - Override locally what should be set at the theme or course level
-- Use OIS vocabulary in ways that contradict its defined semantics
+- Use the OER Design System vocabulary in ways that contradict its defined semantics
 - Generate assessment evidence types that conflict with the selected pattern
 
-## The OIS Index for Agents
+## The Registry Index for Agents
 
 The `ois-index.json` file provides a single normalized JSON structure containing all tokens, patterns, themes, renderers, and validation rules. Agents should fetch and cache this file at the start of any instructional design task:
 
@@ -83,8 +83,8 @@ Each object includes an `aiGuidance` field that tells the agent specifically how
 
 ```
 System: You are an instructional design assistant. Before generating any 
-course content, fetch the OIS registry at /ois-index.json and follow the 
-OIS implementation recipe. Always show your pedagogical decisions as a 
+course content, fetch the registry at /ois-index.json and follow the 
+OER Design System implementation recipe. Always show your pedagogical decisions as a 
 structured summary before generating outputs.
 
 When a user asks you to design a learning activity:
@@ -95,14 +95,14 @@ When a user asks you to design a learning activity:
 5. Show the validation check results.
 6. Generate the requested output.
 
-Do not generate content that violates OIS validation rules without 
+Do not generate content that violates OER Design System validation rules without 
 explicitly noting the violation and justifying the exception.
 ```
 
-## Example: Applying OIS in a Coding Agent
+## Example: Applying the OER Design System in a Coding Agent
 
 ```typescript
-// Fetch OIS registry
+// Fetch registry
 const oisIndex = await fetch('/ois-index.json').then(r => r.json());
 
 // Select theme and pattern for a studio art course
@@ -125,6 +125,6 @@ const violations = oisIndex.validationRules
 
 ## Further Reading
 
-- [OIS Implementation Recipes](/ai/implementation-recipes/) — step-by-step guides for specific platforms and workflows
+- [OER Design System Implementation Recipes](/ai/implementation-recipes/) — step-by-step guides for specific platforms and workflows
 - [Prompt Contracts](/ai/prompt-contracts/) — ready-to-use system prompts for AI assistants
-- [llms.txt Reference](/ai/llms-txt/) — about the `llms.txt` standard and OIS's implementation
+- [llms.txt Reference](/ai/llms-txt/) — about the `llms.txt` standard and the OER Design System implementation

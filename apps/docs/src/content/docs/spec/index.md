@@ -1,12 +1,12 @@
 ---
-title: OIS Specification
-description: The formal specification for the Open Instructional Systems vocabulary.
+title: OER Design System Specification
+description: The formal specification for the OER Design System vocabulary.
 sidebar:
   order: 1
   label: Specification
 ---
 
-The Open Instructional Systems (OIS) specification defines the vocabulary, data schemas, validation rules, and implementation contracts for pedagogical design system metadata.
+The OER Design System specification defines the vocabulary, data schemas, validation rules, and implementation contracts for pedagogical design system metadata.
 
 ## Specification Version
 
@@ -34,11 +34,11 @@ The spec is in active development. The token, pattern, theme, and renderer vocab
 
 ## Principles
 
-1. **Separation of content from pedagogy** — OIS metadata is always separate from, never embedded in, learning content.
+1. **Separation of content from pedagogy** — OER Design System metadata is always separate from, never embedded in, learning content.
 2. **Composability** — Tokens, patterns, and themes are independently useful and may be combined.
 3. **Openness** — The specification is open. Any platform or tool may implement it.
-4. **AI legibility** — All OIS structures must be machine-readable and semantically unambiguous.
-5. **Backward compatibility** — OIS is additive. Adding OIS metadata to an existing resource should never break it.
+4. **AI legibility** — All OER Design System structures must be machine-readable and semantically unambiguous.
+5. **Backward compatibility** — The OER Design System is additive. Adding its metadata to an existing resource should never break it.
 6. **Research grounding** — Every token and pattern must trace back to established instructional design research.
 
 ## Changelog

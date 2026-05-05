@@ -1,11 +1,11 @@
 ---
 title: Glossary
-description: Definitions for all key terms in the Open Instructional Systems vocabulary.
+description: Definitions for all key terms in the OER Design System vocabulary.
 ---
 
 ## A
 
-**Agency** — The degree of choice and self-direction available to the learner. In OIS, governed by the `agency.*` token group.
+**Agency** — The degree of choice and self-direction available to the learner. In the OER Design System, governed by the `agency.*` token group.
 
 **Assessment evidence** — The type of observable output collected to evaluate learning. Governed by `assessment.evidence`. Examples: `quiz`, `artifact`, `reflection`, `portfolio`, `artifact-plus-reflection`.
 
@@ -47,7 +47,7 @@ description: Definitions for all key terms in the Open Instructional Systems voc
 
 ## J
 
-**JSON-LD context** — A machine-readable file that defines the OIS vocabulary as Linked Data, enabling semantic interoperability with OERSchema and schema.org. Available at [`/ois-context.jsonld`](/ois-context.jsonld).
+**JSON-LD context** — A machine-readable file that defines the OER Design System vocabulary as Linked Data, enabling semantic interoperability with OERSchema and schema.org. Available at [`/ois-context.jsonld`](/ois-context.jsonld).
 
 ---
 
@@ -55,17 +55,17 @@ description: Definitions for all key terms in the Open Instructional Systems voc
 
 **Localization level** — The depth of adaptation for different cultural and linguistic contexts. Governed by `localization.level`. Examples: `none`, `translated`, `culturally-adapted`, `co-created`.
 
-**LLMs.txt** — A plain-text file at `/llms.txt` summarizing the OIS vocabulary in a format optimized for large language models. See [AI Agent Readiness](/concepts/ai-agent-readiness/).
+**LLMs.txt** — A plain-text file at `/llms.txt` summarizing the OER Design System vocabulary in a format optimized for large language models. See [AI Agent Readiness](/concepts/ai-agent-readiness/).
 
 ---
 
 ## O
 
-**OIS** — Open Instructional Systems. A pedagogical design system and reference vocabulary for educational content creators, platform developers, and AI agents.
+**OER Design System** — A pedagogical design system and reference vocabulary for educational content creators, platform developers, and AI agents.
 
 **OIS index** — A machine-readable JSON registry of all tokens, patterns, themes, renderer profiles, and validation rules. Available at [`/ois-index.json`](/ois-index.json).
 
-**OERSchema** — A vocabulary extension of schema.org for open educational resources. OIS adds the `pedagogy` block to OERSchema-compliant content. See [Relationship to OERSchema](/concepts/oerschema/).
+**OERSchema** — A vocabulary extension of schema.org for open educational resources. The OER Design System adds the `pedagogy` block to OERSchema-compliant content. See [Relationship to OERSchema](/concepts/oerschema/).
 
 ---
 
@@ -73,7 +73,7 @@ description: Definitions for all key terms in the Open Instructional Systems voc
 
 **Pattern** — See *Instructional pattern*.
 
-**Pedagogy block** — A YAML (or JSON) structure added to content metadata that describes the instructional intent of a learning experience using OIS vocabulary.
+**Pedagogy block** — A YAML (or JSON) structure added to content metadata that describes the instructional intent of a learning experience using OER Design System vocabulary.
 
 **Pedagogical theme** — A named bundle of token defaults representing a coherent instructional style. See [Pedagogical Themes](/concepts/pedagogical-themes/).
 
@@ -119,4 +119,4 @@ description: Definitions for all key terms in the Open Instructional Systems voc
 
 ## Z
 
-**Zod validators** — TypeScript validation schemas for OIS data objects, available in the `@ois/spec` package. Used by platforms and AI agents to validate pedagogy blocks programmatically.
+**Zod validators** — TypeScript validation schemas for OER Design System data objects, available in the `@ois/spec` package. Used by platforms and AI agents to validate pedagogy blocks programmatically.

@@ -1,6 +1,6 @@
 ---
 title: For AI Agents
-description: How AI agents should discover, understand, and apply the Open Instructional Systems vocabulary.
+description: How AI agents should discover, understand, and apply the OER Design System vocabulary.
 sidebar:
   order: 1
   label: Overview

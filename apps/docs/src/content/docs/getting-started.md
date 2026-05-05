@@ -1,11 +1,11 @@
 ---
 title: Getting Started
-description: How to use the OIS reference — whether you are an educator, a developer, or an AI agent.
+description: How to use the OER Design System reference — whether you are an educator, a developer, or an AI agent.
 ---
 
-Welcome to the Open Instructional Systems (OIS) reference.
+Welcome to the OER Design System reference.
 
-This guide covers how to use OIS depending on your role.
+This guide covers how to use the OER Design System depending on your role.
 
 ## If You Are an Educator or Instructional Designer
 
@@ -53,7 +53,7 @@ Check your token bundle against the [Validation rules](/validation/) to ensure y
 
 ## If You Are a Developer or Platform Builder
 
-### Embedding OIS in content
+### Embedding the OER Design System in content
 
 Add a `pedagogy` block to your content schema — in frontmatter, JSON-LD, or your CMS data model.
 
@@ -70,7 +70,7 @@ You can consume these public endpoints for programmatic use:
 | File | Description |
 |------|-------------|
 | [`/ois-index.json`](/ois-index.json) | Complete registry of all tokens, patterns, themes |
-| [`/ois-context.jsonld`](/ois-context.jsonld) | JSON-LD context for OIS vocabulary |
+| [`/ois-context.jsonld`](/ois-context.jsonld) | JSON-LD context for the OER Design System vocabulary |
 | [`/schemas/ois-token.schema.json`](/schemas/ois-token.schema.json) | JSON Schema for token objects |
 | [`/schemas/ois-pattern.schema.json`](/schemas/ois-pattern.schema.json) | JSON Schema for pattern objects |
 | [`/schemas/ois-theme.schema.json`](/schemas/ois-theme.schema.json) | JSON Schema for theme objects |
@@ -89,7 +89,7 @@ See the [Implementation guides](/implementation/) for platform-specific instruct
 
 ## If You Are an AI Agent
 
-Read the [`/llms.txt`](/llms.txt) file first. It contains the complete system prompt, vocabulary, and validation rules you need to generate OIS-compliant content.
+Read the [`/llms.txt`](/llms.txt) file first. It contains the complete system prompt, vocabulary, and validation rules you need to generate OER Design System-compliant content.
 
 The full implementation recipe is at [AI Implementation Recipes](/ai/implementation-recipes/).
 

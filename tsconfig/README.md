@@ -1,6 +1,6 @@
 # Shared TypeScript Configs
 
-This directory contains the shared TypeScript configuration files used across the OIS workspace.
+This directory contains the shared TypeScript configuration files used across the OER Design System workspace.
 
 ## Files
 

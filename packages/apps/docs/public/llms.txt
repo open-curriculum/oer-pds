@@ -1,4 +1,4 @@
-# Open Instructional Systems (OIS)
+# OER Design System
 
 A pedagogical design system vocabulary for learning experience metadata.
 

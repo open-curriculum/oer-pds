@@ -1,6 +1,6 @@
-# Open Instructional Systems
+# OER Design System
 
-Open Instructional Systems (OIS) is a pedagogical design system for open education. It defines tokens, patterns, themes, renderer profiles, and validation rules that make instructional intent portable, adaptable, automatable, and researchable.
+OER Design System is a pedagogical design system for open education. It defines tokens, patterns, themes, renderer profiles, and validation rules that make instructional intent portable, adaptable, automatable, and researchable.
 
 The repository contains the TypeScript specification for the vocabulary, the source registry data, and the public documentation site.
 
@@ -8,13 +8,13 @@ The repository contains the TypeScript specification for the vocabulary, the sou
 
 ### Packages
 
-- `packages/ois-spec` - TypeScript types and validators for OIS objects
+- `packages/ois-spec` - TypeScript types and validators for OER Design System objects
 - `packages/ois-registry` - YAML source data plus build scripts that generate the machine-readable registry and LLM-facing files
 - `tsconfig` - shared TypeScript base configs used across the workspace
 
 ### App
 
-- `apps/docs` - Astro + Starlight documentation site for the public OIS reference
+- `apps/docs` - Astro + Starlight documentation site for the public OER Design System reference
 
 ## What Gets Built
 

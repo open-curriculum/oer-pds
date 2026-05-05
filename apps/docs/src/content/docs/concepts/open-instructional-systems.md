@@ -1,13 +1,13 @@
 ---
-title: What is Open Instructional Systems?
-description: Core definition of OIS — a pedagogical design system that makes instructional intent portable, adaptable, automatable, and researchable.
+title: What is the OER Design System?
+description: Core definition of the OER Design System — a pedagogical design system that makes instructional intent portable, adaptable, automatable, and researchable.
 sidebar:
   order: 1
 ---
 
-Open Instructional Systems (OIS) is a **pedagogical design system for open education**.
+The OER Design System is a **pedagogical design system for open education**.
 
-Where a visual design system provides tokens (colors, spacing, type scale) and patterns (button, card, form) that can be applied consistently across interfaces, OIS provides:
+Where a visual design system provides tokens (colors, spacing, type scale) and patterns (button, card, form) that can be applied consistently across interfaces, the OER Design System provides:
 
 - **Pedagogical tokens** — atomic instructional choices such as scaffolding level, feedback mode, and assessment evidence
 - **Instructional patterns** — reusable sequences of learning activity
@@ -21,11 +21,11 @@ Content reuse is not the same as instructional reuse.
 
 When an instructor takes an OER lesson and reuses it in their course, they can reuse the *content* — but not the *pedagogical logic*. They have to rebuild the instructional structure from scratch: what sequence does the learning follow? What kind of feedback is expected? What constitutes evidence of learning? Is revision expected? How much agency does the learner have?
 
-OIS makes that instructional logic **explicit, portable, and machine-readable**.
+The OER Design System makes that instructional logic **explicit, portable, and machine-readable**.
 
-## What OIS Is Not
+## What the OER Design System Is Not
 
-OIS is not:
+The OER Design System is not:
 
 - A new LMS or course-authoring platform
 - A replacement for OERSchema
@@ -37,7 +37,7 @@ It is a **shared vocabulary** and **reference profile** — a practical layer th
 
 ## The Six-Layer Model
 
-OIS describes open educational resources at six levels:
+The OER Design System describes open educational resources at six levels:
 
 ### Layer 1: Content Objects
 The existing learning resources: `Lesson`, `Lecture`, `Exercise`, `Project`, `Tutorial`, `Article`, `Rubric`, `Pathway`, `Specialization`.
@@ -84,7 +84,7 @@ Profiles that define how content + tokens + patterns should produce usable outpu
 ### Layer 6: Validation and Automation
 Rules that check whether learning objectives, activities, assessments, evidence, and policies are properly aligned — and automation affordances that let AI tools, instructors, and platforms use the system reliably.
 
-## What Makes OIS Novel
+## What Makes the OER Design System Novel
 
 The novel contribution is a synthesis:
 
@@ -96,4 +96,4 @@ The novel contribution is a synthesis:
 
 ## Strongest Positioning Statement
 
-> **OER made educational content shareable. OERSchema made it machine-readable. Open Instructional Systems make it pedagogically reusable.**
+> **OER made educational content shareable. OERSchema made it machine-readable. OER Design System makes instructional design reusable.**

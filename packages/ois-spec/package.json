@@ -1,7 +1,7 @@
 {
   "name": "@ois/spec",
   "version": "0.1.0",
-  "description": "TypeScript types, Zod validators, and JSON Schemas for the Open Instructional Systems vocabulary",
+  "description": "TypeScript types, Zod validators, and JSON Schemas for the OER Design System vocabulary",
   "license": "CC0-1.0",
   "type": "module",
   "exports": {

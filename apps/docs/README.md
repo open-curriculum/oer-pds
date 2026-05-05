@@ -1,10 +1,10 @@
-# OIS Docs App
+# OER Design System Docs App
 
-This app contains the public Open Instructional Systems documentation site built with Astro and Starlight.
+This app contains the public OER Design System documentation site built with Astro and Starlight.
 
 The site publishes three kinds of content from one place:
 
-- reference documentation for OIS concepts and specification details
+- reference documentation for OER Design System concepts and specification details
 - browsable registry content for tokens, patterns, themes, renderers, and validation rules
 - machine-readable static files such as `llms.txt`, `llms-full.txt`, `ois-index.json`, and JSON Schemas
 

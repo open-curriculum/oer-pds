@@ -1,4 +1,4 @@
-name: Deploy OIS Docs to GitHub Pages
+name: Deploy OER Design System Docs to GitHub Pages
 
 on:
   push:

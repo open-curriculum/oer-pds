@@ -31,7 +31,7 @@ const patternList = index.patterns
 
 const themeList = index.themes.map((t) => `- ${t.id}: ${t.summary}`).join('\n');
 
-const llmsTxt = `# Open Instructional Systems (OIS)
+const llmsTxt = `# OER Design System
 
 A pedagogical design system vocabulary for learning experience metadata.
 
@@ -116,16 +116,16 @@ ${t.aiGuidance ? `AI Guidance: ${t.aiGuidance}\n` : ''}`;
   })
   .join('\n');
 
-const llmsFullTxt = `# Open Instructional Systems — Full Specification
+const llmsFullTxt = `# OER Design System — Full Specification
 
 Version: ${index.version}
 Generated: ${index.generatedAt}
 
 ---
 
-## What is OIS?
+## What is the OER Design System?
 
-Open Instructional Systems (OIS) is a pedagogical design system — a set of tokens, patterns, and themes that describe instructional intent in learning materials. It gives instructors, platforms, and AI agents a shared vocabulary for the "how" of teaching, not just the "what."
+OER Design System is a pedagogical design system — a set of tokens, patterns, and themes that describe instructional intent in learning materials. It gives instructors, platforms, and AI agents a shared vocabulary for the "how" of teaching, not just the "what."
 
 ---
 

@@ -8,7 +8,7 @@ export default defineConfig({
   base,
   integrations: [
     starlight({
-      title: 'Open Instructional Systems',
+      title: 'OER Design System',
       description:
         'A pedagogical design system for open education — tokens, patterns, themes, renderers, and validation rules for making instructional intent portable, adaptable, automatable, and researchable.',
       social: {
@@ -26,7 +26,7 @@ export default defineConfig({
             rel: 'alternate',
             type: 'application/json',
             href: `${base}/ois-index.json`,
-            title: 'OIS Registry Index',
+            title: 'OER Design System Registry Index',
           },
         },
       ],
@@ -35,7 +35,7 @@ export default defineConfig({
           label: 'Start Here',
           items: [
             { label: 'Getting Started', link: '/getting-started' },
-            { label: 'About OIS', link: '/about' },
+            { label: 'About the OER Design System', link: '/about' },
             { label: 'Glossary', link: '/glossary' },
           ],
         },
@@ -43,7 +43,7 @@ export default defineConfig({
           label: 'Concepts',
           items: [
             {
-              label: 'What is OIS?',
+              label: 'What is the OER Design System?',
               link: '/concepts/open-instructional-systems',
             },
             {

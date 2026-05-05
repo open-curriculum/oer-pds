@@ -1,7 +1,7 @@
 {
   "name": "ois-docs",
   "version": "0.1.0",
-  "description": "Open Instructional Systems — public reference documentation site",
+  "description": "OER Design System — public reference documentation site",
   "license": "CC-BY-4.0",
   "private": true,
   "type": "module",
